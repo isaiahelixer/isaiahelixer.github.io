@@ -1,0 +1,1 @@
+![example power budget picture](budgetPg1.png)
