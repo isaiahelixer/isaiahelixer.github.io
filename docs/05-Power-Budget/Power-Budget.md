@@ -15,7 +15,7 @@ Write a overview of what you did and why you did a Power Budget.
 
 ## Conclusions
 
-From the prepare Power Budget, .....
+From the prepare Power Budget,
 
 ## Resouces
 
