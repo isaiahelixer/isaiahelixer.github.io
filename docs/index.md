@@ -1,5 +1,5 @@
 ---
-title: Welcome To Isaiah's Page!
+title: Isaiah LaCombe's Datasheet
 tags:
 - tag1
 - tag2
