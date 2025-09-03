@@ -1,5 +1,5 @@
 ---
-title: Welcome To Isaiah's Page
+title: Welcome To Isaiah's Page!
 tags:
 - tag1
 - tag2
