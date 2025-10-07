@@ -11,9 +11,9 @@ This subsystem monitors environmental conditions using digital sensors for soil 
 The system is powered by a 9V, 3A unregulated power supply and is regulated down to 5V, 1.5A using a voltage regulator to ensure safe and stable operation of the microcontroller and all connected sensors.  
 
 It interfaces with three digital sensors:  
-*Soil Moisture Sensor
-*Rain Water Sensor
-*Temperature/Humidity Sensor
+-Soil Moisture Sensor  
+-Rain Water Sensor  
+-Temperature/Humidity Sensor  
 
 Actuator Interface:  
 This subsystem doesn't directly control an actuator but it provides sensor data to other subsystems such as motor control that can act upon the readings.  
