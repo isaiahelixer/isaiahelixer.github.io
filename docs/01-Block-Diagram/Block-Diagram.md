@@ -6,20 +6,19 @@ tags:
 ---
 
 ## Overview
-This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...
+This subsystem monitors environmental conditions using digital sensors for soil moisture, rainwater, and temperature/humidity. It uses a Microchip PIC18F57Q43 Curiosity Nano microcontroller to read sensor data via analog pins and digital I/O and PWM which processes the information and makes it available to the rest of the system for decision-making. 
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
+The system is powered by a 9V 3A unregulated power supply and is regulated down to 5V 1.5A using a voltage regulator to ensure safe and stable operation of the microcontroller and all connected sensors.  
 
+It interfaces with three digital sensors:  
+
+-Soil Moisture Sensor  
+-Rain Water Sensor  
+-Temperature/Humidity Sensor  
+
+Actuator Interface:  
+This subsystem doesn't directly control an actuator but it provides sensor data to other subsystems such as motor control that can act upon the readings.  
 
 ## Block Diagram 
 Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
 <img width="899" height="599" alt="Screenshot 2025-10-06 190912" src="https://github.com/user-attachments/assets/3ef891ec-2af9-4abb-a9e8-9a3ca37b51b6" />
-
-![Example of Indivial Block diagram ]([individual-block-diagram.png](https://github.com/user-attachments/assets/3ef891ec-2af9-4abb-a9e8-9a3ca37b51b6))
