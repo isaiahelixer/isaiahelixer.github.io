@@ -11,8 +11,6 @@ title: Power Budget
 
 **System input:** 9 V external → 5 V regulator (LM7805) → PIC18F16Q41 Curiosity Nano + sensors
 
----
-
 ## Section A – All Major Components 
 
 | **Component Name** | **Part / Example** | **Supply Voltage (V)** | **Qty.** | **Abs. Max Current (mA)** | **Total Current (mA)** |
@@ -21,24 +19,19 @@ title: Power Budget
 | Soil Moisture Sensor | ST0160 Capacitive | 5 | 1 | 5 | 5 |
 | Temperature / Humidity Sensor | SHT31-D | 5 | 1 | 2 | 2 |
 | Rain Sensor | SEN0545 (UART) | 5 | 1 | 40 | 40 |
-| Indicator LED | Status LED (with resistor) | 5 | 1 | 10 | 10 |
-| **Subtotal (estimated)** | | | | | **557 mA** |
+| **Subtotal (estimated)** | | | | | **547 mA** |
 
 **Arithmetic:**  
-500 + 5 + 2 + 40 + 10 = **557 mA total subsystem current**
-
----
+500 + 5 + 2 + 40 = **547 mA total subsystem current**
 
 ## Section B – Power Rails
 
 ### +5 V Rail
-- Subtotal = **557 mA**  
-- Safety margin (25%) = 557 × 1.25 = **696.25 mA** → round to **696 mA**
+- Subtotal = **547 mA**  
+- Safety margin (25%) = 547 × 1.25 = **683.75 mA** → round to **684 mA**
 
 **Arithmetic:**  
-557 × 1.25 = (557 × 5) / 4 = 2785 / 4 = **696.25 mA**
-
----
+547 × 1.25 = (547 × 5) / 4 = 2735 / 4 = **683.75 mA**
 
 ## Section C – Regulator Selection
 
@@ -50,17 +43,15 @@ title: Power Budget
 **Choice:** LM7805 Linear Regulator  
 
 **Rationale:**  
-With the total estimated current of **696 mA** (including a 25% margin), the LM7805 provides enough capacity and thermal headroom.  
-The UA78L05ACLP’s 100 mA limit is insufficient for this system.
+With the total estimated current of **684 mA** (including a 25% margin), the LM7805 provides sufficient current capacity and thermal headroom.  
+The UA78L05ACLP’s 100 mA limit is below system requirements.
 
 **Regulator heat / dissipation check:**  
 Voltage drop = 9 V − 5 V = 4 V  
-Load current = 696 mA = 0.696 A  
-Power dissipated = 4 V × 0.696 A = **2.784 W**  
+Load current = 684 mA = 0.684 A  
+Power dissipated = 4 V × 0.684 A = **2.736 W**  
 
 > **Result:** LM7805 will require a small heat sink at this power level.
-
----
 
 ## Section D – External Power Source
 
@@ -68,38 +59,32 @@ Power dissipated = 4 V × 0.696 A = **2.784 W**
 |------------------|-------------:|------------------------:|---------------------:|
 | Wall Adapter | Generic 9 V DC Adapter | 9 | 1000 |
 
-- Required on +5 V rail (with 25% margin): **696 mA**  
-- Remaining capacity: 1000 − 696 = **304 mA**
+- Required on +5 V rail (with 25% margin): **684 mA**  
+- Remaining capacity: 1000 − 684 = **316 mA**
 
 **Arithmetic:**  
-1000 − 696 = **304 mA remaining capacity**
+1000 − 684 = **316 mA remaining capacity**
 
 **Battery option (example):** 9 V alkaline ≈ 500 mAh (typical spec)  
 
-Battery life = 500 mAh / 696 mA = **0.718 hours ≈ 43 minutes**
+Battery life = 500 mAh / 684 mA = **0.731 hours ≈ 44 minutes**
 
 > **Result:** Battery operation is not practical due to high current draw.
-
----
 
 ## Section E – Summary
 
 | **Item** | **Value / Action** |
 |---------:|--------------------|
-| Subtotal (estimated) | **557 mA** |
-| Total required on 5 V rail (with 25% margin) | **696 mA** |
+| Subtotal (estimated) | **547 mA** |
+| Total required on 5 V rail (with 25% margin) | **684 mA** |
 | Regulator chosen | **LM7805 Linear Regulator** |
-| Regulator dissipation (9→5 V at 696 mA) | **≈ 2.78 W (requires heat sink)** |
+| Regulator dissipation (9→5 V at 684 mA) | **≈ 2.74 W (requires heat sink)** |
 | External supply recommended | **9 V DC adapter, ≥ 1 A** |
-| Estimated battery life (9 V, 500 mAh) | **~0.72 hours (≈43 min)** |
+| Estimated battery life (9 V, 500 mAh) | **~0.73 hours (≈44 min)** |
 | Action required | **Verify PIC18F16Q41/Curiosity Nano current. If actual draw <100 mA, you may use UA78L05ACLP. Otherwise stay with LM7805.** |
 
----
-
 ### Notes & Tips
-- Replace estimated MCU current (500 mA) with the **actual maximum** from the Microchip datasheet. The Curiosity Nano typically consumes **<50 mA**, so your actual total current and power dissipation will be **much lower** once corrected.  
-- When using the LM7805, ensure you attach a **small heat sink** if your real current exceeds ~300 mA.  
-- Keep the 25% safety margin in all power budget calculations.  
-- Add datasheet links for all components when finalizing your GitHub page before export.
-
-
+- Replace estimated MCU current (500 mA) with the **actual max current** from the Microchip datasheet. The Curiosity Nano typically draws **<50 mA**, meaning the real current and power dissipation will be **much lower** than the conservative estimate shown.  
+- Attach a **small heat sink** if current exceeds ~300 mA.  
+- Maintain the **25% safety margin** in all power calculations.  
+- Add **datasheet links** for all components when finalizing your GitHub Markdown page before export.
