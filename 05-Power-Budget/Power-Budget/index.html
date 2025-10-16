@@ -690,9 +690,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#section-a-all-major-components-estimates" class="md-nav__link">
+  <a href="#section-a-all-major-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Section A – All Major Components (estimates)
+      Section A – All Major Components
     </span>
   </a>
   
@@ -753,7 +753,7 @@
           <li class="md-nav__item">
   <a href="#notes-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes &amp; tips
+      Notes &amp; Tips
     </span>
   </a>
   
@@ -863,9 +863,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#section-a-all-major-components-estimates" class="md-nav__link">
+  <a href="#section-a-all-major-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Section A – All Major Components (estimates)
+      Section A – All Major Components
     </span>
   </a>
   
@@ -926,7 +926,7 @@
           <li class="md-nav__item">
   <a href="#notes-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes &amp; tips
+      Notes &amp; Tips
     </span>
   </a>
   
@@ -961,15 +961,13 @@
 
 
 <h1 id="power-budget">Power Budget</h1>
-<p><strong>Team Number:</strong> —<br>
+<p><strong>Team Number:</strong> 101<br>
 <strong>Project Name:</strong> Smart Irrigation Subsystem Board<br>
-<strong>Team Member Names:</strong> (Your Name)<br>
+<strong>Team Member Names:</strong> Isaiah LaCombe<br>
 <strong>Version:</strong> 1.0  </p>
 <p><strong>System input:</strong> 9 V external → 5 V regulator (LM7805) → PIC18F16Q41 Curiosity Nano + sensors</p>
-<blockquote>
-<p><strong>IMPORTANT:</strong> The PIC18F16Q41 current in this document is an <strong>estimate (50 mA)</strong>. BEFORE final submission replace the PIC18F16Q41 / Curiosity Nano current with the MCU <strong>absolute maximum</strong> (and add the Curiosity Nano board draw if you are using the dev board). Use datasheet numbers for all final calculations.</p>
-</blockquote>
-<h2 id="section-a-all-major-components-estimates">Section A – All Major Components (estimates)</h2>
+<hr>
+<h2 id="section-a-all-major-components">Section A – All Major Components</h2>
 <table>
 <thead>
 <tr>
@@ -984,19 +982,19 @@
 <tbody>
 <tr>
 <td>Microcontroller (Curiosity Nano)</td>
-<td>PIC18F16Q41 Curiosity Nano (estimate)</td>
+<td>PIC18F16Q41 Curiosity Nano</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;"><strong>50 (estimate)</strong></td>
-<td style="text-align: right;">50</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">500</td>
 </tr>
 <tr>
 <td>Soil Moisture Sensor</td>
 <td>ST0160 Capacitive</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
 </tr>
 <tr>
 <td>Temperature / Humidity Sensor</td>
@@ -1011,8 +1009,8 @@
 <td>SEN0545 (UART)</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">40</td>
 </tr>
 <tr>
 <td>Indicator LED</td>
@@ -1028,24 +1026,22 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;"><strong>82 mA</strong></td>
+<td style="text-align: right;"><strong>557 mA</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Arithmetic used (digit-by-digit):</strong><br>
-50 + 10 = 60.<br>
-60 + 2 = 62.<br>
-62 + 10 = 72.<br>
-72 + 10 = 82.<br>
-→ <strong>Subtotal = 82 mA</strong>.</p>
+<p><strong>Arithmetic:</strong><br>
+500 + 5 + 2 + 40 + 10 = <strong>557 mA total subsystem current</strong></p>
+<hr>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
 <h3 id="5-v-rail">+5 V Rail</h3>
 <ul>
-<li>Subtotal (estimated) = <strong>82 mA</strong>.  </li>
-<li>Safety margin (25%) = 82 × 1.25 = 102.5 mA → round to <strong>103 mA</strong>.</li>
+<li>Subtotal = <strong>557 mA</strong>  </li>
+<li>Safety margin (25%) = 557 × 1.25 = <strong>696.25 mA</strong> → round to <strong>696 mA</strong></li>
 </ul>
-<p><strong>Arithmetic used (digit-by-digit):</strong><br>
-82 × 1.25 = 82 × (5/4) = (82 × 5) / 4 = 410 / 4 = 102.5 → round → <strong>103 mA</strong>.</p>
+<p><strong>Arithmetic:</strong><br>
+557 × 1.25 = (557 × 5) / 4 = 2785 / 4 = <strong>696.25 mA</strong></p>
+<hr>
 <h2 id="section-c-regulator-selection">Section C – Regulator Selection</h2>
 <table>
 <thead>
@@ -1060,28 +1056,32 @@
 <tbody>
 <tr>
 <td>LM7805 (linear)</td>
-<td style="text-align: right;">7 – 35 V</td>
-<td style="text-align: right;">1000</td>
-<td>Simple, low noise</td>
-<td>Inefficient: (9 V → 5 V) dissipates heat</td>
+<td style="text-align: right;">7 – 25 V</td>
+<td style="text-align: right;">1500</td>
+<td>Simple, low noise, easy to use</td>
+<td>Inefficient (9 V → 5 V drop causes heat; may need heat sink)</td>
 </tr>
 <tr>
 <td>UA78L05ACLP (TO-92, 100 mA max)</td>
 <td style="text-align: right;">7 – 35 V</td>
 <td style="text-align: right;">100</td>
 <td>Compact, low quiescent current</td>
-<td>Limited to ~100 mA output</td>
+<td>Limited to 100 mA output (too low for this system)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> LM7805 Linear Regulator (per your latest selection)<br>
-<strong>Rationale:</strong> With the current estimated at <strong>103 mA</strong> (including 25% margin), the LM7805 can supply the load with margin. If the final MCU + board current is below ~100 mA, the UA78L05ACLP is a compact alternative — otherwise stay with LM7805 to avoid current limits.</p>
-<p><strong>Regulator heat / dissipation check (digit-by-digit calculation):</strong><br>
-Voltage drop = 9 V − 5 V = 4 V.<br>
-Current drawn from input ≈ load current = 103 mA = 0.103 A.<br>
-Power dissipated = Voltage drop × Current = 4 V × 0.103 A.<br>
-Compute: 4 × 0.103 = 0.412 (watts).<br>
-→ <strong>Regulator dissipation ≈ 0.412 W</strong> (LM7805 can handle this without large heatsink; OK).</p>
+<p><strong>Choice:</strong> LM7805 Linear Regulator  </p>
+<p><strong>Rationale:</strong><br>
+With the total estimated current of <strong>696 mA</strong> (including a 25% margin), the LM7805 provides enough capacity and thermal headroom.<br>
+The UA78L05ACLP’s 100 mA limit is insufficient for this system.</p>
+<p><strong>Regulator heat / dissipation check:</strong><br>
+Voltage drop = 9 V − 5 V = 4 V<br>
+Load current = 696 mA = 0.696 A<br>
+Power dissipated = 4 V × 0.696 A = <strong>2.784 W</strong>  </p>
+<blockquote>
+<p><strong>Result:</strong> LM7805 will require a small heat sink at this power level.</p>
+</blockquote>
+<hr>
 <h2 id="section-d-external-power-source">Section D – External Power Source</h2>
 <table>
 <thead>
@@ -1096,23 +1096,23 @@ Compute: 4 × 0.103 = 0.412 (watts).<br>
 <tr>
 <td>Wall Adapter</td>
 <td style="text-align: right;">Generic 9 V DC Adapter</td>
-<td style="text-align: right;">9 V</td>
-<td style="text-align: right;">500 mA</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1000</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Required on +5 V rail (with 25% margin): <strong>103 mA</strong>.  </li>
-<li>Remaining capacity from 9 V / 500 mA adapter: 500 − 103 = <strong>397 mA</strong>.</li>
+<li>Required on +5 V rail (with 25% margin): <strong>696 mA</strong>  </li>
+<li>Remaining capacity: 1000 − 696 = <strong>304 mA</strong></li>
 </ul>
-<p><strong>Arithmetic used (digit-by-digit):</strong><br>
-500 − 103 = 397.</p>
-<p><strong>Battery option (example):</strong> 9 V alkaline ≈ 500 mAh (typical spec).<br>
-Battery life estimate (worst-case, all subsystems running):</p>
-<p>Battery life (hours) = Battery capacity (mAh) / Load (mA)<br>
-= 500 mAh / 103 mA = 4.854369… hours → round to <strong>4.85 hours</strong>.</p>
-<p><strong>Arithmetic used (digit-by-digit):</strong><br>
-500 ÷ 103 ≈ 4.854369 (rounded to 4.85 h).</p>
+<p><strong>Arithmetic:</strong><br>
+1000 − 696 = <strong>304 mA remaining capacity</strong></p>
+<p><strong>Battery option (example):</strong> 9 V alkaline ≈ 500 mAh (typical spec)  </p>
+<p>Battery life = 500 mAh / 696 mA = <strong>0.718 hours ≈ 43 minutes</strong></p>
+<blockquote>
+<p><strong>Result:</strong> Battery operation is not practical due to high current draw.</p>
+</blockquote>
+<hr>
 <h2 id="section-e-summary">Section E – Summary</h2>
 <table>
 <thead>
@@ -1124,43 +1124,42 @@ Battery life estimate (worst-case, all subsystems running):</p>
 <tbody>
 <tr>
 <td style="text-align: right;">Subtotal (estimated)</td>
-<td><strong>82 mA</strong></td>
+<td><strong>557 mA</strong></td>
 </tr>
 <tr>
-<td style="text-align: right;">Total required on 5 V rail (w/ 25% margin)</td>
-<td><strong>103 mA</strong></td>
+<td style="text-align: right;">Total required on 5 V rail (with 25% margin)</td>
+<td><strong>696 mA</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;">Regulator chosen</td>
-<td><strong>LM7805</strong> (linear)</td>
+<td><strong>LM7805 Linear Regulator</strong></td>
 </tr>
 <tr>
-<td style="text-align: right;">Regulator dissipation (9→5 V at 103 mA)</td>
-<td><strong>≈ 0.412 W</strong></td>
+<td style="text-align: right;">Regulator dissipation (9→5 V at 696 mA)</td>
+<td><strong>≈ 2.78 W (requires heat sink)</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;">External supply recommended</td>
-<td>9 V DC adapter, <strong>≥ 500 mA</strong></td>
+<td><strong>9 V DC adapter, ≥ 1 A</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;">Estimated battery life (9 V, 500 mAh)</td>
-<td><strong>~4.85 hours</strong></td>
+<td><strong>~0.72 hours (≈43 min)</strong></td>
 </tr>
 <tr>
-<td style="text-align: right;">Action required (finalization)</td>
-<td><strong>Replace MCU / Curiosity Nano estimate (50 mA) with absolute maximum values from PIC18F16Q41 datasheet and Curiosity Nano board docs. Recompute totals.</strong></td>
+<td style="text-align: right;">Action required</td>
+<td><strong>Verify PIC18F16Q41/Curiosity Nano current. If actual draw &lt;100 mA, you may use UA78L05ACLP. Otherwise stay with LM7805.</strong></td>
 </tr>
 </tbody>
 </table>
-<h3 id="notes-tips">Notes &amp; tips</h3>
+<hr>
+<h3 id="notes-tips">Notes &amp; Tips</h3>
 <ul>
-<li>If final MCU + board draw (with peripherals) is <strong>≤ 100 mA</strong>, you may choose the smaller <strong>UA78L05ACLP</strong> (TO-92) to save board space and quiescent current — but verify the UA78L05ACLP absolute max (100 mA) and that your final margin stays ≥ 25%.  </li>
-<li>If your final total (with margin) exceeds the UA78L05ACLP rating, <strong>use LM7805</strong> (or a small LDO rated &gt;200 mA) to avoid regulator saturation.  </li>
-<li>For the final power-budget PDF, replace the “estimate” values with datasheet values (especially MCU) and include links to each datasheet/product page in your GitHub page.</li>
+<li>Replace estimated MCU current (500 mA) with the <strong>actual maximum</strong> from the Microchip datasheet. The Curiosity Nano typically consumes <strong>&lt;50 mA</strong>, so your actual total current and power dissipation will be <strong>much lower</strong> once corrected.  </li>
+<li>When using the LM7805, ensure you attach a <strong>small heat sink</strong> if your real current exceeds ~300 mA.  </li>
+<li>Keep the 25% safety margin in all power budget calculations.  </li>
+<li>Add datasheet links for all components when finalizing your GitHub page before export.</li>
 </ul>
-<p>If you want, I can now:
-- Fetch and insert the <strong>PIC18F16Q41 absolute-max active current</strong> and the <strong>Curiosity Nano board idle/USB current</strong> from Microchip documents and update the <code>.md</code> automatically. (I already located the relevant Microchip documents and can extract numbers next if you want me to.)<br>
-- Or I can produce a downloadable ZIP containing both <code>ComponentSelection.md</code> (the version with your chosen parts) and this <code>PowerBudget.md</code>.</p>
 
 
 
