@@ -708,15 +708,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5v-rail" class="md-nav__link">
-    <span class="md-ellipsis">
-      +5V Rail
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#section-c-regulator-selection" class="md-nav__link">
     <span class="md-ellipsis">
       Section C – Regulator Selection
@@ -860,15 +851,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5v-rail" class="md-nav__link">
-    <span class="md-ellipsis">
-      +5V Rail
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#section-c-regulator-selection" class="md-nav__link">
     <span class="md-ellipsis">
       Section C – Regulator Selection
@@ -921,7 +903,7 @@
 <h1 id="power-budget">Power Budget</h1>
 <p><strong>Team Number:</strong> 101<br>
 <strong>Project Name:</strong> Smart Irrigation Subsystem Board<br>
-<strong>Team Member Names:</strong> Isaiah LaCombe<br>
+<strong>Team Member Names:</strong> Liam, Isaiah, and Raj<br>
 <strong>Version:</strong> 1.0  </p>
 <p><strong>System input:</strong> 9V external → 5V regulator (LM7805) → PIC18F16Q41 Curiosity Nano + sensors</p>
 <h2 id="section-a-all-major-components">Section A – All Major Components</h2>
@@ -980,13 +962,11 @@
 </tbody>
 </table>
 <p><strong>Arithmetic:</strong><br>
-500 + 5 + 2 + 40 = <strong>547mA total subsystem current</strong></p>
+500 + 5 + 2 + 40 = 547mA total subsystem current</p>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
-<h2 id="5v-rail">+5V Rail</h2>
-<ul>
-<li>Subtotal = <strong>547 mA</strong>  </li>
-<li>Safety margin (25%) = 547 × 1.25 = 683.75mA → round to 684mA</li>
-</ul>
+<p><strong>+5V Rail</strong>
+- Subtotal = 547 mA<br>
+- Safety margin (25%) = 547 × 1.25 = 683.75mA → round to 684mA</p>
 <p><strong>Arithmetic:</strong><br>
 547 × 1.25 = (547 × 5) / 4 = 2735 / 4 = 683.75mA</p>
 <h2 id="section-c-regulator-selection">Section C – Regulator Selection</h2>
@@ -1005,14 +985,14 @@
 <td>LM7805 (linear)</td>
 <td style="text-align: right;">7 – 25V</td>
 <td style="text-align: right;">1500</td>
-<td>Simple, low noise, easy to use</td>
+<td>Simple, low noise, handles high current</td>
 <td>Inefficient (9V → 5V drop causes heat under load; may need heat sink)</td>
 </tr>
 <tr>
 <td>UA78L05ACLP (TO-92, 100 mA max)</td>
 <td style="text-align: right;">7 – 35V</td>
 <td style="text-align: right;">100</td>
-<td>Compact, low quiescent current</td>
+<td>Compact, simple, low quiescent current</td>
 <td>Limited to 100mA output (too low for this system)</td>
 </tr>
 </tbody>
@@ -1047,7 +1027,7 @@ Power dissipated = 4V × 0.684A = 2.736W  </p>
 </table>
 <ul>
 <li>Required on +5V rail (with 25% margin): 684mA </li>
-<li>Remaining capacity: 1000 − 684 = 316 mA</li>
+<li>Remaining capacity: 3000 − 684 = 2316 mA</li>
 </ul>
 <p><strong>Arithmetic:</strong><br>
 1500 − 684 = 816mA remaining capacity before voltage Regulator Failure</p>
@@ -1055,9 +1035,7 @@ Power dissipated = 4V × 0.684A = 2.736W  </p>
 This is not used in the design but if it was:  </p>
 <p>Battery life = 3000 mAh / 50 mA = 60 hours (≈2.5 days) Reducing average current to 50 mA using sleep + duty cycling
 for maximum battery life.</p>
-<blockquote>
-<p><strong>Result:</strong> Battery operation is not practical due to high current draw.</p>
-</blockquote>
+<p><strong>Result:</strong> Battery operation is not practical due to a higher current draw.</p>
 <h2 id="section-e-summary">Section E – Summary</h2>
 <table>
 <thead>
