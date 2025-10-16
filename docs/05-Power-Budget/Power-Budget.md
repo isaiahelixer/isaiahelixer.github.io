@@ -4,9 +4,9 @@ title: Power Budget
 
 # Power Budget
 
-**Team Number:** —  
+**Team Number:** 101
 **Project Name:** Smart Irrigation Subsystem Board  
-**Team Member Names:** (Your Name)  
+**Team Member Names:** Isaiah LaCombe
 **Version:** 1.0  
 
 ---
@@ -15,12 +15,12 @@ title: Power Budget
 
 | **Component Name** | **Part Number / Example** | **Supply Voltage (V)** | **Qty.** | **Abs. Max Current (mA)** | **Total Current (mA)** |
 |--------------------|---------------------------|------------------------|-----------|---------------------------|------------------------|
-| Microcontroller | ATmega328P (Arduino Uno MCU) | 5 | 1 | 50 | 50 |
+| Microcontroller | PIC18F16Q41 Curiosity Nano) | 5 | 1 | 500 | 500 |
 | Soil Moisture Sensor | Capacitive v1.2 | 5 | 1 | 10 | 10 |
 | Temperature/Humidity Sensor | SHT31-D | 5 | 1 | 2 | 2 |
 | Rain Sensor | YL-83 | 5 | 1 | 10 | 10 |
 | Indicator LED | Generic | 5 | 1 | 10 | 10 |
-| **Subtotal** | | | | | **82 mA** |
+| **Subtotal** | | | | | **532 mA** |
 
 ---
 
