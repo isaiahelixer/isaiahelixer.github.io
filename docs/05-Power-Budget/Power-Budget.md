@@ -6,7 +6,7 @@ title: Power Budget
 
 **Team Number:** 101  
 **Project Name:** Smart Irrigation Subsystem Board  
-**Team Member Names:** Isaiah LaCombe  
+**Team Member Names:** Liam, Isaiah, and Raj  
 **Version:** 1.0  
 
 **System input:** 9V external → 5V regulator (LM7805) → PIC18F16Q41 Curiosity Nano + sensors
@@ -22,12 +22,12 @@ title: Power Budget
 | **Subtotal** | | | | | **547mA** |
 
 **Arithmetic:**  
-500 + 5 + 2 + 40 = **547mA total subsystem current**
+500 + 5 + 2 + 40 = 547mA total subsystem current
 
 ## Section B – Power Rails
 
-## +5V Rail
-- Subtotal = **547 mA**  
+**+5V Rail**
+- Subtotal = 547 mA  
 - Safety margin (25%) = 547 × 1.25 = 683.75mA → round to 684mA
 
 **Arithmetic:**  
@@ -37,8 +37,8 @@ title: Power Budget
 
 | **Regulator Option** | **Input Range (V)** | **Max Output (mA)** | **Pros** | **Cons** |
 |----------------------|---------------------:|--------------------:|----------|---------|
-| LM7805 (linear) | 7 – 25V | 1500 | Simple, low noise, easy to use | Inefficient (9V → 5V drop causes heat under load; may need heat sink) |
-| UA78L05ACLP (TO-92, 100 mA max) | 7 – 35V | 100 | Compact, low quiescent current | Limited to 100mA output (too low for this system) |
+| LM7805 (linear) | 7 – 25V | 1500 | Simple, low noise, handles high current | Inefficient (9V → 5V drop causes heat under load; may need heat sink) |
+| UA78L05ACLP (TO-92, 100 mA max) | 7 – 35V | 100 | Compact, simple, low quiescent current | Limited to 100mA output (too low for this system) |
 
 **Choice:** LM7805 Linear Regulator  
 
@@ -60,7 +60,7 @@ Power dissipated = 4V × 0.684A = 2.736W
 | Wall Adapter | Generic 9V DC Adapter | 9 | 3000 |
 
 - Required on +5V rail (with 25% margin): 684mA 
-- Remaining capacity: 1000 − 684 = 316 mA
+- Remaining capacity: 3000 − 684 = 2316 mA
 
 **Arithmetic:**  
 1500 − 684 = 816mA remaining capacity before voltage Regulator Failure
@@ -71,7 +71,7 @@ This is not used in the design but if it was:
 Battery life = 3000 mAh / 50 mA = 60 hours (≈2.5 days) Reducing average current to 50 mA using sleep + duty cycling
 for maximum battery life.
 
-> **Result:** Battery operation is not practical due to high current draw.
+**Result:** Battery operation is not practical due to a higher current draw.
 
 ## Section E – Summary
 
