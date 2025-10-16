@@ -72,5 +72,5 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 **Component:** PIC18F16Q41 Curiosity Nano  
 **Supply:** 5 V from LM7805 Regulator  
 
-**Rationale:** Chosen for its low-power operation, built-in ADC channels for analog sensor inputs, I²C and UART support for digital sensors, and native compatibility with Microchip’s Curiosity Nano ecosystem for fast development and debugging.
+**Rationale:** Used for its low-power operation, built-in ADC channels for analog sensor inputs, I²C and UART support for digital sensors, and fast development and debugging.
 
