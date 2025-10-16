@@ -19,9 +19,9 @@ Includes a **PIC18F16Q41 Curiosity Nano microcontroller** connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
-| ![](SEN0114.png)<br>**Option 1:** SEN0114 Soil Moisture Sensor Module<br>$ — each<br>[link to product](URL) | *Simple analog output*<br>*Low cost*<br>*Compact design* | *Corrodes over time if left in soil*<br>*Requires calibration for accuracy* |
-| ![](ST0160.png)<br>**Option 2:** ST0160 Capacitive Soil Moisture Sensor V2.0<br>$ — each<br>[link to product](URL) | *No corrosion (capacitive)*<br>*Stable analog readings*<br>*Low power consumption* | *More expensive than SEN0114*<br>*Slightly larger PCB footprint* |
-| ![](Industrial_Soil.png)<br>**Option 3:** Industrial Soil Moisture & Temperature Sensor (4-20 mA Output)<br>$ — each<br>[link to product](URL) | *Industrial-grade durability*<br>*Includes temperature output*<br>*Long-term outdoor reliability* | *Higher cost*<br>*Requires analog-to-current interface circuitry* |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/287/217/SEN0114_sml.jpg)<br>**Option 1:** SEN0114 Soil Moisture Sensor Module<br>$ — each<br>[link to product](URL) | *Simple analog output*<br>*Low cost*<br>*Compact design* | *Corrodes over time if left in soil*<br>*Requires calibration for accuracy* |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/169/089/MFG_ST0160_sml%28200x200%29.jpg)<br>**Option 2:** ST0160 Capacitive Soil Moisture Sensor V2.0<br>$ — each<br>[link to product](URL) | *No corrosion (capacitive)*<br>*Stable analog readings*<br>*Low power consumption* | *More expensive than SEN0114*<br>*Slightly larger PCB footprint* |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg)<br>**Option 3:** Industrial Soil Moisture & Temperature Sensor (4-20 mA Output)<br>$ — each<br>[link to product](URL) | *Industrial-grade durability*<br>*Includes temperature output*<br>*Long-term outdoor reliability* | *Higher cost*<br>*Requires analog-to-current interface circuitry* |
 
 **Choice:** Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  
 
@@ -35,9 +35,9 @@ Includes a **PIC18F16Q41 Curiosity Nano microcontroller** connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
-| ![](DHT22.png)<br>**Option 1:** DHT22 / AM2302 Sensor<br>$ — each<br>[link to product](URL) | *Low cost*<br>*Simple one-wire interface*<br>*Good community support* | *Slow sampling rate*<br>*Limited accuracy (±2 °C, ±5 % RH)* |
-| ![](SHT31.png)<br>**Option 2:** Adafruit Sensirion SHT31-D Sensor (I²C)<br>$ — each<br>[link to product](URL) | *High accuracy (±0.3 °C, ±2 % RH)*<br>*I²C communication*<br>*Fast response time* | *Moderate cost*<br>*Requires I²C pins on MCU* |
-| ![](SHT45.png)<br>**Option 3:** SHT45 Precision Temperature Humidity Module<br>$ — each<br>[link to product](URL) | *Very high precision (±0.1 °C, ±1 % RH)*<br>*Low power consumption*<br>*Compact form factor* | *Higher price*<br>*May require fine-pitch connector or adapter* |
+| ![](https://m.media-amazon.com/images/I/51J9ha5fZKL._SX425_.jpg)<br>**Option 1:** DHT22 / AM2302 Sensor<br>$ — each<br>[link to product](URL) | *Low cost*<br>*Simple one-wire interface*<br>*Good community support* | *Slow sampling rate*<br>*Limited accuracy (±2 °C, ±5 % RH)* |
+| ![](https://cdn-shop.adafruit.com/970x728/2857-03.jpg)<br>**Option 2:** Adafruit Sensirion SHT31-D Sensor (I²C)<br>$ — each<br>[link to product](URL) | *High accuracy (±0.3 °C, ±2 % RH)*<br>*I²C communication*<br>*Fast response time* | *Moderate cost*<br>*Requires I²C pins on MCU* |
+| ![](https://m.media-amazon.com/images/I/71Z1V1E1iNL._SX425_.jpg)<br>**Option 3:** SHT45 Precision Temperature Humidity Module<br>$ — each<br>[link to product](URL) | *Very high precision (±0.1 °C, ±1 % RH)*<br>*Low power consumption*<br>*Compact form factor* | *Higher price*<br>*May require fine-pitch connector or adapter* |
 
 **Choice:** Option 2 — Adafruit Sensirion SHT31-D Sensor  
 
@@ -51,9 +51,9 @@ Includes a **PIC18F16Q41 Curiosity Nano microcontroller** connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
-| ![](ST0247.png)<br>**Option 1:** ST0247 Raindrop Detection Sensor Module<br>$ — each<br>[link to product](URL) | *Low cost and easy to interface*<br>*Analog and digital outputs* | *Susceptible to corrosion and false positives*<br>*Not quantitative* |
-| ![](SEN0545.png)<br>**Option 2:** SEN0545 Rain Sensor (UART Output)<br>$ — each<br>[link to product](URL) | *Digital UART interface*<br>*Corrosion-resistant coating*<br>*Stable signal processing built-in* | *Slightly higher cost*<br>*Requires UART parsing logic* |
-| ![](OpticalRain.png)<br>**Option 3:** Optical Rain Gauge Sensor (RS485 Pulse Output)<br>$ — each<br>[link to product](URL) | *Industrial precision and long lifetime*<br>*Non-contact optical detection* | *High price*<br>*Requires RS485 interface and external housing* |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/169/089/MFG_ST0247_sml%28200x200%29.jpg)<br>**Option 1:** ST0247 Raindrop Detection Sensor Module<br>$ — each<br>[link to product](URL) | *Low cost and easy to interface*<br>*Analog and digital outputs* | *Susceptible to corrosion and false positives*<br>*Not quantitative* |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/003/217/526/MFG_SEN0545_sml%28200x200%29.jpg)<br>**Option 2:** SEN0545 Rain Sensor (UART Output)<br>$ — each<br>[link to product](URL) | *Digital UART interface*<br>*Corrosion-resistant coating*<br>*Stable signal processing built-in* | *Slightly higher cost*<br>*Requires UART parsing logic* |
+| ![](https://ae-pic-a1.aliexpress-media.com/kf/Sc002d2b6c540434aa2b6636900dfaa44D.jpg_640x640q75.jpg_.avif)<br>**Option 3:** Optical Rain Gauge Sensor (RS485 Pulse Output)<br>$ — each<br>[link to product](URL) | *Industrial precision and long lifetime*<br>*Non-contact optical detection* | *High price*<br>*Requires RS485 interface and external housing* |
 
 **Choice:** Option 2 — SEN0545 Rain Sensor (UART Output)  
 
@@ -67,8 +67,8 @@ Includes a **PIC18F16Q41 Curiosity Nano microcontroller** connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
-| ![](LM7805.png)<br>**Option 1:** LM7805 Linear Regulator<br>$ — each<br>[link to product](URL) | *Simple design*<br>*Low noise*<br>*Stable 5 V output* | *Inefficient when dropping 9 V to 5 V*<br>*Generates heat at higher currents* |
-| ![](LM2596.png)<br>**Option 2:** LM2596 Buck Converter<br>$ — each<br>[link to product](URL) | *High efficiency*<br>*Cooler operation*<br>*Can handle higher currents* | *Slight switching noise*<br>*More complex layout* |
+| ![]([LM7805.png](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg))<br>**Option 1:** LM7805 Linear Regulator<br>$ — each<br>[link to product](URL) | *Simple design*<br>*Low noise*<br>*Stable 5 V output* | *Inefficient when dropping 9 V to 5 V*<br>*Generates heat at higher currents* |
+| ![]([LM2596.png](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg))<br>**Option 2:** UA78L05ACLP <br>$ — each<br>[link to product](URL) | *High efficiency*<br>*Cooler operation*<br>*Can handle higher currents* | *Slight switching noise*<br>*More complex layout* |
 
 **Choice:** Option 1 — LM7805 Linear Regulator  
 
