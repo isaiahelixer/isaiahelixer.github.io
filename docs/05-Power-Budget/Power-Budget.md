@@ -4,97 +4,102 @@ title: Power Budget
 
 # Power Budget
 
-**Team Number:** —  
+**Team Number:** 101  
 **Project Name:** Smart Irrigation Subsystem Board  
-**Team Member Names:** (Your Name)  
+**Team Member Names:** Isaiah LaCombe  
 **Version:** 1.0  
 
 **System input:** 9 V external → 5 V regulator (LM7805) → PIC18F16Q41 Curiosity Nano + sensors
 
-> **IMPORTANT:** The PIC18F16Q41 current in this document is an **estimate (50 mA)**. BEFORE final submission replace the PIC18F16Q41 / Curiosity Nano current with the MCU **absolute maximum** (and add the Curiosity Nano board draw if you are using the dev board). Use datasheet numbers for all final calculations.
+---
 
-## Section A – All Major Components (estimates)
+## Section A – All Major Components 
 
 | **Component Name** | **Part / Example** | **Supply Voltage (V)** | **Qty.** | **Abs. Max Current (mA)** | **Total Current (mA)** |
 |--------------------|--------------------|------------------------:|--------:|--------------------------:|-----------------------:|
-| Microcontroller (Curiosity Nano) | PIC18F16Q41 Curiosity Nano (estimate) | 5 | 1 | **50 (estimate)** | 50 |
-| Soil Moisture Sensor | ST0160 Capacitive | 5 | 1 | 10 | 10 |
+| Microcontroller (Curiosity Nano) | PIC18F16Q41 Curiosity Nano | 5 | 1 | 500 | 500 |
+| Soil Moisture Sensor | ST0160 Capacitive | 5 | 1 | 5 | 5 |
 | Temperature / Humidity Sensor | SHT31-D | 5 | 1 | 2 | 2 |
-| Rain Sensor | SEN0545 (UART) | 5 | 1 | 10 | 10 |
+| Rain Sensor | SEN0545 (UART) | 5 | 1 | 40 | 40 |
 | Indicator LED | Status LED (with resistor) | 5 | 1 | 10 | 10 |
-| **Subtotal (estimated)** | | | | | **82 mA** |
+| **Subtotal (estimated)** | | | | | **557 mA** |
 
-**Arithmetic used (digit-by-digit):**  
-50 + 10 = 60.  
-60 + 2 = 62.  
-62 + 10 = 72.  
-72 + 10 = 82.  
-→ **Subtotal = 82 mA**.
+**Arithmetic:**  
+500 + 5 + 2 + 40 + 10 = **557 mA total subsystem current**
+
+---
 
 ## Section B – Power Rails
 
 ### +5 V Rail
-- Subtotal (estimated) = **82 mA**.  
-- Safety margin (25%) = 82 × 1.25 = 102.5 mA → round to **103 mA**.
+- Subtotal = **557 mA**  
+- Safety margin (25%) = 557 × 1.25 = **696.25 mA** → round to **696 mA**
 
-**Arithmetic used (digit-by-digit):**  
-82 × 1.25 = 82 × (5/4) = (82 × 5) / 4 = 410 / 4 = 102.5 → round → **103 mA**.
+**Arithmetic:**  
+557 × 1.25 = (557 × 5) / 4 = 2785 / 4 = **696.25 mA**
+
+---
 
 ## Section C – Regulator Selection
 
 | **Regulator Option** | **Input Range (V)** | **Max Output (mA)** | **Pros** | **Cons** |
 |----------------------|---------------------:|--------------------:|----------|---------|
-| LM7805 (linear) | 7 – 35 V | 1000 | Simple, low noise | Inefficient: (9 V → 5 V) dissipates heat |
-| UA78L05ACLP (TO-92, 100 mA max) | 7 – 35 V | 100 | Compact, low quiescent current | Limited to ~100 mA output |
+| LM7805 (linear) | 7 – 25 V | 1500 | Simple, low noise, easy to use | Inefficient (9 V → 5 V drop causes heat; may need heat sink) |
+| UA78L05ACLP (TO-92, 100 mA max) | 7 – 35 V | 100 | Compact, low quiescent current | Limited to 100 mA output (too low for this system) |
 
-**Choice:** LM7805 Linear Regulator (per your latest selection)  
-**Rationale:** With the current estimated at **103 mA** (including 25% margin), the LM7805 can supply the load with margin. If the final MCU + board current is below ~100 mA, the UA78L05ACLP is a compact alternative — otherwise stay with LM7805 to avoid current limits.
+**Choice:** LM7805 Linear Regulator  
 
-**Regulator heat / dissipation check (digit-by-digit calculation):**  
-Voltage drop = 9 V − 5 V = 4 V.  
-Current drawn from input ≈ load current = 103 mA = 0.103 A.  
-Power dissipated = Voltage drop × Current = 4 V × 0.103 A.  
-Compute: 4 × 0.103 = 0.412 (watts).  
-→ **Regulator dissipation ≈ 0.412 W** (LM7805 can handle this without large heatsink; OK).
+**Rationale:**  
+With the total estimated current of **696 mA** (including a 25% margin), the LM7805 provides enough capacity and thermal headroom.  
+The UA78L05ACLP’s 100 mA limit is insufficient for this system.
+
+**Regulator heat / dissipation check:**  
+Voltage drop = 9 V − 5 V = 4 V  
+Load current = 696 mA = 0.696 A  
+Power dissipated = 4 V × 0.696 A = **2.784 W**  
+
+> **Result:** LM7805 will require a small heat sink at this power level.
+
+---
 
 ## Section D – External Power Source
 
 | **Power Source** | **Example** | **Output Voltage (V)** | **Max Current (mA)** |
 |------------------|-------------:|------------------------:|---------------------:|
-| Wall Adapter | Generic 9 V DC Adapter | 9 V | 500 mA |
+| Wall Adapter | Generic 9 V DC Adapter | 9 | 1000 |
 
-- Required on +5 V rail (with 25% margin): **103 mA**.  
-- Remaining capacity from 9 V / 500 mA adapter: 500 − 103 = **397 mA**.
+- Required on +5 V rail (with 25% margin): **696 mA**  
+- Remaining capacity: 1000 − 696 = **304 mA**
 
-**Arithmetic used (digit-by-digit):**  
-500 − 103 = 397.
+**Arithmetic:**  
+1000 − 696 = **304 mA remaining capacity**
 
-**Battery option (example):** 9 V alkaline ≈ 500 mAh (typical spec).  
-Battery life estimate (worst-case, all subsystems running):
+**Battery option (example):** 9 V alkaline ≈ 500 mAh (typical spec)  
 
-Battery life (hours) = Battery capacity (mAh) / Load (mA)  
-= 500 mAh / 103 mA = 4.854369… hours → round to **4.85 hours**.
+Battery life = 500 mAh / 696 mA = **0.718 hours ≈ 43 minutes**
 
-**Arithmetic used (digit-by-digit):**  
-500 ÷ 103 ≈ 4.854369 (rounded to 4.85 h).
+> **Result:** Battery operation is not practical due to high current draw.
+
+---
 
 ## Section E – Summary
 
 | **Item** | **Value / Action** |
 |---------:|--------------------|
-| Subtotal (estimated) | **82 mA** |
-| Total required on 5 V rail (w/ 25% margin) | **103 mA** |
-| Regulator chosen | **LM7805** (linear) |
-| Regulator dissipation (9→5 V at 103 mA) | **≈ 0.412 W** |
-| External supply recommended | 9 V DC adapter, **≥ 500 mA** |
-| Estimated battery life (9 V, 500 mAh) | **~4.85 hours** |
-| Action required (finalization) | **Replace MCU / Curiosity Nano estimate (50 mA) with absolute maximum values from PIC18F16Q41 datasheet and Curiosity Nano board docs. Recompute totals.** |
+| Subtotal (estimated) | **557 mA** |
+| Total required on 5 V rail (with 25% margin) | **696 mA** |
+| Regulator chosen | **LM7805 Linear Regulator** |
+| Regulator dissipation (9→5 V at 696 mA) | **≈ 2.78 W (requires heat sink)** |
+| External supply recommended | **9 V DC adapter, ≥ 1 A** |
+| Estimated battery life (9 V, 500 mAh) | **~0.72 hours (≈43 min)** |
+| Action required | **Verify PIC18F16Q41/Curiosity Nano current. If actual draw <100 mA, you may use UA78L05ACLP. Otherwise stay with LM7805.** |
 
-### Notes & tips
-- If final MCU + board draw (with peripherals) is **≤ 100 mA**, you may choose the smaller **UA78L05ACLP** (TO-92) to save board space and quiescent current — but verify the UA78L05ACLP absolute max (100 mA) and that your final margin stays ≥ 25%.  
-- If your final total (with margin) exceeds the UA78L05ACLP rating, **use LM7805** (or a small LDO rated >200 mA) to avoid regulator saturation.  
-- For the final power-budget PDF, replace the “estimate” values with datasheet values (especially MCU) and include links to each datasheet/product page in your GitHub page.
+---
 
-If you want, I can now:
-- Fetch and insert the **PIC18F16Q41 absolute-max active current** and the **Curiosity Nano board idle/USB current** from Microchip documents and update the `.md` automatically. (I already located the relevant Microchip documents and can extract numbers next if you want me to.)  
-- Or I can produce a downloadable ZIP containing both `ComponentSelection.md` (the version with your chosen parts) and this `PowerBudget.md`.
+### Notes & Tips
+- Replace estimated MCU current (500 mA) with the **actual maximum** from the Microchip datasheet. The Curiosity Nano typically consumes **<50 mA**, so your actual total current and power dissipation will be **much lower** once corrected.  
+- When using the LM7805, ensure you attach a **small heat sink** if your real current exceeds ~300 mA.  
+- Keep the 25% safety margin in all power budget calculations.  
+- Add datasheet links for all components when finalizing your GitHub page before export.
+
+
