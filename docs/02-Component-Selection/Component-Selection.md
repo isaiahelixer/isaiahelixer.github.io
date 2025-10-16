@@ -23,7 +23,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 **Choice:** Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  
 
-**Rationale:** Provides corrosion-free sensing with stable analog output, ideal for long-term moisture monitoring in outdoor environments while maintaining low cost and simple integration with the PIC ADC.
+**Rationale:** Provides much more corrosion-free sensing with stable analog output and is good for long-term moisture monitoring in outdoor environments while maintaining low cost and simple integration with the PIC ADC.
 
 ## Temperature & Humidity Sensors
 
@@ -37,9 +37,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 **Choice:** Option 2 — Adafruit Sensirion SHT31-D Sensor  
 
-**Rationale:** Offers a balance between precision, power efficiency, and integration simplicity using I²C communication, aligning well with the PIC18F16Q41’s peripheral support.
-
----
+**Rationale:** Offers a balance between precision, power efficiency, and integration simplicity using I²C communication working well with the PIC18F16Q41’s peripheral support.
 
 ## Rain Water Sensors
 
@@ -53,9 +51,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 **Choice:** Option 2 — SEN0545 Rain Sensor (UART Output)  
 
-**Rationale:** Provides reliable digital output with minimal maintenance and better environmental resistance than basic analog boards, while avoiding the complexity and cost of industrial RS485 systems.
-
----
+**Rationale:** Provides reliable digital output with minimal maintenance and better environmental resistance than basic analog boards and avoiding the complexity and cost of industrial RS485 systems.
 
 ## Voltage Regulator 
 
@@ -68,9 +64,8 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 **Choice:** Option 1 — LM7805 Linear Regulator  
 
-**Rationale:** System current is low so the LM7805 offers sufficient efficiency with low noise, ideal for stable analog measurements on the sensor inputs.
+**Rationale:** System current is moderate so the LM7805 offers sufficient efficiency with low noise, needed for stable analog measurements on the sensor inputs.
 
----
 
 ## Microcontroller
 
