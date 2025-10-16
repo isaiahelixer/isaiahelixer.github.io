@@ -713,9 +713,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#section-a-all-major-components" class="md-nav__link">
+  <a href="#section-a-all-major-components-estimates" class="md-nav__link">
     <span class="md-ellipsis">
-      Section A – All Major Components
+      Section A – All Major Components (estimates)
     </span>
   </a>
   
@@ -769,6 +769,21 @@
       Section E – Summary
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Section E – Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-finalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to finalize
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -871,9 +886,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#section-a-all-major-components" class="md-nav__link">
+  <a href="#section-a-all-major-components-estimates" class="md-nav__link">
     <span class="md-ellipsis">
-      Section A – All Major Components
+      Section A – All Major Components (estimates)
     </span>
   </a>
   
@@ -928,6 +943,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Section E – Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-finalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to finalize
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -954,165 +984,185 @@
 
 
 <h1 id="power-budget">Power Budget</h1>
-<p><strong>Team Number:</strong> 101
+<p><strong>Team Number:</strong> —<br>
 <strong>Project Name:</strong> Smart Irrigation Subsystem Board<br>
-<strong>Team Member Names:</strong> Isaiah LaCombe
+<strong>Team Member Names:</strong> (Your Name)<br>
 <strong>Version:</strong> 1.0  </p>
+<p><strong>System input:</strong> 9 V external → 5 V regulator → PIC18F16Q41 Curiosity Nano + sensors</p>
+<blockquote>
+<p>NOTE: The current values below are <strong>estimates</strong>. For the final submission you <strong>must</strong> replace the MCU and module currents with the <em>absolute maximum current</em> values from the PIC18F16Q41 datasheet and Curiosity Nano documentation.</p>
+</blockquote>
 <hr>
-<h2 id="section-a-all-major-components">Section A – All Major Components</h2>
+<h2 id="section-a-all-major-components-estimates">Section A – All Major Components (estimates)</h2>
 <table>
 <thead>
 <tr>
 <th><strong>Component Name</strong></th>
-<th><strong>Part Number / Example</strong></th>
-<th><strong>Supply Voltage (V)</strong></th>
-<th><strong>Qty.</strong></th>
-<th><strong>Abs. Max Current (mA)</strong></th>
-<th><strong>Total Current (mA)</strong></th>
+<th><strong>Part / Example</strong></th>
+<th style="text-align: right;"><strong>Supply Voltage (V)</strong></th>
+<th style="text-align: right;"><strong>Qty.</strong></th>
+<th style="text-align: right;"><strong>Abs. Max Current (mA)</strong></th>
+<th style="text-align: right;"><strong>Total Current (mA)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Microcontroller</td>
-<td>PIC18F16Q41 Curiosity Nano)</td>
-<td>5</td>
-<td>1</td>
-<td>500</td>
-<td>500</td>
+<td>Microcontroller (Curiosity Nano)</td>
+<td>PIC18F16Q41 Curiosity Nano (estimate)</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;"><strong>50 (estimate)</strong></td>
+<td style="text-align: right;">50</td>
 </tr>
 <tr>
 <td>Soil Moisture Sensor</td>
 <td>Capacitive v1.2</td>
-<td>5</td>
-<td>1</td>
-<td>10</td>
-<td>10</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
 </tr>
 <tr>
 <td>Temperature/Humidity Sensor</td>
 <td>SHT31-D</td>
-<td>5</td>
-<td>1</td>
-<td>2</td>
-<td>2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
 </tr>
 <tr>
 <td>Rain Sensor</td>
-<td>YL-83</td>
-<td>5</td>
-<td>1</td>
-<td>10</td>
-<td>10</td>
+<td>YL-83 analog module</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
 </tr>
 <tr>
 <td>Indicator LED</td>
-<td>Generic</td>
-<td>5</td>
-<td>1</td>
-<td>10</td>
-<td>10</td>
+<td>Generic status LED</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
 </tr>
 <tr>
-<td><strong>Subtotal</strong></td>
+<td><strong>Subtotal (estimated)</strong></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><strong>532 mA</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>82 mA</strong></td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>Replace</strong> the "Microcontroller" row value (50 mA) with the PIC18F16Q41 <strong>absolute maximum</strong> current from Microchip (and include Curiosity Nano board consumption if you plan to use the development board rather than the bare MCU).</p>
+</blockquote>
 <hr>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
 <h3 id="5-v-rail">+5 V Rail</h3>
-<p>Total current = 82 mA<br>
-Safety margin (25%) = 82 × 1.25 = <strong>103 mA</strong></p>
+<ul>
+<li>Subtotal (estimated) = <strong>82 mA</strong>  </li>
+<li>Safety margin (25%) → 82 × 1.25 = <strong>102.5 mA</strong> → round to <strong>103 mA</strong></li>
+</ul>
 <hr>
 <h2 id="section-c-regulator-selection">Section C – Regulator Selection</h2>
 <table>
 <thead>
 <tr>
 <th><strong>Regulator Option</strong></th>
-<th><strong>Voltage Input Range</strong></th>
-<th><strong>Max Output Current (mA)</strong></th>
+<th style="text-align: right;"><strong>Input Range (V)</strong></th>
+<th style="text-align: right;"><strong>Max Output (mA)</strong></th>
 <th><strong>Pros</strong></th>
 <th><strong>Cons</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>LM7805 Linear Regulator</td>
-<td>7 – 35 V</td>
-<td>1000</td>
-<td>Simple, low noise</td>
-<td>Inefficient drop (9 → 5 V = 4 V × I loss)</td>
+<td>LM7805 (linear)</td>
+<td style="text-align: right;">7 – 35 V</td>
+<td style="text-align: right;">1000</td>
+<td>Low noise, simple</td>
+<td>Inefficient (dissipates (9–5)V × I)</td>
 </tr>
 <tr>
-<td>LM2596 Buck Converter</td>
-<td>6 – 40 V</td>
-<td>2000</td>
-<td>High efficiency</td>
-<td>Slight switching noise</td>
+<td>LM2596 (buck)</td>
+<td style="text-align: right;">6 – 40 V</td>
+<td style="text-align: right;">2000</td>
+<td>High efficiency, low heat</td>
+<td>Switching noise; filter may be required</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> LM7805 Linear Regulator<br>
-<strong>Rationale:</strong> For a total current near 100 mA, heat dissipation (≈ 0.4 W) is acceptable, and the clean output minimizes noise on analog sensor signals.</p>
+<strong>Rationale:</strong> With estimated 103 mA load the dissipation is ≈ 4 V × 0.103 A = 0.412 W — acceptable without a large heatsink. LM7805 gives a clean rail which benefits analog readings. If measured final current &gt; 200–300 mA, switch to a buck regulator.</p>
 <hr>
 <h2 id="section-d-external-power-source">Section D – External Power Source</h2>
 <table>
 <thead>
 <tr>
 <th><strong>Power Source</strong></th>
-<th><strong>Part Number / Example</strong></th>
-<th><strong>Input Range (V)</strong></th>
-<th><strong>Output Voltage (V)</strong></th>
-<th><strong>Max Current (mA)</strong></th>
+<th style="text-align: right;"><strong>Example</strong></th>
+<th style="text-align: right;"><strong>Output Voltage (V)</strong></th>
+<th style="text-align: right;"><strong>Max Current (mA)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Plug-in Wall Adapter</td>
-<td>Generic 9 V DC Adapter</td>
-<td>100–240 VAC</td>
-<td>9 V DC</td>
-<td>500</td>
+<td>Wall Adapter</td>
+<td style="text-align: right;">Generic 9 V DC Adapter</td>
+<td style="text-align: right;">9 V</td>
+<td style="text-align: right;">500 mA</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Connected Regulator:</strong> LM7805<br>
-<strong>Required Current:</strong> 103 mA (with margin)<br>
-<strong>Remaining Current Available:</strong> ≈ 397 mA  </p>
-<p>If powered by a 9 V 500 mAh battery:<br>
-Battery Life = 500 mAh / 103 mA ≈ <strong>4.8 hours (worst-case)</strong></p>
+<ul>
+<li>Required on +5 V rail (with margin): <strong>103 mA</strong>  </li>
+<li>Remaining capacity on 9 V adapter (500 mA): ≈ <strong>397 mA</strong></li>
+</ul>
+<p><strong>Battery option example:</strong> 9 V alkaline ~500 mAh<br>
+- Battery life ≈ Capacity / Load = 500 mAh / 103 mA ≈ <strong>4.85 hours</strong> (worst-case)</p>
 <hr>
 <h2 id="section-e-summary">Section E – Summary</h2>
 <table>
 <thead>
 <tr>
-<th><strong>Item</strong></th>
-<th><strong>Value</strong></th>
+<th style="text-align: right;"><strong>Item</strong></th>
+<th><strong>Value / Action</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Total Required on 5 V Rail (w/ 25% margin)</td>
-<td>103 mA</td>
+<td style="text-align: right;">Total required on 5 V rail (w/ 25% margin)</td>
+<td><strong>103 mA</strong> (estimate)</td>
 </tr>
 <tr>
-<td>Regulator Choice</td>
+<td style="text-align: right;">Regulator chosen (example)</td>
 <td>LM7805 Linear Regulator</td>
 </tr>
 <tr>
-<td>External Power Source</td>
-<td>9 V Wall Adapter (≥ 500 mA)</td>
+<td style="text-align: right;">External supply</td>
+<td>9 V wall adapter ≥ 500 mA recommended</td>
 </tr>
 <tr>
-<td>Estimated Battery Life (9 V 500 mAh)</td>
-<td>~4.8 hours</td>
+<td style="text-align: right;">Estimated battery life (9 V, 500 mAh)</td>
+<td>~4.8 hours (worst-case)</td>
+</tr>
+<tr>
+<td style="text-align: right;">Action required</td>
+<td><strong>Replace MCU/Curiosity Nano current estimate with absolute max values from datasheet</strong></td>
 </tr>
 </tbody>
 </table>
+<hr>
+<h3 id="how-to-finalize">How to finalize</h3>
+<ol>
+<li>Open the PIC18F16Q41 datasheet / Curiosity Nano documentation.  </li>
+<li>Find absolute maximum current values for the MCU (active modes, peripherals enabled) and add any extra consumption from the Curiosity Nano board (USB interface, LEDs, onboard regulator) if you plan to use the development board.  </li>
+<li>Replace the estimate in Section A and recompute totals in Sections B–E.  </li>
+<li>If final current &gt; ~200–300 mA, switch the regulator choice to a buck converter and recalculate heat and battery life.</li>
+</ol>
 
 
 
