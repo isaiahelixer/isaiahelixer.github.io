@@ -966,7 +966,6 @@
 <strong>Team Member Names:</strong> Isaiah LaCombe<br>
 <strong>Version:</strong> 1.0  </p>
 <p><strong>System input:</strong> 9 V external → 5 V regulator (LM7805) → PIC18F16Q41 Curiosity Nano + sensors</p>
-<hr>
 <h2 id="section-a-all-major-components">Section A – All Major Components</h2>
 <table>
 <thead>
@@ -1013,35 +1012,25 @@
 <td style="text-align: right;">40</td>
 </tr>
 <tr>
-<td>Indicator LED</td>
-<td>Status LED (with resistor)</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">10</td>
-</tr>
-<tr>
 <td><strong>Subtotal (estimated)</strong></td>
 <td></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;"><strong>557 mA</strong></td>
+<td style="text-align: right;"><strong>547 mA</strong></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Arithmetic:</strong><br>
-500 + 5 + 2 + 40 + 10 = <strong>557 mA total subsystem current</strong></p>
-<hr>
+500 + 5 + 2 + 40 = <strong>547 mA total subsystem current</strong></p>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
 <h3 id="5-v-rail">+5 V Rail</h3>
 <ul>
-<li>Subtotal = <strong>557 mA</strong>  </li>
-<li>Safety margin (25%) = 557 × 1.25 = <strong>696.25 mA</strong> → round to <strong>696 mA</strong></li>
+<li>Subtotal = <strong>547 mA</strong>  </li>
+<li>Safety margin (25%) = 547 × 1.25 = <strong>683.75 mA</strong> → round to <strong>684 mA</strong></li>
 </ul>
 <p><strong>Arithmetic:</strong><br>
-557 × 1.25 = (557 × 5) / 4 = 2785 / 4 = <strong>696.25 mA</strong></p>
-<hr>
+547 × 1.25 = (547 × 5) / 4 = 2735 / 4 = <strong>683.75 mA</strong></p>
 <h2 id="section-c-regulator-selection">Section C – Regulator Selection</h2>
 <table>
 <thead>
@@ -1072,16 +1061,15 @@
 </table>
 <p><strong>Choice:</strong> LM7805 Linear Regulator  </p>
 <p><strong>Rationale:</strong><br>
-With the total estimated current of <strong>696 mA</strong> (including a 25% margin), the LM7805 provides enough capacity and thermal headroom.<br>
-The UA78L05ACLP’s 100 mA limit is insufficient for this system.</p>
+With the total estimated current of <strong>684 mA</strong> (including a 25% margin), the LM7805 provides sufficient current capacity and thermal headroom.<br>
+The UA78L05ACLP’s 100 mA limit is below system requirements.</p>
 <p><strong>Regulator heat / dissipation check:</strong><br>
 Voltage drop = 9 V − 5 V = 4 V<br>
-Load current = 696 mA = 0.696 A<br>
-Power dissipated = 4 V × 0.696 A = <strong>2.784 W</strong>  </p>
+Load current = 684 mA = 0.684 A<br>
+Power dissipated = 4 V × 0.684 A = <strong>2.736 W</strong>  </p>
 <blockquote>
 <p><strong>Result:</strong> LM7805 will require a small heat sink at this power level.</p>
 </blockquote>
-<hr>
 <h2 id="section-d-external-power-source">Section D – External Power Source</h2>
 <table>
 <thead>
@@ -1102,17 +1090,16 @@ Power dissipated = 4 V × 0.696 A = <strong>2.784 W</strong>  </p>
 </tbody>
 </table>
 <ul>
-<li>Required on +5 V rail (with 25% margin): <strong>696 mA</strong>  </li>
-<li>Remaining capacity: 1000 − 696 = <strong>304 mA</strong></li>
+<li>Required on +5 V rail (with 25% margin): <strong>684 mA</strong>  </li>
+<li>Remaining capacity: 1000 − 684 = <strong>316 mA</strong></li>
 </ul>
 <p><strong>Arithmetic:</strong><br>
-1000 − 696 = <strong>304 mA remaining capacity</strong></p>
+1000 − 684 = <strong>316 mA remaining capacity</strong></p>
 <p><strong>Battery option (example):</strong> 9 V alkaline ≈ 500 mAh (typical spec)  </p>
-<p>Battery life = 500 mAh / 696 mA = <strong>0.718 hours ≈ 43 minutes</strong></p>
+<p>Battery life = 500 mAh / 684 mA = <strong>0.731 hours ≈ 44 minutes</strong></p>
 <blockquote>
 <p><strong>Result:</strong> Battery operation is not practical due to high current draw.</p>
 </blockquote>
-<hr>
 <h2 id="section-e-summary">Section E – Summary</h2>
 <table>
 <thead>
@@ -1124,19 +1111,19 @@ Power dissipated = 4 V × 0.696 A = <strong>2.784 W</strong>  </p>
 <tbody>
 <tr>
 <td style="text-align: right;">Subtotal (estimated)</td>
-<td><strong>557 mA</strong></td>
+<td><strong>547 mA</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;">Total required on 5 V rail (with 25% margin)</td>
-<td><strong>696 mA</strong></td>
+<td><strong>684 mA</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;">Regulator chosen</td>
 <td><strong>LM7805 Linear Regulator</strong></td>
 </tr>
 <tr>
-<td style="text-align: right;">Regulator dissipation (9→5 V at 696 mA)</td>
-<td><strong>≈ 2.78 W (requires heat sink)</strong></td>
+<td style="text-align: right;">Regulator dissipation (9→5 V at 684 mA)</td>
+<td><strong>≈ 2.74 W (requires heat sink)</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;">External supply recommended</td>
@@ -1144,7 +1131,7 @@ Power dissipated = 4 V × 0.696 A = <strong>2.784 W</strong>  </p>
 </tr>
 <tr>
 <td style="text-align: right;">Estimated battery life (9 V, 500 mAh)</td>
-<td><strong>~0.72 hours (≈43 min)</strong></td>
+<td><strong>~0.73 hours (≈44 min)</strong></td>
 </tr>
 <tr>
 <td style="text-align: right;">Action required</td>
@@ -1152,13 +1139,12 @@ Power dissipated = 4 V × 0.696 A = <strong>2.784 W</strong>  </p>
 </tr>
 </tbody>
 </table>
-<hr>
 <h3 id="notes-tips">Notes &amp; Tips</h3>
 <ul>
-<li>Replace estimated MCU current (500 mA) with the <strong>actual maximum</strong> from the Microchip datasheet. The Curiosity Nano typically consumes <strong>&lt;50 mA</strong>, so your actual total current and power dissipation will be <strong>much lower</strong> once corrected.  </li>
-<li>When using the LM7805, ensure you attach a <strong>small heat sink</strong> if your real current exceeds ~300 mA.  </li>
-<li>Keep the 25% safety margin in all power budget calculations.  </li>
-<li>Add datasheet links for all components when finalizing your GitHub page before export.</li>
+<li>Replace estimated MCU current (500 mA) with the <strong>actual max current</strong> from the Microchip datasheet. The Curiosity Nano typically draws <strong>&lt;50 mA</strong>, meaning the real current and power dissipation will be <strong>much lower</strong> than the conservative estimate shown.  </li>
+<li>Attach a <strong>small heat sink</strong> if current exceeds ~300 mA.  </li>
+<li>Maintain the <strong>25% safety margin</strong> in all power calculations.  </li>
+<li>Add <strong>datasheet links</strong> for all components when finalizing your GitHub Markdown page before export.</li>
 </ul>
 
 
