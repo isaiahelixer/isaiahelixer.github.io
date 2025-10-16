@@ -67,8 +67,8 @@ Includes a **PIC18F16Q41 Curiosity Nano microcontroller** connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
-| ![]([LM7805.png](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg))<br>**Option 1:** LM7805 Linear Regulator<br>$ — each<br>[link to product](URL) | *Simple design*<br>*Low noise*<br>*Stable 5 V output* | *Inefficient when dropping 9 V to 5 V*<br>*Generates heat at higher currents* |
-| ![]([LM2596.png](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg))<br>**Option 2:** UA78L05ACLP <br>$ — each<br>[link to product](URL) | *High efficiency*<br>*Cooler operation*<br>*Can handle higher currents* | *Slight switching noise*<br>*More complex layout* |
+| ![]([LM7805.png](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg)<br>**Option 1:** LM7805 Linear Regulator<br>$ — each<br>[link to product](URL) | *Simple design*<br>*Low noise*<br>*Stable 5 V output* | *Inefficient when dropping 9 V to 5 V*<br>*Generates heat at higher currents* |
+| ![]([LM2596.png](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg)<br>**Option 2:** UA78L05ACLP <br>$ — each<br>[link to product](URL) | *High efficiency*<br>*Cooler operation*<br>*Can handle higher currents* | *Slight switching noise*<br>*More complex layout* |
 
 **Choice:** Option 1 — LM7805 Linear Regulator  
 
