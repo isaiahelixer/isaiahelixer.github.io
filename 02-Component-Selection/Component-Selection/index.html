@@ -552,27 +552,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#soil-moisture-sensor-analog" class="md-nav__link">
+  <a href="#soil-moisture-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Soil Moisture Sensor (Analog)
+      Soil Moisture Sensors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#temperature-humidity-sensor" class="md-nav__link">
+  <a href="#temperature-humidity-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Temperature &amp; Humidity Sensor
+      Temperature &amp; Humidity Sensors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rain-sensor" class="md-nav__link">
+  <a href="#rain-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Rain Sensor
+      Rain Sensors
     </span>
   </a>
   
@@ -588,9 +588,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#microcontroller-pic18f16q41-curiosity-nano-subsystem-mcu" class="md-nav__link">
+  <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      Microcontroller (PIC18F16Q41 Curiosity Nano)  (subsystem: MCU)
+      Microcontroller
     </span>
   </a>
   
@@ -833,27 +833,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#soil-moisture-sensor-analog" class="md-nav__link">
+  <a href="#soil-moisture-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Soil Moisture Sensor (Analog)
+      Soil Moisture Sensors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#temperature-humidity-sensor" class="md-nav__link">
+  <a href="#temperature-humidity-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Temperature &amp; Humidity Sensor
+      Temperature &amp; Humidity Sensors
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rain-sensor" class="md-nav__link">
+  <a href="#rain-sensors" class="md-nav__link">
     <span class="md-ellipsis">
-      Rain Sensor
+      Rain Sensors
     </span>
   </a>
   
@@ -869,9 +869,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#microcontroller-pic18f16q41-curiosity-nano-subsystem-mcu" class="md-nav__link">
+  <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      Microcontroller (PIC18F16Q41 Curiosity Nano)  (subsystem: MCU)
+      Microcontroller
     </span>
   </a>
   
@@ -902,13 +902,14 @@
 
 <h1 id="component-selection">Component Selection</h1>
 <p>Subsystem board powered from 9 V input through a 5 V regulator.<br>
-Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
+Includes a <strong>PIC18F16Q41 Curiosity Nano microcontroller</strong> connected to:<br>
 - Analog soil moisture sensor<br>
-- Temperature/humidity sensor<br>
+- Temperature / humidity sensor<br>
 - Rain sensor<br>
 - 8-pin connector to communicate with other boards  </p>
 <hr>
-<h2 id="soil-moisture-sensor-analog">Soil Moisture Sensor (Analog)</h2>
+<h2 id="soil-moisture-sensors">Soil Moisture Sensors</h2>
+<p><em>Table 1: Soil Moisture Sensor Comparison</em></p>
 <table>
 <thead>
 <tr>
@@ -919,26 +920,27 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="soil1.png" data-desc-position="bottom"><img alt="" src="soil1.png"></a><br><strong>Option 1:</strong> Resistive probe (e.g., YL-69 Module)<br>$2 each<br><a href="https://www.digikey.com/">YL-69 Resistive Sensor</a></td>
-<td><em>Very low cost</em><br><em>Easy analog output for ADC</em></td>
-<td><em>Corrodes quickly</em><br><em>Non-linear readings</em><br><em>Requires frequent calibration</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="SEN0114.png" data-desc-position="bottom"><img alt="" src="SEN0114.png"></a><br><strong>Option 1:</strong> SEN0114 Soil Moisture Sensor Module<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>Simple analog output</em><br><em>Low cost</em><br><em>Compact design</em></td>
+<td><em>Corrodes over time if left in soil</em><br><em>Requires calibration for accuracy</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="soil2.png" data-desc-position="bottom"><img alt="" src="soil2.png"></a><br><strong>Option 2:</strong> Capacitive soil moisture sensor v1.2<br>$5 each<br><a href="https://www.adafruit.com/">Capacitive Soil Module</a></td>
-<td><em>No corrosion</em><br><em>Stable analog signal</em><br><em>Compact size</em></td>
-<td><em>Slightly higher cost</em><br><em>Needs calibration per soil type</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="ST0160.png" data-desc-position="bottom"><img alt="" src="ST0160.png"></a><br><strong>Option 2:</strong> ST0160 Capacitive Soil Moisture Sensor V2.0<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>No corrosion (capacitive)</em><br><em>Stable analog readings</em><br><em>Low power consumption</em></td>
+<td><em>More expensive than SEN0114</em><br><em>Slightly larger PCB footprint</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="soil3.png" data-desc-position="bottom"><img alt="" src="soil3.png"></a><br><strong>Option 3:</strong> Industrial analog soil moisture transmitter (4–20 mA output)<br>$22 each<br><a href="https://www.dfrobot.com/">Industrial Soil Transmitter</a></td>
-<td><em>Weatherproof housing</em><br><em>Highly accurate and robust</em></td>
-<td><em>Expensive</em><br><em>Larger form factor</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Industrial_Soil.png" data-desc-position="bottom"><img alt="" src="Industrial_Soil.png"></a><br><strong>Option 3:</strong> Industrial Soil Moisture &amp; Temperature Sensor (4-20 mA Output)<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>Industrial-grade durability</em><br><em>Includes temperature output</em><br><em>Long-term outdoor reliability</em></td>
+<td><em>Higher cost</em><br><em>Requires analog-to-current interface circuitry</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 2 — Capacitive Soil Moisture Sensor v1.2<br>
-<strong>Rationale:</strong> Provides stable analog readings without corrosion, suitable for long-term outdoor deployment while remaining low-cost and easy to interface with the PIC ADC.</p>
+<p><strong>Choice:</strong> Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  </p>
+<p><strong>Rationale:</strong> Provides corrosion-free sensing with stable analog output, ideal for long-term moisture monitoring in outdoor environments while maintaining low cost and simple integration with the PIC ADC.</p>
 <hr>
-<h2 id="temperature-humidity-sensor">Temperature &amp; Humidity Sensor</h2>
+<h2 id="temperature-humidity-sensors">Temperature &amp; Humidity Sensors</h2>
+<p><em>Table 2: Temperature &amp; Humidity Sensor Comparison</em></p>
 <table>
 <thead>
 <tr>
@@ -949,26 +951,27 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="temp1.png" data-desc-position="bottom"><img alt="" src="temp1.png"></a><br><strong>Option 1:</strong> DHT22 / AM2302<br>$6 each<br><a href="https://www.adafruit.com/">DHT22 Sensor</a></td>
-<td><em>Low cost</em><br><em>Easy to use (library support)</em></td>
-<td><em>Slow sampling rate</em><br><em>Moderate accuracy</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="DHT22.png" data-desc-position="bottom"><img alt="" src="DHT22.png"></a><br><strong>Option 1:</strong> DHT22 / AM2302 Sensor<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>Low cost</em><br><em>Simple one-wire interface</em><br><em>Good community support</em></td>
+<td><em>Slow sampling rate</em><br><em>Limited accuracy (±2 °C, ±5 % RH)</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="temp2.png" data-desc-position="bottom"><img alt="" src="temp2.png"></a><br><strong>Option 2:</strong> SHT31-D (I²C)<br>$12 each<br><a href="https://www.adafruit.com/">SHT31-D Sensor</a></td>
-<td><em>High accuracy and stability</em><br><em>Fast response</em><br><em>I²C communication</em></td>
-<td><em>Higher price</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="SHT31.png" data-desc-position="bottom"><img alt="" src="SHT31.png"></a><br><strong>Option 2:</strong> Adafruit Sensirion SHT31-D Sensor (I²C)<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>High accuracy (±0.3 °C, ±2 % RH)</em><br><em>I²C communication</em><br><em>Fast response time</em></td>
+<td><em>Moderate cost</em><br><em>Requires I²C pins on MCU</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="temp3.png" data-desc-position="bottom"><img alt="" src="temp3.png"></a><br><strong>Option 3:</strong> BME280 (I²C/SPI)<br>$14 each<br><a href="https://www.adafruit.com/">BME280 Sensor</a></td>
-<td><em>Adds pressure measurement</em><br><em>Accurate &amp; low power</em></td>
-<td><em>Adds unnecessary feature (pressure)</em><br><em>Slightly more expensive</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="SHT45.png" data-desc-position="bottom"><img alt="" src="SHT45.png"></a><br><strong>Option 3:</strong> SHT45 Precision Temperature Humidity Module<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>Very high precision (±0.1 °C, ±1 % RH)</em><br><em>Low power consumption</em><br><em>Compact form factor</em></td>
+<td><em>Higher price</em><br><em>May require fine-pitch connector or adapter</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 2 — SHT31-D Sensor<br>
-<strong>Rationale:</strong> Best balance of precision, low power, and easy I²C integration for the PIC18F16Q41.</p>
+<p><strong>Choice:</strong> Option 2 — Adafruit Sensirion SHT31-D Sensor  </p>
+<p><strong>Rationale:</strong> Offers a balance between precision, power efficiency, and integration simplicity using I²C communication, aligning well with the PIC18F16Q41’s peripheral support.</p>
 <hr>
-<h2 id="rain-sensor">Rain Sensor</h2>
+<h2 id="rain-sensors">Rain Sensors</h2>
+<p><em>Table 3: Rain Sensor Comparison</em></p>
 <table>
 <thead>
 <tr>
@@ -979,26 +982,27 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="rain1.png" data-desc-position="bottom"><img alt="" src="rain1.png"></a><br><strong>Option 1:</strong> Analog rain detection board (YL-83)<br>$3 each<br><a href="https://www.adafruit.com/">YL-83 Rain Module</a></td>
-<td><em>Cheap and simple</em><br><em>Analog or digital output</em></td>
-<td><em>Corrodes over time</em><br><em>Not weatherproof</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="ST0247.png" data-desc-position="bottom"><img alt="" src="ST0247.png"></a><br><strong>Option 1:</strong> ST0247 Raindrop Detection Sensor Module<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>Low cost and easy to interface</em><br><em>Analog and digital outputs</em></td>
+<td><em>Susceptible to corrosion and false positives</em><br><em>Not quantitative</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="rain2.png" data-desc-position="bottom"><img alt="" src="rain2.png"></a><br><strong>Option 2:</strong> Optical rain sensor (IR reflection type)<br>$25 each<br><a href="https://www.dfrobot.com/">Optical Rain Sensor</a></td>
-<td><em>Non-contact detection</em><br><em>Long life</em></td>
-<td><em>Requires optical calibration</em><br><em>Higher cost</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="SEN0545.png" data-desc-position="bottom"><img alt="" src="SEN0545.png"></a><br><strong>Option 2:</strong> SEN0545 Rain Sensor (UART Output)<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>Digital UART interface</em><br><em>Corrosion-resistant coating</em><br><em>Stable signal processing built-in</em></td>
+<td><em>Slightly higher cost</em><br><em>Requires UART parsing logic</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="rain3.png" data-desc-position="bottom"><img alt="" src="rain3.png"></a><br><strong>Option 3:</strong> Tipping-bucket rain gauge<br>$60 each<br><a href="https://www.sparkfun.com/">Tipping Bucket Sensor</a></td>
-<td><em>Accurate rainfall measurement (mm)</em></td>
-<td><em>Bulky, mechanical parts</em><br><em>Requires mounting and calibration</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="OpticalRain.png" data-desc-position="bottom"><img alt="" src="OpticalRain.png"></a><br><strong>Option 3:</strong> Optical Rain Gauge Sensor (RS485 Pulse Output)<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>Industrial precision and long lifetime</em><br><em>Non-contact optical detection</em></td>
+<td><em>High price</em><br><em>Requires RS485 interface and external housing</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 1 — YL-83 Analog Rain Module<br>
-<strong>Rationale:</strong> Simple analog detection is sufficient for moisture-triggered irrigation logic and is easy to interface with PIC ADC inputs.</p>
+<p><strong>Choice:</strong> Option 2 — SEN0545 Rain Sensor (UART Output)  </p>
+<p><strong>Rationale:</strong> Provides reliable digital output with minimal maintenance and better environmental resistance than basic analog boards, while avoiding the complexity and cost of industrial RS485 systems.</p>
 <hr>
 <h2 id="voltage-regulator-9-v-5-v">Voltage Regulator (9 V → 5 V)</h2>
+<p><em>Table 4: Voltage Regulator Comparison</em></p>
 <table>
 <thead>
 <tr>
@@ -1009,28 +1013,24 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="reg1.png" data-desc-position="bottom"><img alt="" src="reg1.png"></a><br><strong>Option 1:</strong> LM7805 Linear Regulator<br>$1 each<br><a href="https://www.ti.com/">LM7805</a></td>
-<td><em>Simple circuit, low noise</em><br><em>Stable 5 V output</em></td>
-<td><em>Inefficient (heat loss) when dropping from 9 V</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="LM7805.png" data-desc-position="bottom"><img alt="" src="LM7805.png"></a><br><strong>Option 1:</strong> LM7805 Linear Regulator<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>Simple design</em><br><em>Low noise</em><br><em>Stable 5 V output</em></td>
+<td><em>Inefficient when dropping 9 V to 5 V</em><br><em>Generates heat at higher currents</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="reg2.png" data-desc-position="bottom"><img alt="" src="reg2.png"></a><br><strong>Option 2:</strong> LM2596 Buck Converter<br>$4 each<br><a href="https://www.digikey.com/">LM2596 Buck Module</a></td>
-<td><em>Efficient, handles higher current</em><br><em>Cool operation</em></td>
-<td><em>More switching noise (may need filtering)</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="LM2596.png" data-desc-position="bottom"><img alt="" src="LM2596.png"></a><br><strong>Option 2:</strong> LM2596 Buck Converter<br>$ — each<br><a href="URL">link to product</a></td>
+<td><em>High efficiency</em><br><em>Cooler operation</em><br><em>Can handle higher currents</em></td>
+<td><em>Slight switching noise</em><br><em>More complex layout</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 1 — LM7805 Linear Regulator<br>
-<strong>Rationale:</strong> Estimated system current is low; LM7805 gives a clean, low-noise 5 V rail which benefits ADC readings from analog sensors. If measured current grows above ~200–300 mA, switch to a buck converter.</p>
+<p><strong>Choice:</strong> Option 1 — LM7805 Linear Regulator  </p>
+<p><strong>Rationale:</strong> System current is low (&lt; 150 mA) so the LM7805 offers sufficient efficiency with low noise, ideal for stable analog measurements on the sensor inputs.</p>
 <hr>
-<h2 id="microcontroller-pic18f16q41-curiosity-nano-subsystem-mcu">Microcontroller (PIC18F16Q41 Curiosity Nano)  <strong>(subsystem: MCU)</strong></h2>
-<ul>
-<li><strong>Board:</strong> Microchip Curiosity Nano with PIC18F16Q41</li>
-<li><strong>Notes:</strong> Use the Curiosity Nano breakout footprint or include the bare PIC18F16Q41 on your PCB as your design requires.</li>
-<li><strong>Power/IO:</strong> 5 V logic (confirm board configuration) and ADC inputs for soil and rain sensors; I²C for SHT31.</li>
-</ul>
-<p><strong>Rationale for selection:</strong> PIC18F16Q41 provides sufficient analog inputs, low-power operation options, and easy integration with Microchip Curiosity Nano development board for rapid prototyping and debugging.</p>
-<p><strong>Important:</strong> Replace the estimated current values in your power budget with the PIC18F16Q41 <em>absolute maximum</em> current values from the Microchip datasheet and the Curiosity Nano board documentation (required for accuracy in the power budget).</p>
+<h2 id="microcontroller">Microcontroller</h2>
+<p><strong>Component:</strong> PIC18F16Q41 Curiosity Nano<br>
+<strong>Supply:</strong> 5 V from LM7805 Regulator  </p>
+<p><strong>Rationale:</strong> Chosen for its low-power operation, built-in ADC channels for analog sensor inputs, I²C and UART support for digital sensors, and native compatibility with Microchip’s Curiosity Nano ecosystem for fast development and debugging.</p>
 
 
 
