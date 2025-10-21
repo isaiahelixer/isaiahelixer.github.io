@@ -13,4 +13,4 @@ This schematic is designed to support the Smart Irrigation Subsystem Board. It r
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](ExampleSchematic.pdf), and the Zip folder of the project [*here*](dummyZip.zip).
+The schematic as a PDF download is available [*here*](https://drive.google.com/file/d/1a4OAKZrk6LRnWvmBonQYlOflql5_qynn/view?usp=sharing), and the Zip folder of the project [*here*](dummyZip.zip).
