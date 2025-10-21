@@ -12,6 +12,6 @@ This schematic is designed to support the Smart Irrigation Subsystem Board. It r
 **Figure 1:** Showing the sensors, microcontroller, and power delivery schematic.
 
 
-## Resouces
+## Resources
 
 The schematic as a PDF download is available [*here*](https://drive.google.com/file/d/1_huN4Ivck--dMZcGOye8KnJlNY8wMjda/view?usp=sharing), and the Zip folder of the project [*here*]().
