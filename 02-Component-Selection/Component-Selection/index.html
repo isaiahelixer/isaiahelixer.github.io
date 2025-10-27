@@ -906,6 +906,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 - Analog capacitive soil moisture sensor<br>
 - MCP6004 op-amp<br>
 - 8-pin connector to communicate with other boards  </p>
+<hr>
 <h2 id="soil-moisture-sensors">Soil Moisture Sensors</h2>
 <p><em>Table 1: Soil Moisture Sensor Comparison</em></p>
 <table>
@@ -935,7 +936,8 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  </p>
-<p><strong>Rationale:</strong> Provides corrosion-free sensing with stable analog output and is suitable for long-term outdoor monitoring while maintaining low cost and simple integration with the PIC ADC.</p>
+<p><strong>Rationale:</strong> Provides corrosion-free sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and simple integration with the PIC ADC.</p>
+<hr>
 <h2 id="voltage-regulator">Voltage Regulator</h2>
 <p><em>Table 2: Voltage Regulator Comparison</em></p>
 <table>
@@ -954,27 +956,87 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </tr>
 <tr>
 <td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg"></a><br><strong>Option 2:</strong> UA78L05ACLP<br>$1.69 — each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/UA78L05ACLP/13465029">link to product</a></td>
-<td><em>Compact package</em><br><em>Low quiescent current</em><br><em>Perfect for ≤ 100 mA loads</em></td>
+<td><em>Compact package</em><br><em>Low quiescent current</em><br><em>Perfect for ≤100 mA loads</em></td>
 <td><em>Limited output current (100 mA max)</em><br><em>Not ideal for high-current systems</em></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 1 — LM7805 Linear Regulator  </p>
-<p><strong>Rationale:</strong> System current is moderate so the LM7805 offers sufficient efficiency with low noise, needed for stable analog measurements on the sensor inputs.</p>
+<p><strong>Rationale:</strong> System current is moderate, and the LM7805 offers low noise and stability, ideal for analog sensing applications.</p>
+<hr>
 <h2 id="microcontroller">Microcontroller</h2>
-<p><strong>Component:</strong> PIC18F16Q41 Curiosity Nano<br>
-<strong>Supply:</strong> 5 V from LM7805 Regulator  </p>
-<p><strong>Rationale:</strong> Used for its low-power operation, built-in ADC channels for analog sensor inputs, I²C and UART support for digital sensors, and fast development and debugging.</p>
+<p><em>Table 3: Microcontroller Comparison</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Solution</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img width=&quot;797&quot; height=&quot;471&quot; alt=&quot;Screenshot 2025-10-27 083819&quot; src=&quot;https://github.com/user-attachments/assets/9fb2554c-9bb8-481d-b711-f7ca10886eb0&quot; /" data-desc-position="bottom"><img alt="" src="img width=&quot;797&quot; height=&quot;471&quot; alt=&quot;Screenshot 2025-10-27 083819&quot; src=&quot;https://github.com/user-attachments/assets/9fb2554c-9bb8-481d-b711-f7ca10886eb0&quot; /"></a><br><strong>Option 1:</strong> PIC18F16Q41 Curiosity Nano<br>$15 — each<br><a href="https://www.microchip.com/en-us/development-tool/dm164150">link to product</a></td>
+<td><em>Low-power operation</em><br><em>Integrated ADC channels</em><br><em>I²C, SPI, and UART communication</em><br><em>Onboard debugger (USB)</em></td>
+<td><em>Limited I/O for expansion</em><br><em>Requires MPLAB X IDE setup</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice:</strong> Option 1 — PIC18F16Q41 Curiosity Nano  </p>
+<p><strong>Rationale:</strong> Readily available and already supplied to the team, simplifying integration with sensors and op-amp circuitry.</p>
+<hr>
 <h2 id="operational-amplifier">Operational Amplifier</h2>
-<p><strong>Component:</strong> MCP6004 (Through-Hole Quad Op-Amp)<br>
-<strong>Supply:</strong> 5 V from LM7805 Regulator  </p>
-<p><strong>Rationale:</strong> Already supplied component used for signal conditioning of analog sensor inputs. Offers rail-to-rail I/O, low power consumption, and stable operation within 5 V single-supply systems.<br>
-<strong>Note:</strong> Maximum supply current is 23 mA. Ensure local decoupling with 0.1 µF capacitors near each Vcc pin.  </p>
+<p><em>Table 4: Operational Amplifier Comparison</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Solution</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>![](<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/f03be599-595e-4b94-8da5-4a28fbb7912e" data-desc-position="bottom"><img width="638" height="640" alt="Screenshot 2025-10-27 083608" src="https://github.com/user-attachments/assets/f03be599-595e-4b94-8da5-4a28fbb7912e"></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>)<br><strong>Option 1:</strong> MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=120565755&amp;gbraid=0AAAAADrbLlhiVO2X4tb4kz7_jZIGtwYQb&amp;gclid=Cj0KCQjwsPzHBhDCARIsALlWNG37JIeSuMgRwxjZq4kBzbXYEut2_n45V8FEW6-N_EugdkGwGCHQN68aAozsEALw_wcB">link to product</a></td>
+<td><em>Rail-to-rail I/O</em><br><em>Low quiescent current (23 mA max)</em><br><em>Operates from single 5 V supply</em><br><em>Four amplifiers per package</em></td>
+<td><em>Through-hole package larger than SMD</em><br><em>Limited bandwidth for high-speed signals</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice:</strong> Option 1 — MCP6004 Op-Amp  </p>
+<p><strong>Rationale:</strong> Already supplied; provides four precision amplifiers suitable for low-power sensor signal conditioning and stable analog performance.</p>
+<hr>
 <h2 id="power-adapter">Power Adapter</h2>
-<p><strong>Component:</strong> Model 0930 — AC to DC Power Adapter<br>
-<strong>Specification:</strong> 9 V DC Output, 3 A Max  </p>
-<p><strong>Rationale:</strong> Pre-supplied power source providing system input voltage for the LM7805 regulator. Rated current provides sufficient headroom for the subsystem load.<br>
-<strong>Note:</strong> Verify barrel jack polarity and label on PCB (typically center-positive). Include a 2 A inline fuse and bulk capacitor (e.g., 470 µF, 25 V) on the input for protection and stability.</p>
+<p><em>Table 5: Power Adapter Comparison</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Solution</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>![](<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/a43cfc88-b332-4752-b125-37c5fcd68e4e" data-desc-position="bottom"><img width="838" height="841" alt="Screenshot 2025-10-27 084100" src="https://github.com/user-attachments/assets/a43cfc88-b332-4752-b125-37c5fcd68e4e"></a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>)<br><strong>Option 1:</strong> 9 V 3 A AC to DC Adapter — Model 0930<br>Supplied Item<br><a href="https://circuit.rocks/products/ac-dc-9v-3a-wall-power-adapter-5-5x2-1mm-barrel-jack-center-positive?srsltid=AfmBOorFslDo47N-3NvdrLDoGEcEk_4wOiCGbP_auU3NXxOUc5jR5Ha3">link to product</a></td>
+<td><em>High current capacity (3 A)</em><br><em>Stable DC output</em><br><em>Compatible with LM7805 input requirements</em></td>
+<td><em>Linear regulator heat generation at high loads</em><br><em>Requires correct barrel polarity and connector matching</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice:</strong> Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)  </p>
+<p><strong>Rationale:</strong> Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.</p>
+<hr>
 
 
 
