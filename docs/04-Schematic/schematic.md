@@ -8,7 +8,7 @@ This schematic is designed to support the Smart Irrigation Subsystem Board. It r
 
 
 ## Subsystem Schematic Design
-**Figure 1:* Showing the sensors, microcontroller, signal amplifier, and power delivery schematic.
+*Figure 1:* Showing the sensors, microcontroller, signal amplifier, and power delivery schematic.
 <img width="3300" height="2550" alt="Subsystem Schematic Design" src="https://github.com/user-attachments/assets/80f8975d-74ef-4791-8990-ff97184f6fb8" />
 
 
