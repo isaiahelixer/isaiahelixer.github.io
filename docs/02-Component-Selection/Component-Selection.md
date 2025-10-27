@@ -10,6 +10,8 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 - MCP6004 op-amp  
 - 8-pin connector to communicate with other boards  
 
+---
+
 ## Soil Moisture Sensors
 
 *Table 1: Soil Moisture Sensor Comparison*
@@ -22,7 +24,9 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 **Choice:** Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  
 
-**Rationale:** Provides corrosion-free sensing with stable analog output and is suitable for long-term outdoor monitoring while maintaining low cost and simple integration with the PIC ADC.
+**Rationale:** Provides corrosion-free sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and simple integration with the PIC ADC.
+
+---
 
 ## Voltage Regulator 
 
@@ -31,33 +35,55 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg)<br>**Option 1:** LM7805 Linear Regulator<br>$0.64 — each<br>[link to product](https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ACV/585962) | *Simple design*<br>*Low noise*<br>*Stable 5 V output* | *Inefficient when dropping 9 V to 5 V*<br>*Generates heat at higher currents* |
-| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg)<br>**Option 2:** UA78L05ACLP<br>$1.69 — each<br>[link to product](https://www.digikey.com/en/products/detail/texas-instruments/UA78L05ACLP/13465029) | *Compact package*<br>*Low quiescent current*<br>*Perfect for ≤ 100 mA loads* | *Limited output current (100 mA max)*<br>*Not ideal for high-current systems* |
+| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg)<br>**Option 2:** UA78L05ACLP<br>$1.69 — each<br>[link to product](https://www.digikey.com/en/products/detail/texas-instruments/UA78L05ACLP/13465029) | *Compact package*<br>*Low quiescent current*<br>*Perfect for ≤100 mA loads* | *Limited output current (100 mA max)*<br>*Not ideal for high-current systems* |
 
 **Choice:** Option 1 — LM7805 Linear Regulator  
 
-**Rationale:** System current is moderate so the LM7805 offers sufficient efficiency with low noise, needed for stable analog measurements on the sensor inputs.
+**Rationale:** System current is moderate, and the LM7805 offers low noise and stability, ideal for analog sensing applications.
+
+---
 
 ## Microcontroller
 
-**Component:** PIC18F16Q41 Curiosity Nano  
-**Supply:** 5 V from LM7805 Regulator  
+*Table 3: Microcontroller Comparison*
 
-**Rationale:** Used for its low-power operation, built-in ADC channels for analog sensor inputs, I²C and UART support for digital sensors, and fast development and debugging.
+| **Solution** | **Pros** | **Cons** |
+|--------------|-----------|-----------|
+| ![](<img width="797" height="471" alt="Screenshot 2025-10-27 083819" src="https://github.com/user-attachments/assets/9fb2554c-9bb8-481d-b711-f7ca10886eb0" />)<br>**Option 1:** PIC18F16Q41 Curiosity Nano<br>$15 — each<br>[link to product](https://www.microchip.com/en-us/development-tool/dm164150) | *Low-power operation*<br>*Integrated ADC channels*<br>*I²C, SPI, and UART communication*<br>*Onboard debugger (USB)* | *Limited I/O for expansion*<br>*Requires MPLAB X IDE setup* |
+
+**Choice:** Option 1 — PIC18F16Q41 Curiosity Nano  
+
+**Rationale:** Readily available and already supplied to the team, simplifying integration with sensors and op-amp circuitry.
+
+---
 
 ## Operational Amplifier
 
-**Component:** MCP6004 (Through-Hole Quad Op-Amp)  
-**Supply:** 5 V from LM7805 Regulator  
+*Table 4: Operational Amplifier Comparison*
 
-**Rationale:** Already supplied component used for signal conditioning of analog sensor inputs. Offers rail-to-rail I/O, low power consumption, and stable operation within 5 V single-supply systems.  
-**Note:** Maximum supply current is 23 mA. Ensure local decoupling with 0.1 µF capacitors near each Vcc pin.  
+| **Solution** | **Pros** | **Cons** |
+|--------------|-----------|-----------|
+| ![](<img width="638" height="640" alt="Screenshot 2025-10-27 083608" src="https://github.com/user-attachments/assets/f03be599-595e-4b94-8da5-4a28fbb7912e" />
+)<br>**Option 1:** MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br>[link to product](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060?gclsrc=aw.ds&gad_source=1&gad_campaignid=120565755&gbraid=0AAAAADrbLlhiVO2X4tb4kz7_jZIGtwYQb&gclid=Cj0KCQjwsPzHBhDCARIsALlWNG37JIeSuMgRwxjZq4kBzbXYEut2_n45V8FEW6-N_EugdkGwGCHQN68aAozsEALw_wcB) | *Rail-to-rail I/O*<br>*Low quiescent current (23 mA max)*<br>*Operates from single 5 V supply*<br>*Four amplifiers per package* | *Through-hole package larger than SMD*<br>*Limited bandwidth for high-speed signals* |
+
+**Choice:** Option 1 — MCP6004 Op-Amp  
+
+**Rationale:** Already supplied; provides four precision amplifiers suitable for low-power sensor signal conditioning and stable analog performance.
+
+---
 
 ## Power Adapter
 
-**Component:** Model 0930 — AC to DC Power Adapter  
-**Specification:** 9 V DC Output, 3 A Max  
+*Table 5: Power Adapter Comparison*
 
-**Rationale:** Pre-supplied power source providing system input voltage for the LM7805 regulator. Rated current provides sufficient headroom for the subsystem load.  
-**Note:** Verify barrel jack polarity and label on PCB (typically center-positive). Include a 2 A inline fuse and bulk capacitor (e.g., 470 µF, 25 V) on the input for protection and stability.
+| **Solution** | **Pros** | **Cons** |
+|--------------|-----------|-----------|
+| ![](<img width="838" height="841" alt="Screenshot 2025-10-27 084100" src="https://github.com/user-attachments/assets/a43cfc88-b332-4752-b125-37c5fcd68e4e" />
+)<br>**Option 1:** 9 V 3 A AC to DC Adapter — Model 0930<br>Supplied Item<br>[link to product](https://circuit.rocks/products/ac-dc-9v-3a-wall-power-adapter-5-5x2-1mm-barrel-jack-center-positive?srsltid=AfmBOorFslDo47N-3NvdrLDoGEcEk_4wOiCGbP_auU3NXxOUc5jR5Ha3) | *High current capacity (3 A)*<br>*Stable DC output*<br>*Compatible with LM7805 input requirements* | *Linear regulator heat generation at high loads*<br>*Requires correct barrel polarity and connector matching* |
 
+**Choice:** Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)  
+
+**Rationale:** Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.
+
+---
 
