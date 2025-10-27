@@ -20,4 +20,4 @@ This subsystem doesn't directly control an actuator but it provides sensor data 
 
 ## Block Diagram  
 
-![Diagram]("https://github.com/isaiahelixer/isaiahelixer.github.io/blob/0fb4ff5d5531046969bbd44f2026349a30f3c858/docs/01-Block-Diagram/Block%20Diagram%20-%20Individual.drawio.png")
+![Diagram](https://github.com/isaiahelixer/isaiahelixer.github.io/blob/0fb4ff5d5531046969bbd44f2026349a30f3c858/docs/01-Block-Diagram/Block%20Diagram%20-%20Individual.drawio.png)
