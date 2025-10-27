@@ -19,4 +19,5 @@ Communicates soil data to other subsystems (e.g., motor control or irrigation lo
 
 ## Block Diagram
 
-<img width="602" height="402" alt="Block Diagram - Team 101 drawio" src="https://github.com/user-attachments/assets/de2b0016-6ed7-4976-842a-36e711a624e4" />
+<img width="3300" height="2550" alt="Subsystem Schematic Design" src="https://github.com/user-attachments/assets/90c2a820-02b4-4488-9c30-1e0c806ae228" />
+
