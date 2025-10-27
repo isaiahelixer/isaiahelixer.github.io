@@ -5,53 +5,50 @@ title: Power Budget
 # Power Budget
 
 **Team Number:** 101  
-**Project Name:** Smart Irrigation Subsystem Board  
+**Project Name:** Smart Irrigation Sensor Subsystem Board  
 **Team Member Names:** Liam, Isaiah, and Raj  
-**Version:** 1.0  
+**Version:** 1.1  
 
-**System input:** 9V external → 5V regulator (LM7805) → PIC18F16Q41 Curiosity Nano + sensors
+**System input:** 9V external → 5V regulator (LM7805) → PIC18F57Q43 Curiosity Nano + soil moisture sensor
 
 ## Section A – All Major Components 
 
 | **Component Name** | **Part / Example** | **Supply Voltage (V)** | **Qty.** | **Abs. Max Current (mA)** | **Total Current (mA)** |
 |--------------------|--------------------|------------------------:|--------:|--------------------------:|-----------------------:|
-| Microcontroller (Curiosity Nano) | PIC18F16Q41 Curiosity Nano | 5 | 1 | 500 | 500 |
+| Microcontroller (Curiosity Nano) | PIC18F57Q43 Curiosity Nano | 5 | 1 | 500 | 500 |
 | Soil Moisture Sensor | ST0160 Capacitive | 5 | 1 | 5 | 5 |
-| Temperature / Humidity Sensor | SHT31-D | 5 | 1 | 2 | 2 |
-| Rain Sensor | SEN0545 (UART) | 5 | 1 | 40 | 40 |
-| **Subtotal** | | | | | **547mA** |
+| **Subtotal** | | | | | **505mA** |
 
 **Arithmetic:**  
-500 + 5 + 2 + 40 = 547mA total subsystem current
+500 + 5 = **505mA total subsystem current**
 
 ## Section B – Power Rails
 
 **+5V Rail**
-- Subtotal = 547 mA  
-- Safety margin (25%) = 547 × 1.25 = 683.75mA → round to 684mA
+- Subtotal = 505 mA  
+- Safety margin (25%) = 505 × 1.25 = 631.25mA → round to **631mA**
 
 **Arithmetic:**  
-547 × 1.25 = (547 × 5) / 4 = 2735 / 4 = 683.75mA
+505 × 1.25 = (505 × 5) / 4 = 2525 / 4 = **631.25mA**
 
 ## Section C – Regulator Selection
 
 | **Regulator Option** | **Input Range (V)** | **Max Output (mA)** | **Pros** | **Cons** |
 |----------------------|---------------------:|--------------------:|----------|---------|
-| LM7805 (linear) | 7 – 25V | 1500 | Simple, low noise, handles high current | Inefficient (9V → 5V drop causes heat under load; may need heat sink) |
-| UA78L05ACLP (TO-92, 100 mA max) | 7 – 35V | 100 | Compact, simple, low quiescent current | Limited to 100mA output (too low for this system) |
+| LM7805 (linear) | 7 – 25V | 1500 | Simple, low noise, reliable | Inefficient for high current (heat dissipation) |
+| UA78L05ACLP (TO-92, 100 mA max) | 7 – 35V | 100 | Compact, low quiescent current | Not enough current for system needs |
 
 **Choice:** LM7805 Linear Regulator  
 
 **Rationale:**  
-With the total estimated current of 684mA (including the 25% margin), the LM7805 provides sufficient current capacity and thermal headroom.  
-The UA78L05ACLP’s 100mA limit is below system requirements.
+With a total estimated current of 631mA (including the 25% margin), the LM7805 provides plenty of current capacity and thermal safety. The UA78L05ACLP’s 100mA limit is far below system requirements.
 
 **Regulator heat / dissipation check:**  
 Voltage drop = 9V − 5V = 4V  
-Load current = 684mA = 0.684A  
-Power dissipated = 4V × 0.684A = 2.736W  
+Load current = 631mA = 0.631A  
+Power dissipated = 4V × 0.631A = **2.52W**
 
-**Result:** LM7805 will require a small heat sink at this power level.
+**Result:** LM7805 will require a small heat sink for continuous operation.
 
 ## Section D – External Power Source
 
@@ -59,27 +56,26 @@ Power dissipated = 4V × 0.684A = 2.736W
 |------------------|-------------:|------------------------:|---------------------:|
 | Wall Adapter | Generic 9V DC Adapter | 9 | 3000 |
 
-- Required on +5V rail (with 25% margin): 684mA 
-- Remaining capacity: 3000 − 684 = 2316 mA
+- Required on +5V rail (with 25% margin): 631mA  
+- Remaining capacity: 3000 − 631 = **2369 mA**
 
-**Arithmetic:**  
-1500 − 684 = 816mA remaining capacity before voltage Regulator Failure
+**Battery Option (not implemented):**  
+If powered by a 3000mAh Li-ion battery:  
 
-**Battery option:** 3000 mAh Li-ion battery
-This is not used in the design but if it was:  
+Battery life = 3000 mAh / 50 mA (sleep-mode avg.) = **60 hours (≈2.5 days)**  
 
-Battery life = 3000 mAh / 50 mA = 60 hours (≈2.5 days) Reducing average current to 50 mA using sleep + duty cycling
-for maximum battery life.
-
-**Result:** Battery operation is not practical due to a higher current draw.
+Due to higher active current draw, continuous battery use is not recommended for this design.
 
 ## Section E – Summary
 
 | **Item** | **Value / Action** |
 |---------:|--------------------|
-| Subtotal (estimated) | 547mA |
-| Total required on 5V rail (with 25% margin) | 684mA |
+| Subtotal (estimated) | 505mA |
+| Total required on 5V rail (with 25% margin) | 631mA |
 | Regulator chosen | LM7805 Linear Regulator |
-| Regulator dissipation (9→5V at 684 mA) | ≈ 2.74W (may need a heat sink) |
-| External supply recommended | 9V DC adapter, ≥ 3 A |
-| Estimated battery life (3000 mAh Li-ion battery) | Max Current 60 hours (≈2.5 days) |
+| Regulator dissipation (9→5V at 631mA) | ≈ 2.52W (heat sink required) |
+| External supply recommended | 9V DC adapter, ≥ 3A |
+| Estimated battery life (3000 mAh Li-ion battery) | ≈ 60 hours (sleep mode average) |
+
+**Conclusion:** 
+The subsystem draws a safe and stable current within the LM7805’s limits. The 9V, 3A wall adapter provides more than enough headroom for all operations, ensuring reliable performance for the Smart Irrigation Sensor Subsystem.
