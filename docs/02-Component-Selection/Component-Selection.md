@@ -36,10 +36,12 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 |--------------|-----------|-----------|
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg)<br>**Option 1:** LM7805 Linear Regulator<br>$0.64 — each<br>[link to product](https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ACV/585962) | *Simple design*<br>*Low noise*<br>*Stable 5 V output* | *Inefficient when dropping 9 V to 5 V*<br>*Generates heat at higher currents* |
 | ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg)<br>**Option 2:** UA78L05ACLP<br>$1.69 — each<br>[link to product](https://www.digikey.com/en/products/detail/texas-instruments/UA78L05ACLP/13465029) | *Compact package*<br>*Low quiescent current*<br>*Perfect for ≤100 mA loads* | *Limited output current (100 mA max)*<br>*Not ideal for high-current systems* |
+|<img width="301" height="300" alt="Screenshot 2025-10-27 085500 (1)" src="https://github.com/user-attachments/assets/89f2e40e-c528-4b86-9d24-e24a1fa8eebd" />
+ <br>**Option 3:** N7805-1CW DC/DC Converter (Mean Well)<br>$10.20 — each<br>[link to product](https://www.digikey.com/en/products/detail/mean-well-usa-inc/N7805-1CW/22119070?gclsrc=aw.ds&gad_source=1&gad_campaignid=20232005509&gbraid=0AAAAADrbLlg-mikvqqI5kSyxvX2VfJ_hR&gclid=Cj0KCQjwsPzHBhDCARIsALlWNG103010_DEIqUxx9fiA1KByIbHfhtIRslfFwbx4pb0jn2gCCEdNubsaAjjsEALw_wcB) | *High efficiency (93%)*<br>*Wide 8–36 V input range*<br>*Compact enclosed design*<br>*Low heat output*<br>*500 mA max current, 7.5 W power*<br>*Operates -40°C to +85°C* | *Higher cost than LM7805*<br>*More complex sourcing if not stocked* |
 
 **Choice:** Option 1 — LM7805 Linear Regulator  
 
-**Rationale:** System current is moderate, and the LM7805 offers low noise and stability, ideal for analog sensing applications.
+**Rationale:** The LM7805 is already supplied and sufficient for the system’s moderate current demand. The N7805-1CW offers improved efficiency but is not required for this application.
 
 ---
 
@@ -65,7 +67,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
 |<img width="299" height="300" alt="Screenshot 2025-10-27 083608 (1)" src="https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e" />
-<br>**Option 1:** MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br>[link to product](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060?gclsrc=aw.ds&gad_source=1&gad_campaignid=120565755&gbraid=0AAAAADrbLlhiVO2X4tb4kz7_jZIGtwYQb&gclid=Cj0KCQjwsPzHBhDCARIsALlWNG37JIeSuMgRwxjZq4kBzbXYEut2_n45V8FEW6-N_EugdkGwGCHQN68aAozsEALw_wcB) | *Rail-to-rail I/O*<br>*Low quiescent current (23 mA max)*<br>*Operates from single 5 V supply*<br>*Four amplifiers per package* | *Through-hole package larger than SMD*<br>*Limited bandwidth for high-speed signals* |
+<br>**Option 1:** MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br>[link to product](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060) | *Rail-to-rail I/O*<br>*Low quiescent current (23 mA max)*<br>*Operates from single 5 V supply*<br>*Four amplifiers per package* | *Through-hole package larger than SMD*<br>*Limited bandwidth for high-speed signals* |
 
 **Choice:** Option 1 — MCP6004 Op-Amp  
 
@@ -87,4 +89,3 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 **Rationale:** Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.
 
 ---
-
