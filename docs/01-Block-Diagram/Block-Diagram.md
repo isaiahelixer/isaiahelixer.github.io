@@ -11,11 +11,11 @@ This subsystem monitors soil saturation levels using an analog soil moisture sen
 Power is supplied by a 9V, 3A wall adapter, which is regulated down to 5V, 1.5A through a voltage regulator to provide stable and safe operation for both the microcontroller and sensor.
 
 ### Sensors and Interfaces
-**Connected Sensor:**
-- Analog Soil Moisture Sensor  
+Connected Sensor:
+Analog Soil Moisture Sensor  
 
-**System Interface:**
-- Communicates soil data to other subsystems (e.g., motor control or irrigation logic) through an 8-pin connector, enabling coordinated system responses based on soil conditions.
+System Interface:
+Communicates soil data to other subsystems (e.g., motor control or irrigation logic) through an 8-pin connector, enabling coordinated system responses based on soil conditions.
 
 ## Block Diagram
 
