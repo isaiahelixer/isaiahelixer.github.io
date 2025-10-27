@@ -561,24 +561,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#temperature-humidity-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Temperature &amp; Humidity Sensors
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rain-water-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rain Water Sensors
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#voltage-regulator" class="md-nav__link">
     <span class="md-ellipsis">
       Voltage Regulator
@@ -591,6 +573,24 @@
   <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
       Microcontroller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Amplifier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-adapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Adapter
     </span>
   </a>
   
@@ -842,24 +842,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#temperature-humidity-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Temperature &amp; Humidity Sensors
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rain-water-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rain Water Sensors
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#voltage-regulator" class="md-nav__link">
     <span class="md-ellipsis">
       Voltage Regulator
@@ -872,6 +854,24 @@
   <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
       Microcontroller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-amplifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Amplifier
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-adapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Adapter
     </span>
   </a>
   
@@ -901,11 +901,10 @@
 
 
 <h1 id="component-selection">Component Selection</h1>
-<p>Subsystem board powered from 9 V input through a 5 V regulator.<br>
+<p>Subsystem board powered from 9 V wall adapter input through a 5 V regulator.<br>
 Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
-- Analog soil moisture sensor<br>
-- Temperature / humidity sensor<br>
-- Rain sensor<br>
+- Analog capacitive soil moisture sensor<br>
+- MCP6004 op-amp<br>
 - 8-pin connector to communicate with other boards  </p>
 <h2 id="soil-moisture-sensors">Soil Moisture Sensors</h2>
 <p><em>Table 1: Soil Moisture Sensor Comparison</em></p>
@@ -919,86 +918,26 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/287/217/SEN0114_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/287/217/SEN0114_sml.jpg"></a><br><strong>Option 1:</strong> SEN0114 Soil Moisture Sensor Module<br>$2.70 — each<br><a href="https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20243136172&amp;gbraid=0AAAAADrbLljjqP1OlpuYdh5M1W-hfUbv9&amp;gclid=Cj0KCQjwjL3HBhCgARIsAPUg7a72iXUga0vyWkCpTmrg7OEWgcecpY3oCWXcBJWl99RSd2a7WRIvGukaAgzTEALw_wcB">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/287/217/SEN0114_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/287/217/SEN0114_sml.jpg"></a><br><strong>Option 1:</strong> SEN0114 Soil Moisture Sensor Module<br>$2.70 — each<br><a href="https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525">link to product</a></td>
 <td><em>Simple analog output</em><br><em>Low cost</em><br><em>Compact design</em></td>
 <td><em>Corrodes over time if left in soil</em><br><em>Requires calibration for accuracy</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/169/089/MFG_ST0160_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/169/089/MFG_ST0160_sml%28200x200%29.jpg"></a><br><strong>Option 2:</strong> ST0160 Capacitive Soil Moisture Sensor V2.0<br>$8.60 — each<br><a href="https://www.digikey.com/en/products/detail/sunfounder/ST0160/22116813?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20243136172&amp;gbraid=0AAAAADrbLljjqP1OlpuYdh5M1W-hfUbv9&amp;gclid=Cj0KCQjwjL3HBhCgARIsAPUg7a4EblarQQQLZEiHysFPVUKRckIVFPQZiBxU5v7J3dNoex9XDlxkbKsaAjHHEALw_wcB">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/169/089/MFG_ST0160_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/169/089/MFG_ST0160_sml%28200x200%29.jpg"></a><br><strong>Option 2:</strong> ST0160 Capacitive Soil Moisture Sensor V2.0<br>$8.60 — each<br><a href="https://www.digikey.com/en/products/detail/sunfounder/ST0160/22116813">link to product</a></td>
 <td><em>No corrosion (capacitive)</em><br><em>Stable analog readings</em><br><em>Low power consumption</em></td>
 <td><em>More expensive than SEN0114</em><br><em>Slightly larger PCB footprint</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg"></a><br><strong>Option 3:</strong> Industrial Soil Moisture &amp; Temperature Sensor<br>$79 — each<br><a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/314990620/16570933?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLliHISOuiELCQaQga1eaoIOmc&amp;gclid=Cj0KCQjwjL3HBhCgARIsAPUg7a6GUOuKgdWM8bK_z-oZTCjWhKf-02W3xt938QRWk4AhGV1x-1FNQZ0aAj1jEALw_wcB">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg"></a><br><strong>Option 3:</strong> Industrial Soil Moisture &amp; Temperature Sensor<br>$79 — each<br><a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/314990620/16570933">link to product</a></td>
 <td><em>Industrial-grade durability</em><br><em>Includes temperature output</em><br><em>Long-term outdoor reliability</em></td>
 <td><em>Higher cost</em><br><em>Requires analog-to-current interface circuitry</em></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  </p>
-<p><strong>Rationale:</strong> Provides much more corrosion-free sensing with stable analog output and is good for long-term moisture monitoring in outdoor environments while maintaining low cost and simple integration with the PIC ADC.</p>
-<h2 id="temperature-humidity-sensors">Temperature &amp; Humidity Sensors</h2>
-<p><em>Table 2: Temperature &amp; Humidity Sensor Comparison</em></p>
-<table>
-<thead>
-<tr>
-<th><strong>Solution</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://m.media-amazon.com/images/I/51J9ha5fZKL._SX425_.jpg" data-desc-position="bottom"><img alt="" src="https://m.media-amazon.com/images/I/51J9ha5fZKL._SX425_.jpg"></a><br><strong>Option 1:</strong> DHT22 / AM2302 Sensor<br>$9.39 — each<br><a href="https://www.amazon.com/HiLetgo-Temperature-Humidity-Electronic-Practice/dp/B01N9BA0O4?th=1">link to product</a></td>
-<td><em>Low cost</em><br><em>Simple one-wire interface</em><br><em>Good community support</em></td>
-<td><em>Slow sampling rate</em><br><em>Limited accuracy (±0.5 °C, ±2 % RH)</em></td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://cdn-shop.adafruit.com/970x728/2857-03.jpg" data-desc-position="bottom"><img alt="" src="https://cdn-shop.adafruit.com/970x728/2857-03.jpg"></a><br><strong>Option 2:</strong> Adafruit Sensirion SHT31-D Sensor (I²C)<br>$13.95 — each<br><a href="https://www.adafruit.com/product/2857?gad_source=1&amp;gad_campaignid=21079227318&amp;gbraid=0AAAAADx9JvRao8jpCtH97p0BS1kvCOCfs&amp;gclid=Cj0KCQjwjL3HBhCgARIsAPUg7a6aRmfh7hVts6f-NzgjwWEcrnFF6SG6mYFPvHJF_5_NLzgAmvnoko8aAptiEALw_wcB">link to product</a></td>
-<td><em>High accuracy (±0.3 °C, ±2 % RH)</em><br><em>I²C communication</em><br><em>Fast response time</em></td>
-<td><em>Moderate cost</em><br><em>Requires I²C pins on MCU</em></td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://m.media-amazon.com/images/I/71Z1V1E1iNL._SX425_.jpg" data-desc-position="bottom"><img alt="" src="https://m.media-amazon.com/images/I/71Z1V1E1iNL._SX425_.jpg"></a><br><strong>Option 3:</strong> SHT45 Precision Temperature Humidity Module<br>$14.99 — each<br><a href="https://www.amazon.com/Precision-Temperature-Humidity-Interface-Breakout/dp/B0F1T4FM37/ref=sr_1_5?crid=2VJIOX6WRDNSV&amp;dib=eyJ2IjoiMSJ9.zLBsVEuSKpEuyBZVms1dVu0643-k49KWv2t-UJYjMxNGQcBPK1_THaOCvx9d6-2-ntkOCHWHa7Rdj9jf1VsCOK43UwYetYYVvY5T-MND0ftnXYeAf6bon6pU6m5dubFih_55ThChYhZLtXHg5aTiAKZXexRsSKD_ONrPuilh63rLFCSjnOHcOfUEDkzDDCb2BSlUocbAAWiidhY3d8GbziNRZ7AfDPOkyjFCQxTitOA.4fzmUt8u5s_igziwHNm6q_OWwX7cZa_uKZrncxJJp5g&amp;dib_tag=se&amp;keywords=high+precision+temp+humidity+sensor&amp;qid=1760576969&amp;sprefix=high+percision+temp+humidity+sensor%2Caps%2C115&amp;sr=8-5">link to product</a></td>
-<td><em>Very high precision (±0.1 °C, ±1 % RH)</em><br><em>Low power consumption</em><br><em>Compact form factor</em></td>
-<td><em>Higher price</em><br><em>May require fine-pitch connector or adapter</em></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Choice:</strong> Option 2 — Adafruit Sensirion SHT31-D Sensor  </p>
-<p><strong>Rationale:</strong> Offers a balance between precision, power efficiency, and integration simplicity using I²C communication working well with the PIC18F16Q41’s peripheral support.</p>
-<h2 id="rain-water-sensors">Rain Water Sensors</h2>
-<p><em>Table 3: Rain Sensor Comparison</em></p>
-<table>
-<thead>
-<tr>
-<th><strong>Solution</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/169/089/MFG_ST0247_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/169/089/MFG_ST0247_sml%28200x200%29.jpg"></a><br><strong>Option 1:</strong> ST0247 Raindrop Detection Sensor Module<br>$8.60 — each<br><a href="https://www.digikey.com/en/products/detail/sunfounder/ST0247/22116808?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20243136172&amp;gbraid=0AAAAADrbLljjqP1OlpuYdh5M1W-hfUbv9&amp;gclid=Cj0KCQjwjL3HBhCgARIsAPUg7a7lPwbIinfl1HWkQD0m-_1eTPRBahGmL4eiiv88jQ6CN0GsMBAA35UaAuRsEALw_wcB">link to product</a></td>
-<td><em>Low cost and easy to interface</em><br><em>Analog and digital outputs</em></td>
-<td><em>Susceptible to corrosion and false positives</em><br><em>Not quantitative</em></td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/003/217/526/MFG_SEN0545_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/003/217/526/MFG_SEN0545_sml%28200x200%29.jpg"></a><br><strong>Option 2:</strong> SEN0545 Rain Sensor (UART Output)<br>$22.68 — each<br><a href="https://www.digikey.com/en/products/detail/dfrobot/SEN0545/18069212?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLliHISOuiELCQaQga1eaoIOmc&amp;gclid=Cj0KCQjwjL3HBhCgARIsAPUg7a5ib2a6vLSE00kvNW-UBVDEF8pqLx0DSEHB3ZOGEL2FSJWKz9Z_23gaAmehEALw_wcB">link to product</a></td>
-<td><em>Digital UART interface</em><br><em>Corrosion-resistant coating</em><br><em>Stable signal processing built-in</em></td>
-<td><em>Slightly higher cost</em><br><em>Requires UART parsing logic</em></td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://ae-pic-a1.aliexpress-media.com/kf/Sc002d2b6c540434aa2b6636900dfaa44D.jpg_640x640q75.jpg_.avif" data-desc-position="bottom"><img alt="" src="https://ae-pic-a1.aliexpress-media.com/kf/Sc002d2b6c540434aa2b6636900dfaa44D.jpg_640x640q75.jpg_.avif"></a><br><strong>Option 3:</strong> Optical Rain Gauge Sensor (RS485 Pulse Output)<br>$85.72 — each<br><a href="[URL](https://www.aliexpress.com/p/tesla-landing/index.html?scenario=c_ppc_item_bridge&amp;productId=3256809806842311&amp;_immersiveMode=true&amp;withMainCard=true&amp;src=google&amp;aff_platform=true&amp;isdl=y&amp;src=google&amp;albch=shopping&amp;acnt=708-803-3821&amp;isdl=y&amp;slnk=&amp;plac=&amp;mtctp=&amp;albbt=Google_7_shopping&amp;aff_platform=google&amp;aff_short_key=UneMJZVf&amp;gclsrc=aw.ds&amp;&amp;albagn=888888&amp;&amp;ds_e_adid=&amp;ds_e_matchtype=&amp;ds_e_device=c&amp;ds_e_network=x&amp;ds_e_product_group_id=&amp;ds_e_product_id=en3256809806842311&amp;ds_e_product_merchant_id=5561010287&amp;ds_e_product_country=US&amp;ds_e_product_language=en&amp;ds_e_product_channel=online&amp;ds_e_product_store_id=&amp;ds_url_v=2&amp;albcp=19108282527&amp;albag=&amp;isSmbAutoCall=false&amp;needSmbHouyi=false&amp;gad_source=1&amp;gad_campaignid=19108284222&amp;gbraid=0AAAAAD6I-hFTzxHMvC0P7g7-KEDZyVPXJ&amp;gclid=Cj0KCQjwjL3HBhCgARIsAPUg7a5OO4ZGq7sFIcbFeqVzzmS34YxdUDmL9Aym0eGSSBtH2n28LKDXv14aAmETEALw_wcB)">link to product</a></td>
-<td><em>Industrial precision and long lifetime</em><br><em>Non-contact optical detection</em></td>
-<td><em>High price</em><br><em>Requires RS485 interface and external housing</em></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Choice:</strong> Option 2 — SEN0545 Rain Sensor (UART Output)  </p>
-<p><strong>Rationale:</strong> Provides reliable digital output with minimal maintenance and better environmental resistance than basic analog boards and avoiding the complexity and cost of industrial RS485 systems.</p>
+<p><strong>Rationale:</strong> Provides corrosion-free sensing with stable analog output and is suitable for long-term outdoor monitoring while maintaining low cost and simple integration with the PIC ADC.</p>
 <h2 id="voltage-regulator">Voltage Regulator</h2>
-<p><em>Table 4: Voltage Regulator Comparison</em></p>
+<p><em>Table 2: Voltage Regulator Comparison</em></p>
 <table>
 <thead>
 <tr>
@@ -1009,12 +948,12 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg"></a><br><strong>Option 1:</strong> LM7805 Linear Regulator<br>$0.64 — each<br><a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ACV/585962?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20509815359&amp;gbraid=0AAAAADrbLlhRNmrlatu8xAxdWtHI80ley&amp;gclid=Cj0KCQjwjL3HBhCgARIsAPUg7a7KnZXvXwXNpi7chQOzYTkAFFRfNkGRiLEYhx7zuVN-bOktpTwngCAaAm3zEALw_wcB">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg"></a><br><strong>Option 1:</strong> LM7805 Linear Regulator<br>$0.64 — each<br><a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ACV/585962">link to product</a></td>
 <td><em>Simple design</em><br><em>Low noise</em><br><em>Stable 5 V output</em></td>
 <td><em>Inefficient when dropping 9 V to 5 V</em><br><em>Generates heat at higher currents</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg"></a><br><strong>Option 2:</strong> UA78L05ACLP <br>$1.69 — each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/UA78L05ACLP/13465029">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg"></a><br><strong>Option 2:</strong> UA78L05ACLP<br>$1.69 — each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/UA78L05ACLP/13465029">link to product</a></td>
 <td><em>Compact package</em><br><em>Low quiescent current</em><br><em>Perfect for ≤ 100 mA loads</em></td>
 <td><em>Limited output current (100 mA max)</em><br><em>Not ideal for high-current systems</em></td>
 </tr>
@@ -1026,6 +965,16 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 <p><strong>Component:</strong> PIC18F16Q41 Curiosity Nano<br>
 <strong>Supply:</strong> 5 V from LM7805 Regulator  </p>
 <p><strong>Rationale:</strong> Used for its low-power operation, built-in ADC channels for analog sensor inputs, I²C and UART support for digital sensors, and fast development and debugging.</p>
+<h2 id="operational-amplifier">Operational Amplifier</h2>
+<p><strong>Component:</strong> MCP6004 (Through-Hole Quad Op-Amp)<br>
+<strong>Supply:</strong> 5 V from LM7805 Regulator  </p>
+<p><strong>Rationale:</strong> Already supplied component used for signal conditioning of analog sensor inputs. Offers rail-to-rail I/O, low power consumption, and stable operation within 5 V single-supply systems.<br>
+<strong>Note:</strong> Maximum supply current is 23 mA. Ensure local decoupling with 0.1 µF capacitors near each Vcc pin.  </p>
+<h2 id="power-adapter">Power Adapter</h2>
+<p><strong>Component:</strong> Model 0930 — AC to DC Power Adapter<br>
+<strong>Specification:</strong> 9 V DC Output, 3 A Max  </p>
+<p><strong>Rationale:</strong> Pre-supplied power source providing system input voltage for the LM7805 regulator. Rated current provides sufficient headroom for the subsystem load.<br>
+<strong>Note:</strong> Verify barrel jack polarity and label on PCB (typically center-positive). Include a 2 A inline fuse and bulk capacitor (e.g., 470 µF, 25 V) on the input for protection and stability.</p>
 
 
 
