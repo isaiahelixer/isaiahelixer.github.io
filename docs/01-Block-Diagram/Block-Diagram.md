@@ -1,23 +1,22 @@
 ---
-title: Individal Block Diagram
+title: Individual Block Diagram
 tags:
-- tag1
-- tag2
+- subsystem
+- soil-sensor
 ---
 
 ## Overview
-This subsystem monitors environmental conditions using digital sensors for soil moisture, rainwater, and temperature/humidity. It uses a Microchip PIC18F57Q43 Curiosity Nano microcontroller to read sensor data via analog pins and digital I/O and PWM which processes the information and makes it available to the rest of the system for decision-making. 
+This subsystem monitors soil saturation levels using an analog soil moisture sensor. A Microchip PIC18F57Q43 Curiosity Nano microcontroller reads the sensor’s analog output, processes the data, and transmits the results to the main system for further analysis and control actions.
 
-The system is powered by a 9V, 3A unregulated power supply and is regulated down to 5V, 1.5A using a voltage regulator to ensure safe and stable operation of the microcontroller and all connected sensors.  
+Power is supplied by a 9V, 3A wall adapter, which is regulated down to 5V, 1.5A through a voltage regulator to provide stable and safe operation for both the microcontroller and sensor.
 
-It interfaces with three digital sensors:  
--Soil Moisture Sensor  
--Rain Water Sensor  
--Temperature/Humidity Sensor  
+### Sensors and Interfaces
+**Connected Sensor:**
+- Analog Soil Moisture Sensor  
 
-Actuator Interface:  
-This subsystem doesn't directly control an actuator but it provides sensor data to other subsystems such as motor control that can act upon the readings.  
+**System Interface:**
+- Communicates soil data to other subsystems (e.g., motor control or irrigation logic) through an 8-pin connector, enabling coordinated system responses based on soil conditions.
 
-## Block Diagram  
+## Block Diagram
 
-![Diagram](https://github.com/isaiahelixer/isaiahelixer.github.io/blob/0fb4ff5d5531046969bbd44f2026349a30f3c858/docs/01-Block-Diagram/Block%20Diagram%20-%20Individual.drawio.png)
+<img width="602" height="402" alt="Block Diagram - Team 101 drawio" src="https://github.com/user-attachments/assets/de2b0016-6ed7-4976-842a-36e711a624e4" />
