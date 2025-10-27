@@ -10,7 +10,7 @@ This subsystem monitors soil saturation levels using an analog soil moisture sen
 
 Power is supplied by a 9V, 3A wall adapter, which is regulated down to 5V, 1.5A through a voltage regulator to provide stable and safe operation for both the microcontroller and sensor.
 
-### Sensors and Interfaces
+## Sensors and Interfaces
 Connected Sensor:
 Analog Capacitive Soil Moisture Sensor  
 
