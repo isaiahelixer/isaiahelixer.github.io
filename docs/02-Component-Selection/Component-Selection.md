@@ -49,7 +49,8 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
-| ![](<img width="797" height="471" alt="Screenshot 2025-10-27 083819" src="https://github.com/user-attachments/assets/9fb2554c-9bb8-481d-b711-f7ca10886eb0" />)<br>**Option 1:** PIC18F16Q41 Curiosity Nano<br>$15 — each<br>[link to product](https://www.microchip.com/en-us/development-tool/dm164150) | *Low-power operation*<br>*Integrated ADC channels*<br>*I²C, SPI, and UART communication*<br>*Onboard debugger (USB)* | *Limited I/O for expansion*<br>*Requires MPLAB X IDE setup* |
+| ![](<img width="423" height="250" alt="Screenshot 2025-10-27 083819 (1)" src="https://github.com/user-attachments/assets/74bf714e-3918-4d43-b116-b8da425d14f9" />
+)<br>**Option 1:** PIC18F16Q41 Curiosity Nano<br>$15 — each<br>[link to product](https://www.microchip.com/en-us/development-tool/dm164150) | *Low-power operation*<br>*Integrated ADC channels*<br>*I²C, SPI, and UART communication*<br>*Onboard debugger (USB)* | *Limited I/O for expansion*<br>*Requires MPLAB X IDE setup* |
 
 **Choice:** Option 1 — PIC18F16Q41 Curiosity Nano  
 
@@ -63,7 +64,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
-| ![](<img width="638" height="640" alt="Screenshot 2025-10-27 083608" src="https://github.com/user-attachments/assets/f03be599-595e-4b94-8da5-4a28fbb7912e" />
+| ![](<img width="299" height="300" alt="Screenshot 2025-10-27 083608 (1)" src="https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e" />
 )<br>**Option 1:** MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br>[link to product](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060?gclsrc=aw.ds&gad_source=1&gad_campaignid=120565755&gbraid=0AAAAADrbLlhiVO2X4tb4kz7_jZIGtwYQb&gclid=Cj0KCQjwsPzHBhDCARIsALlWNG37JIeSuMgRwxjZq4kBzbXYEut2_n45V8FEW6-N_EugdkGwGCHQN68aAozsEALw_wcB) | *Rail-to-rail I/O*<br>*Low quiescent current (23 mA max)*<br>*Operates from single 5 V supply*<br>*Four amplifiers per package* | *Through-hole package larger than SMD*<br>*Limited bandwidth for high-speed signals* |
 
 **Choice:** Option 1 — MCP6004 Op-Amp  
@@ -78,7 +79,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |--------------|-----------|-----------|
-| ![](<img width="838" height="841" alt="Screenshot 2025-10-27 084100" src="https://github.com/user-attachments/assets/a43cfc88-b332-4752-b125-37c5fcd68e4e" />
+| ![](<img width="299" height="300" alt="Screenshot 2025-10-27 084100 (1)" src="https://github.com/user-attachments/assets/04c6a715-77bc-453e-a9f3-900abc7a1e74" />
 )<br>**Option 1:** 9 V 3 A AC to DC Adapter — Model 0930<br>Supplied Item<br>[link to product](https://circuit.rocks/products/ac-dc-9v-3a-wall-power-adapter-5-5x2-1mm-barrel-jack-center-positive?srsltid=AfmBOorFslDo47N-3NvdrLDoGEcEk_4wOiCGbP_auU3NXxOUc5jR5Ha3) | *High current capacity (3 A)*<br>*Stable DC output*<br>*Compatible with LM7805 input requirements* | *Linear regulator heat generation at high loads*<br>*Requires correct barrel polarity and connector matching* |
 
 **Choice:** Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)  
