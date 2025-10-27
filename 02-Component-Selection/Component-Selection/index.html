@@ -906,7 +906,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 - Analog capacitive soil moisture sensor<br>
 - MCP6004 op-amp<br>
 - 8-pin connector to communicate with other boards  </p>
-<hr>
 <h2 id="soil-moisture-sensors">Soil Moisture Sensors</h2>
 <p><em>Table 1: Soil Moisture Sensor Comparison</em></p>
 <table>
@@ -937,7 +936,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </table>
 <p><strong>Choice:</strong> Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  </p>
 <p><strong>Rationale:</strong> Provides corrosion-free sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and simple integration with the PIC ADC.</p>
-<hr>
 <h2 id="voltage-regulator">Voltage Regulator</h2>
 <p><em>Table 2: Voltage Regulator Comparison</em></p>
 <table>
@@ -965,7 +963,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 <td></td>
 </tr>
 <tr>
-<td><br><strong>Option 3:</strong> N7805-1CW DC/DC Converter (Mean Well)<br>$10.20 — each<br><a href="https://www.digikey.com/en/products/detail/mean-well-usa-inc/N7805-1CW/22119070?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLlg-mikvqqI5kSyxvX2VfJ_hR&amp;gclid=Cj0KCQjwsPzHBhDCARIsALlWNG103010_DEIqUxx9fiA1KByIbHfhtIRslfFwbx4pb0jn2gCCEdNubsaAjjsEALw_wcB">link to product</a></td>
+<td><br><strong>Option 3:</strong> N7805-1CW DC/DC Converter (Mean Well)<br>$4.84 — each<br><a href="https://www.digikey.com/en/products/detail/mean-well-usa-inc/N7805-1CW/22119070?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLlg-mikvqqI5kSyxvX2VfJ_hR&amp;gclid=Cj0KCQjwsPzHBhDCARIsALlWNG103010_DEIqUxx9fiA1KByIbHfhtIRslfFwbx4pb0jn2gCCEdNubsaAjjsEALw_wcB">link to product</a></td>
 <td><em>High efficiency (93%)</em><br><em>Wide 8–36 V input range</em><br><em>Compact enclosed design</em><br><em>Low heat output</em><br><em>500 mA max current, 7.5 W power</em><br><em>Operates -40°C to +85°C</em></td>
 <td><em>Higher cost than LM7805</em><br><em>More complex sourcing if not stocked</em></td>
 </tr>
@@ -973,7 +971,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </table>
 <p><strong>Choice:</strong> Option 1 — LM7805 Linear Regulator  </p>
 <p><strong>Rationale:</strong> The LM7805 is already supplied and sufficient for the system’s moderate current demand. The N7805-1CW offers improved efficiency but is not required for this application.</p>
-<hr>
 <h2 id="microcontroller">Microcontroller</h2>
 <p><em>Table 3: Microcontroller Comparison</em></p>
 <table>
@@ -999,7 +996,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </table>
 <p><strong>Choice:</strong> Option 1 — PIC18F16Q41 Curiosity Nano  </p>
 <p><strong>Rationale:</strong> Readily available and already supplied to the team, simplifying integration with sensors and op-amp circuitry.</p>
-<hr>
 <h2 id="operational-amplifier">Operational Amplifier</h2>
 <p><em>Table 4: Operational Amplifier Comparison</em></p>
 <table>
@@ -1025,7 +1021,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </table>
 <p><strong>Choice:</strong> Option 1 — MCP6004 Op-Amp  </p>
 <p><strong>Rationale:</strong> Already supplied; provides four precision amplifiers suitable for low-power sensor signal conditioning and stable analog performance.</p>
-<hr>
 <h2 id="power-adapter">Power Adapter</h2>
 <p><em>Table 5: Power Adapter Comparison</em></p>
 <table>
@@ -1043,7 +1038,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 <td></td>
 </tr>
 <tr>
-<td><br><strong>Option 1:</strong> 9 V 3 A AC to DC Adapter — Model 0930<br>Supplied Item<br><a href="https://circuit.rocks/products/ac-dc-9v-3a-wall-power-adapter-5-5x2-1mm-barrel-jack-center-positive?srsltid=AfmBOorFslDo47N-3NvdrLDoGEcEk_4wOiCGbP_auU3NXxOUc5jR5Ha3">link to product</a></td>
+<td><br><strong>Option 1:</strong> 9V 3A AC to DC Adapter — Model 0930<br>Supplied Item<br><a href="https://circuit.rocks/products/ac-dc-9v-3a-wall-power-adapter-5-5x2-1mm-barrel-jack-center-positive?srsltid=AfmBOorFslDo47N-3NvdrLDoGEcEk_4wOiCGbP_auU3NXxOUc5jR5Ha3">link to product</a></td>
 <td><em>High current capacity (3 A)</em><br><em>Stable DC output</em><br><em>Compatible with LM7805 input requirements</em></td>
 <td><em>Linear regulator heat generation at high loads</em><br><em>Requires correct barrel polarity and connector matching</em></td>
 </tr>
@@ -1051,7 +1046,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </table>
 <p><strong>Choice:</strong> Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)  </p>
 <p><strong>Rationale:</strong> Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.</p>
-<hr>
 
 
 
