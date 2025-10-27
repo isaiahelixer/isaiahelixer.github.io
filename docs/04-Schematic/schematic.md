@@ -14,4 +14,4 @@ This schematic is designed to support the Smart Irrigation Subsystem Board. It r
 
 ## Resources
 
-The schematic as a PDF download is available [*here*](https://drive.google.com/file/d/1PHRfCVrIbQymHdliSHlpxxPT8_5ArY3Y/view?usp=sharing), and the Zip folder of the project [*here*](https://drive.google.com/file/d/11O1bJFZIB-i-Q4pH2sXoqLdddwygJViZ/view?usp=sharing).
+The schematic as a PDF download is available [*here*](https://github.com/isaiahelixer/isaiahelixer.github.io/blob/e36b2e452d88d8e405739bb19b1020889994b977/docs/04-Schematic/Subsystem%20Schematic%20Design.pdf), and the Zip folder of the project [*here*](https://drive.google.com/file/d/11O1bJFZIB-i-Q4pH2sXoqLdddwygJViZ/view?usp=sharing).
