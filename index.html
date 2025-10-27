@@ -437,11 +437,29 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introduction">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-contribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      My Contribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My Contribution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#project-summary" class="md-nav__link">
+  <a href="#project-summary_1" class="md-nav__link">
     <span class="md-ellipsis">
       Project Summary
     </span>
@@ -450,7 +468,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#my-contribution" class="md-nav__link">
+  <a href="#my-contribution_1" class="md-nav__link">
     <span class="md-ellipsis">
       My Contribution
     </span>
@@ -788,11 +806,29 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introduction">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-contribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      My Contribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My Contribution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#project-summary" class="md-nav__link">
+  <a href="#project-summary_1" class="md-nav__link">
     <span class="md-ellipsis">
       Project Summary
     </span>
@@ -801,7 +837,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#my-contribution" class="md-nav__link">
+  <a href="#my-contribution_1" class="md-nav__link">
     <span class="md-ellipsis">
       My Contribution
     </span>
@@ -842,21 +878,32 @@
 <p></p><center>
 <font size="6"> Welcome</font><br>
 as part of<br>
-<font size="8"> Project Name</font><br>
+<font size="8"> Projectz</font><br>
 for<br>
 <font size="5"> Team 101 </font><br><p></p>
-<p><strong>Submission: month, DD, YYYY</strong>
+<p><strong>Submission: 10, 27, 2025</strong>
 </p></center><p></p>
 <h2 id="introduction">Introduction</h2>
-<ul>
-<li>This needs to be updated so that a reader gets an idea of the purpose of this datasheet.</li>
-</ul>
-<h3 id="project-summary">Project Summary</h3>
+<p>This datasheet provides a complete overview of the Sensor Subsystem Board used in the Smart Irrigation System project. The subsystem is designed to measure soil moisture levels and send that data to the main control unit in turn helping the system make decisions about when to water.  </p>
+<p>The document outlines how the subsystem works, what components were selected, and how power is managed to ensure reliable performance. It includes the block diagram, component selections, bill of materials (BOM), schematic, power budget, and appendix for full reference listed above.  </p>
+<h2 id="project-summary">Project Summary</h2>
+<p>The <strong>Smart Irrigation System</strong> is a water-efficient lawn watering project designed by Team 101. Its goal is to help homeowners and renters maintain healthy lawns while reducing water waste and cost. The system automatically monitors soil conditions, weather, and water usage to decide when watering is needed.  </p>
+<p>The project is built around three main subsystems — <strong>Control</strong>, <strong>Sensor</strong>, and <strong>Motor</strong> — each using a PIC18F57Q43 Curiosity Nano microcontroller. These subsystems work together to create a modular and reliable watering system that can function both online and offline.  </p>
+<p>My subsystem, the <strong>Sensor Board</strong>, plays a key role by measuring soil moisture levels and sending accurate data to the Control Board. This data allows the system to decide when to turn the pump on or off, helping achieve efficient and automatic lawn irrigation.  </p>
+<p>For a full overview of the team project, including our mission statement, user needs, and system design, you can visit the <strong><a href="https://egr304-2025-f-101.github.io/team101.github.io/Appendix/App-Team-Org/">Team Report Appendix</a></strong>.</p>
+<h2 id="my-contribution">My Contribution</h2>
+<p>My part in this project focuses on the <strong>Sensor Subsystem</strong>, which handles data collection and signal processing for the soil moisture readings. I designed the board to convert a 9V supply down to 5V using an LM7805 regulator and included diode and fuse protection for safe operation. The board uses an MCP6004 op-amp to condition the sensor signal before it’s read by the PIC18F57Q43 microcontroller.  </p>
+<p>The processed data is then sent to the Control Subsystem through an 8-pin connector to support system coordination. My design ensures that the sensor data is clean, stable, and accurate, which is essential for the irrigation logic to function properly.  </p>
+<p>To review the materials and components used to build this subsystem, visit the <strong>BOM</strong> section of this datasheet.<br>
+For information on circuit layout and wiring, see the <strong>Schematic</strong> section.<br>
+For power usage and regulation details, check the <strong>Power Budget</strong> section.</p>
+<p>This subsystem provides the foundation for the system’s “decision-making,” ensuring the smart irrigation setup reacts correctly to real soil conditions.</p>
+<h3 id="project-summary_1">Project Summary</h3>
 <ul>
 <li>This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.</li>
 <li>Add context that ties into the link to your <a href="https://embedded-systems-design.github.io/EGR304TeamTemplate/">team report.</a></li>
 </ul>
-<h3 id="my-contribution">My Contribution</h3>
+<h3 id="my-contribution_1">My Contribution</h3>
 <ul>
 <li>This needs to be updated to reflect a team introduction</li>
 <li>Content should also help an unfamiliar reader navigate to areas of interest. Information like:</li>
