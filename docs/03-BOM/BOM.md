@@ -1,7 +1,7 @@
 ---
 title: Bill of Materials
 tags:
-- Smart Irrigation Subsystem
+- Smart Irrigation Sensor Subsystem
 - Power and Sensor Board
 ---
 
@@ -40,6 +40,7 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 
 **Total Estimated Cost:** ≈ **$31.21**
 
-
+A complete Excel version of this Bill of Materials, including Manufacturer Part #, Vendor Links, Supplier Part #, and Schematic Reference Designators that can be accessed here:  
+📂 [Smart Irrigation Sensor Subsystem BOM](sandbox:/mnt/data/Smart_Irrigation_BOM.xlsx)
 
 
