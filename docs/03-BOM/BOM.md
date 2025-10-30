@@ -11,8 +11,6 @@ The following Bill of Materials lists all major electronic and passive component
 The system operates from a 9 V input using an LM7805 linear regulator to provide a regulated 5 V rail powering the PIC18F57Q43 Curiosity Nano, MCP6004 op-amp, and ST0160 capacitive soil moisture sensor.  
 The design also includes decoupling capacitors, diodes for reverse protection, resistors, fuses, jumpers, and test points for debugging and signal monitoring.
 
----
-
 ## Bill of Materials 
 
 | **Part Name/Description** | **Qty** | **Unit Cost** | **Total Cost** | **Manufacturer** | **Datasheet Link** |
@@ -36,18 +34,12 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 | Slide Switch | 1 | $0.83 | $0.83 | Same Sky | [Datasheet](https://www.sameskydevices.com/product/resource/slw-1276864-4a-d.pdf) |
 | Debug Button (Momentary SW) | 1 | $0.10 | $0.10 | Same Sky | [Datasheet](https://www.sameskydevices.com/product/resource/ts02.pdf) |
 | 1/2 Watt 220 Ω Resistor | 2 | $0.10 | $0.20 | Yageo | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
-| 2 Watt 100 Ω Resistor | 1 | $0.10 | $0.10 | Yageo | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
+| 1/2 Watt 100 Ω Resistor | 1 | $0.10 | $0.10 | Yageo | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
 | 1/2 Watt 10 kΩ Resistor | 1 | $0.11 | $0.11 | Yageo | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
 | Test Points | 3 | $0.39 | $1.17 | Keystone | [Datasheet](https://www.keyelco.com/userAssets/file/M65p56.pdf) |
 
----
-
 **Total Estimated Cost:** ≈ **$31.21**
 
----
-
-✅ **All total costs updated for quantity.**  
-Would you like me to also add **links to the Mouser/Digikey product pages** for each major part (e.g., microcontroller, op amp, sensor, regulator)? That makes it look very polished for reports and posters.
 
 
 
