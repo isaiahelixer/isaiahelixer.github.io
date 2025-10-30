@@ -552,9 +552,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#soil-moisture-sensors" class="md-nav__link">
+  <a href="#soil-moisture-sensor" class="md-nav__link">
     <span class="md-ellipsis">
-      Soil Moisture Sensors
+      Soil Moisture Sensor
     </span>
   </a>
   
@@ -833,9 +833,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#soil-moisture-sensors" class="md-nav__link">
+  <a href="#soil-moisture-sensor" class="md-nav__link">
     <span class="md-ellipsis">
-      Soil Moisture Sensors
+      Soil Moisture Sensor
     </span>
   </a>
   
@@ -901,13 +901,14 @@
 
 
 <h1 id="component-selection">Component Selection</h1>
-<p>Subsystem board powered from 9 V wall adapter input through a 5 V regulator.<br>
-Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
+<p>Subsystem board powered from a 9 V wall adapter input through a 5 V regulator.<br>
+Includes a <strong>PIC18F16Q41 Curiosity Nano</strong> microcontroller connected to:<br>
 - Analog capacitive soil moisture sensor<br>
 - MCP6004 op-amp<br>
-- 8-pin connector to communicate with other boards  </p>
-<h2 id="soil-moisture-sensors">Soil Moisture Sensors</h2>
-<p><em>Table 1: Soil Moisture Sensor Comparison</em></p>
+- 8-pin connector for communication with other subsystem boards  </p>
+<hr>
+<h2 id="soil-moisture-sensor">Soil Moisture Sensor</h2>
+<p><strong>Table 1: Soil Moisture Sensor Comparison</strong></p>
 <table>
 <thead>
 <tr>
@@ -918,36 +919,27 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/66eeb141-3a8a-4a65-ba30-f9e865b20f8b" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/66eeb141-3a8a-4a65-ba30-f9e865b20f8b"></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><br><strong>Option 1:</strong> SEN0114 Soil Moisture Sensor Module<br>$2.70 — each<br><a href="https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/66eeb141-3a8a-4a65-ba30-f9e865b20f8b" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/66eeb141-3a8a-4a65-ba30-f9e865b20f8b"></a><br><strong>Option 1:</strong> SEN0114 Soil Moisture Sensor Module<br>$2.70 — each<br><a href="https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525">Product Link</a></td>
 <td><em>Simple analog output</em><br><em>Low cost</em><br><em>Compact design</em></td>
 <td><em>Corrodes over time if left in soil</em><br><em>Requires calibration for accuracy</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/d213c9d3-1647-4f78-83f7-da6f1a7d93ea" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/d213c9d3-1647-4f78-83f7-da6f1a7d93ea"></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><br><strong>Option 2:</strong> ST0160 Capacitive Soil Moisture Sensor V2.0<br>$8.60 — each<br><a href="https://www.amazon.com/Capacitive-Corrosion-Resistant-Detection-Raspberry/dp/B0F6N259HM/?_encoding=UTF8&amp;pd_rd_w=DQplV&amp;content-id=amzn1.sym.048a6e3c-8d40-4302-8312-26c626af6738%3Aamzn1.symc.050ea944-f1cf-4610-b462-3b604f2f4082&amp;pf_rd_p=048a6e3c-8d40-4302-8312-26c626af6738&amp;pf_rd_r=6MM1VGGRWJ33QBQZWP95&amp;pd_rd_wg=0njKJ&amp;pd_rd_r=abac3d32-6dc9-42ad-bebb-c9ab94a5e445&amp;ref_=pd_hp_d_btf_ci_mcx_mr_ca_id_hp_d">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/d213c9d3-1647-4f78-83f7-da6f1a7d93ea" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/d213c9d3-1647-4f78-83f7-da6f1a7d93ea"></a><br><strong>Option 2:</strong> ST0160 Capacitive Soil Moisture Sensor V2.0<br>$8.60 — each<br><a href="https://www.amazon.com/dp/B0F6N259HM">Product Link</a></td>
 <td><em>No corrosion (capacitive)</em><br><em>Stable analog readings</em><br><em>Low power consumption</em></td>
 <td><em>More expensive than SEN0114</em><br><em>Slightly larger PCB footprint</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg"></a><br><strong>Option 3:</strong> Industrial Soil Moisture &amp; Temperature Sensor<br>$79 — each<br><a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/314990620/16570933">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg"></a><br><strong>Option 3:</strong> Industrial Soil Moisture &amp; Temperature Sensor<br>$79 — each<br><a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/314990620/16570933">Product Link</a></td>
 <td><em>Industrial-grade durability</em><br><em>Includes temperature output</em><br><em>Long-term outdoor reliability</em></td>
-<td><em>Higher cost</em><br><em>Requires analog-to-current interface circuitry</em></td>
+<td><em>High cost</em><br><em>Requires analog-to-current interface circuitry</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  </p>
-<p><strong>Rationale:</strong> Provides corrosion-free sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and simple integration with the PIC ADC.</p>
+<p><strong>Choice:</strong> Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0<br>
+<strong>Rationale:</strong> Provides corrosion-free sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and easy integration with the PIC ADC.</p>
+<hr>
 <h2 id="voltage-regulator">Voltage Regulator</h2>
-<p><em>Table 2: Voltage Regulator Comparison</em></p>
+<p><strong>Table 2: Voltage Regulator Comparison</strong></p>
 <table>
 <thead>
 <tr>
@@ -958,31 +950,27 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg"></a><br><strong>Option 1:</strong> LM7805 Linear Regulator<br>$0.64 — each<br><a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ACV/585962">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/300/415/110/497%7ETO220-3TO220AB%7E%7E3_sml.jpg"></a><br><strong>Option 1:</strong> LM7805 Linear Regulator<br>$0.64 — each<br><a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ACV/585962">Product Link</a></td>
 <td><em>Simple design</em><br><em>Low noise</em><br><em>Stable 5 V output</em></td>
-<td><em>Inefficient when dropping 9 V to 5 V</em><br><em>Generates heat at higher currents</em></td>
+<td><em>Inefficient dropping 9 V → 5 V</em><br><em>Generates heat at higher currents</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg"></a><br><strong>Option 2:</strong> UA78L05ACLP<br>$1.69 — each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/UA78L05ACLP/13465029">link to product</a></td>
-<td><em>Compact package</em><br><em>Low quiescent current</em><br><em>Perfect for ≤100 mA loads</em></td>
-<td><em>Limited output current (100 mA max)</em><br><em>Not ideal for high-current systems</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/001/202/809/296%7E4040001-2%7ELP%7E3_sml%28200x200%29.jpg"></a><br><strong>Option 2:</strong> UA78L05ACLP Regulator<br>$1.69 — each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/UA78L05ACLP/13465029">Product Link</a></td>
+<td><em>Compact package</em><br><em>Low quiescent current</em><br><em>Ideal for ≤100 mA loads</em></td>
+<td><em>Limited to 100 mA output</em><br><em>Not for high-current systems</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/89f2e40e-c528-4b86-9d24-e24a1fa8eebd" data-desc-position="bottom"><img width="301" height="300" alt="Screenshot 2025-10-27 085500 (1)" src="https://github.com/user-attachments/assets/89f2e40e-c528-4b86-9d24-e24a1fa8eebd"></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><br><strong>Option 3:</strong> N7805-1CW DC/DC Converter (Mean Well)<br>$4.84 — each<br><a href="https://www.digikey.com/en/products/detail/mean-well-usa-inc/N7805-1CW/22119070?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20232005509&amp;gbraid=0AAAAADrbLlg-mikvqqI5kSyxvX2VfJ_hR&amp;gclid=Cj0KCQjwsPzHBhDCARIsALlWNG103010_DEIqUxx9fiA1KByIbHfhtIRslfFwbx4pb0jn2gCCEdNubsaAjjsEALw_wcB">link to product</a></td>
-<td><em>High efficiency (93%)</em><br><em>Wide 8–36 V input range</em><br><em>Compact enclosed design</em><br><em>Low heat output</em><br><em>500 mA max current, 7.5 W power</em><br><em>Operates -40°C to +85°C</em></td>
-<td><em>Higher cost than LM7805</em><br><em>More complex sourcing if not stocked</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/89f2e40e-c528-4b86-9d24-e24a1fa8eebd" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/89f2e40e-c528-4b86-9d24-e24a1fa8eebd"></a><br><strong>Option 3:</strong> N7805-1CW DC/DC Converter (Mean Well)<br>$4.84 — each<br><a href="https://www.digikey.com/en/products/detail/mean-well-usa-inc/N7805-1CW/22119070">Product Link</a></td>
+<td><em>High efficiency (93%)</em><br><em>Wide 8–36 V input range</em><br><em>Compact enclosed design</em><br><em>Low heat output</em></td>
+<td><em>Higher cost than LM7805</em><br><em>Less common in local stock</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 1 — LM7805 Linear Regulator  </p>
-<p><strong>Rationale:</strong> The LM7805 is already supplied and sufficient for the system’s moderate current demand. The N7805-1CW offers improved efficiency but is not required for this application.</p>
+<p><strong>Choice:</strong> Option 1 — LM7805 Linear Regulator<br>
+<strong>Rationale:</strong> Already supplied and sufficient for the system’s moderate current demand. The N7805-1CW offers higher efficiency but is unnecessary for this subsystem.</p>
+<hr>
 <h2 id="microcontroller">Microcontroller</h2>
-<p><em>Table 3: Microcontroller Comparison</em></p>
+<p><strong>Table 3: Microcontroller Comparison</strong></p>
 <table>
 <thead>
 <tr>
@@ -993,21 +981,17 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/74bf714e-3918-4d43-b116-b8da425d14f9" data-desc-position="bottom"><img width="423" height="250" alt="Screenshot 2025-10-27 083819 (1)" src="https://github.com/user-attachments/assets/74bf714e-3918-4d43-b116-b8da425d14f9"></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><br><strong>Option 1:</strong> PIC18F16Q41 Curiosity Nano<br>$15 — each<br><a href="https://www.microchip.com/en-us/development-tool/dm164150">link to product</a></td>
-<td><em>Low-power operation</em><br><em>Integrated ADC channels</em><br><em>I²C, SPI, and UART communication</em><br><em>Onboard debugger (USB)</em></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/74bf714e-3918-4d43-b116-b8da425d14f9" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/74bf714e-3918-4d43-b116-b8da425d14f9"></a><br><strong>Option 1:</strong> PIC18F16Q41 Curiosity Nano<br>$15 — each<br><a href="https://www.microchip.com/en-us/development-tool/dm164150">Product Link</a></td>
+<td><em>Low-power operation</em><br><em>Integrated ADC channels</em><br><em>I²C, SPI, and UART communication</em><br><em>Onboard debugger via USB</em></td>
 <td><em>Limited I/O for expansion</em><br><em>Requires MPLAB X IDE setup</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 1 — PIC18F16Q41 Curiosity Nano  </p>
-<p><strong>Rationale:</strong> Readily available and already supplied to the team, simplifying integration with sensors and op-amp circuitry.</p>
+<p><strong>Choice:</strong> Option 1 — PIC18F16Q41 Curiosity Nano<br>
+<strong>Rationale:</strong> Readily available and already supplied to the team, simplifying integration with sensors and op-amp circuitry.</p>
+<hr>
 <h2 id="operational-amplifier">Operational Amplifier</h2>
-<p><em>Table 4: Operational Amplifier Comparison</em></p>
+<p><strong>Table 4: Operational Amplifier Comparison</strong></p>
 <table>
 <thead>
 <tr>
@@ -1018,21 +1002,17 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e" data-desc-position="bottom"><img width="299" height="300" alt="Screenshot 2025-10-27 083608 (1)" src="https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e"></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><br><strong>Option 1:</strong> MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e"></a><br><strong>Option 1:</strong> MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">Product Link</a></td>
 <td><em>Rail-to-rail I/O</em><br><em>Low quiescent current (23 mA max)</em><br><em>Operates from single 5 V supply</em><br><em>Four amplifiers per package</em></td>
 <td><em>Through-hole package larger than SMD</em><br><em>Limited bandwidth for high-speed signals</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 1 — MCP6004 Op-Amp  </p>
-<p><strong>Rationale:</strong> Already supplied; provides four precision amplifiers suitable for low-power sensor signal conditioning and stable analog performance.</p>
+<p><strong>Choice:</strong> Option 1 — MCP6004 Op-Amp<br>
+<strong>Rationale:</strong> Already supplied; provides four precision amplifiers suitable for low-power sensor signal conditioning and stable analog performance.</p>
+<hr>
 <h2 id="power-adapter">Power Adapter</h2>
-<p><em>Table 5: Power Adapter Comparison</em></p>
+<p><strong>Table 5: Power Adapter Comparison</strong></p>
 <table>
 <thead>
 <tr>
@@ -1043,19 +1023,15 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/04c6a715-77bc-453e-a9f3-900abc7a1e74" data-desc-position="bottom"><img width="299" height="300" alt="Screenshot 2025-10-27 084100 (1)" src="https://github.com/user-attachments/assets/04c6a715-77bc-453e-a9f3-900abc7a1e74"></a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><br><strong>Option 1:</strong> 9V 3A AC to DC Adapter — Model 0930<br>Supplied Item<br><a href="https://circuit.rocks/products/ac-dc-9v-3a-wall-power-adapter-5-5x2-1mm-barrel-jack-center-positive?srsltid=AfmBOorFslDo47N-3NvdrLDoGEcEk_4wOiCGbP_auU3NXxOUc5jR5Ha3">link to product</a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/04c6a715-77bc-453e-a9f3-900abc7a1e74" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/04c6a715-77bc-453e-a9f3-900abc7a1e74"></a><br><strong>Option 1:</strong> 9 V 3 A AC to DC Adapter — Model 0930<br>Supplied Item<br><a href="https://circuit.rocks/products/ac-dc-9v-3a-wall-power-adapter-5-5x2-1mm-barrel-jack-center-positive">Product Link</a></td>
 <td><em>High current capacity (3 A)</em><br><em>Stable DC output</em><br><em>Compatible with LM7805 input requirements</em></td>
 <td><em>Linear regulator heat generation at high loads</em><br><em>Requires correct barrel polarity and connector matching</em></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)  </p>
-<p><strong>Rationale:</strong> Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.</p>
+<p><strong>Choice:</strong> Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)<br>
+<strong>Rationale:</strong> Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.</p>
+<hr>
 
 
 
