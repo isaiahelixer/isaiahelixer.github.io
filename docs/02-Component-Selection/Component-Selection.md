@@ -74,6 +74,6 @@ Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:
 
 ## Bill of Materials
 
-[**View Complete Bill of Materials (Excel Sheet)**](https://github.com/user-attachments/assets/your-bom-link-here)
+[**View Complete Full Bill of Materials (Excel Sheet)**](https://github.com/user-attachments/assets/your-bom-link-here)
 
 
