@@ -10,8 +10,6 @@ Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:
 - MCP6004 op-amp  
 - 8-pin connector for communication with other subsystem boards  
 
----
-
 ## Soil Moisture Sensor
 
 **Table 1: Soil Moisture Sensor Comparison**
@@ -24,8 +22,6 @@ Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:
 
 **Choice:** Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  
 **Rationale:** Provides corrosion-free sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and easy integration with the PIC ADC.
-
----
 
 ## Voltage Regulator
 
@@ -40,8 +36,6 @@ Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:
 **Choice:** Option 1 — LM7805 Linear Regulator  
 **Rationale:** Already supplied and sufficient for the system’s moderate current demand. The N7805-1CW offers higher efficiency but is unnecessary for this subsystem.
 
----
-
 ## Microcontroller
 
 **Table 3: Microcontroller Comparison**
@@ -52,8 +46,6 @@ Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:
 
 **Choice:** Option 1 — PIC18F16Q41 Curiosity Nano  
 **Rationale:** Readily available and already supplied to the team, simplifying integration with sensors and op-amp circuitry.
-
----
 
 ## Operational Amplifier
 
@@ -66,8 +58,6 @@ Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:
 **Choice:** Option 1 — MCP6004 Op-Amp  
 **Rationale:** Already supplied; provides four precision amplifiers suitable for low-power sensor signal conditioning and stable analog performance.
 
----
-
 ## Power Adapter
 
 **Table 5: Power Adapter Comparison**
@@ -78,6 +68,4 @@ Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:
 
 **Choice:** Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)  
 **Rationale:** Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.
-
----
 
