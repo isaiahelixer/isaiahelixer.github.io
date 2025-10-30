@@ -36,9 +36,9 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 | 1/2 Watt 220 Ω Resistor | 2 | $0.10 | $0.20 | Yageo | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
 | 1/2 Watt 100 Ω Resistor | 1 | $0.10 | $0.10 | Yageo | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
 | 1/2 Watt 10 kΩ Resistor | 1 | $0.11 | $0.11 | Yageo | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
-| Test Points | 3 | $0.39 | $1.17 | Keystone | [Datasheet](https://www.keyelco.com/userAssets/file/M65p56.pdf) |
+| Test Points | 9 | $0.39 | $3.51 | Keystone | [Datasheet](https://www.keyelco.com/userAssets/file/M65p56.pdf) |
 
-**Total Estimated Cost:** ≈ **$31.21**
+**Total Estimated Cost:** ≈ **$33.55**
 
 A complete Excel version of this Bill of Materials, including Manufacturer Part #, Vendor Links, Supplier Part #, and Schematic Reference Designators that can be accessed here:  
 📂 [Smart Irrigation Sensor Subsystem BOM](sandbox:/mnt/data/Smart_Irrigation_BOM.xlsx)
