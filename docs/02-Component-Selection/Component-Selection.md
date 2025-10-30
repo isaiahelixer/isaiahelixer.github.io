@@ -1,5 +1,8 @@
 ---
 title: Component Selection
+tags:
+- Smart Irrigation Sensor Subsystem
+- Power and Sensor Board
 ---
 
 # Component Selection
@@ -68,4 +71,9 @@ Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:
 
 **Choice:** Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)  
 **Rationale:** Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.
+
+## Bill of Materials
+
+[**View Complete Bill of Materials (Excel Sheet)**](https://github.com/user-attachments/assets/your-bom-link-here)
+
 
