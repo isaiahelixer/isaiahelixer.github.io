@@ -8,7 +8,10 @@ tags:
 ## Overview
 
 The following Bill of Materials lists all major electronic and passive components used in my sensor subsystem board.  
-The system operates from a 9 V input using an LM7805 linear regulator to provide a regulated 5 V rail powering the PIC18F57Q43 Curiosity Nano, MCP6004 op-amp, and ST0160 capacitive soil moisture sensor.  
+
+The system operates from a 9 V input using an LM7805 linear regulator to provide a regulated  
+5V rail powering the PIC18F57Q43 Curiosity Nano, MCP6004 op-amp, and ST0160 capacitive soil moisture sensor.  
+
 The design also includes decoupling capacitors, diodes for reverse protection, resistors, fuses, jumpers, and test points for debugging and signal monitoring.
 
 ## Bill of Materials
