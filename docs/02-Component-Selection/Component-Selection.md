@@ -8,7 +8,7 @@ tags:
 # Component Selection
 
 Subsystem board powered from a 9 V wall adapter input through a 5 V regulator.  
-Includes a **PIC18F16Q41 Curiosity Nano** microcontroller connected to:  
+Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:  
 - Analog capacitive soil moisture sensor  
 - MCP6004 op-amp  
 - 8-pin connector for communication with other subsystem boards  
