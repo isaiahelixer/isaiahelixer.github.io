@@ -9,7 +9,7 @@ title: Power Budget
 **Team Member Names:** Liam, Isaiah, Myles, and Raj  
 **Version:** 1.4  
 
-**System input:** 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → Op-AmpPIC18F57Q43 Curiosity Nano
+**System input:** 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → Op-Amp PIC18F57Q43 Curiosity Nano
 
 ## Section A – All Major Components 
 
@@ -36,7 +36,7 @@ title: Power Budget
 
 ## Section C – Regulator Selection
 
-| **Regulator Option** | **Input Range(V)** | **Max Output(mA)** | **Pros** | **Cons** |
+| **Regulator Option** | **Input Range (V)** | **Max Output (mA)** | **Pros** | **Cons** |
 |----------------------|---------------------:|--------------------:|----------|---------|
 | LM7805 (linear) | 7 – 25V | 1500 | Simple, low noise, reliable | Inefficient (9V→5V drop causes heat; needs heat sink) |
 | UA78L05ACLP (TO-92, 100 mA max) | 7 – 35V | 100 | Compact, low quiescent current | Not enough output current for system needs |
