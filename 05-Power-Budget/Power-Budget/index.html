@@ -904,7 +904,7 @@
 <p><strong>Team Number:</strong> 101<br>
 <strong>Project Name:</strong> Smart Irrigation Sensor Subsystem Board<br>
 <strong>Team Member Names:</strong> Liam, Isaiah, Myles, and Raj<br>
-<strong>Version:</strong> 1.3  </p>
+<strong>Version:</strong> 1.4  </p>
 <p><strong>System input:</strong> 9V external → 5V regulator (LM7805) → PIC18F57Q43 Curiosity Nano + Soil Moisture Sensor + MCP6004 Op-Amp</p>
 <h2 id="section-a-all-major-components">Section A – All Major Components</h2>
 <table>
@@ -932,8 +932,8 @@
 <td>ST0160 Capacitive</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
 </tr>
 <tr>
 <td>Operational Amplifier</td>
@@ -949,19 +949,19 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;"><strong>528 mA</strong></td>
+<td style="text-align: right;"><strong>543 mA</strong></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Arithmetic (component sum):</strong><br>
-500 + 5 + 23 = 528 mA total subsystem current</p>
+500 + 20 + 23 = 543 mA total subsystem current</p>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
 <p><strong>+5V Rail</strong>
-- Subtotal = 528 mA<br>
-- Safety margin (25%) = 528 × 1.25 = 660 mA</p>
+- Subtotal = 543 mA<br>
+- Safety margin (25%) = 543 × 1.25 = 678.75 mA</p>
 <p><strong>Arithmetic (with margin):</strong><br>
-528 × 1.25 = (528 × 5) / 4 = 2640 / 4 = 660.0 mA</p>
-<p><strong>Rounded total (for spec/selection):</strong> 660 mA</p>
+543 × 1.25 = (543 × 5) / 4 = 2715 / 4 = 678.75 mA</p>
+<p><strong>Rounded total (for spec/selection):</strong> 680 mA</p>
 <h2 id="section-c-regulator-selection">Section C – Regulator Selection</h2>
 <table>
 <thead>
@@ -992,11 +992,11 @@
 </table>
 <p><strong>Choice:</strong> LM7805 Linear Regulator  </p>
 <p><strong>Rationale:</strong><br>
-With a total estimated current requirement of 660 mA (including margin), an LM7805 (1.5 A rated in common packages or variants) provides ample output capacity and thermal design margin. The UA78L05ACLP (100 mA) is insufficient.</p>
+With a total estimated current requirement of ~680 mA (including margin), the LM7805 (1.5 A rated) provides ample output capacity and thermal headroom. The UA78L05ACLP (100 mA) is insufficient.</p>
 <p><strong>Regulator heat / dissipation check:</strong><br>
 - Voltage drop = 9 V − 5 V = 4 V<br>
-- Load current (with margin) = 660 mA = 0.660 A<br>
-- Power dissipated = 4 V × 0.660 A = 2.64 W</p>
+- Load current (with margin) = 680 mA = 0.680 A<br>
+- Power dissipated = 4 V × 0.680 A = 2.72 W</p>
 <p><strong>Result:</strong> The LM7805 will require a small heat sink for continuous operation at this load.</p>
 <h2 id="section-d-external-power-source">Section D – External Power Source</h2>
 <table>
@@ -1018,16 +1018,16 @@ With a total estimated current requirement of 660 mA (including margin), an LM78
 </tbody>
 </table>
 <ul>
-<li>Required on +5V rail (with 25% margin): 660 mA  </li>
-<li>Remaining capacity on 9V, 3A adapter: 3000 − 660 = 2340 mA</li>
+<li>Required on +5V rail (with 25% margin): 680 mA  </li>
+<li>Remaining capacity on 9V, 3A adapter: 3000 − 680 = 2320 mA</li>
 </ul>
 <p><strong>Arithmetic:</strong><br>
-3000 − 660 = 2340 mA remaining</p>
+3000 − 680 = 2320 mA remaining</p>
 <p><strong>Battery Option (not implemented):</strong><br>
 If powered by a 3000 mAh battery (for estimation only):</p>
 <ul>
 <li>Example sleep-mode average current = 50 mA → battery life = 3000 mAh / 50 mA = 60 hours (≈ 2.5 days)  </li>
-<li>With active current near the full draw (528 mA), battery life = 3000 / 528 ≈ 5.68 hours (not practical for continuous operation)</li>
+<li>With active current near the full draw (543 mA), battery life = 3000 / 543 ≈ 5.52 hours (not practical for continuous operation)</li>
 </ul>
 <h2 id="section-e-summary">Section E – Summary</h2>
 <table>
@@ -1040,19 +1040,19 @@ If powered by a 3000 mAh battery (for estimation only):</p>
 <tbody>
 <tr>
 <td style="text-align: right;">Subtotal (estimated)</td>
-<td>528 mA</td>
+<td>543 mA</td>
 </tr>
 <tr>
 <td style="text-align: right;">Total required on 5V rail (with 25% margin)</td>
-<td>660 mA</td>
+<td>680 mA</td>
 </tr>
 <tr>
 <td style="text-align: right;">Regulator chosen</td>
 <td>LM7805 Linear Regulator</td>
 </tr>
 <tr>
-<td style="text-align: right;">Regulator dissipation (9→5V at 660 mA)</td>
-<td>≈ 2.64 W (heat sink required)</td>
+<td style="text-align: right;">Regulator dissipation (9→5V at 680 mA)</td>
+<td>≈ 2.72 W (heat sink required)</td>
 </tr>
 <tr>
 <td style="text-align: right;">External supply recommended</td>
@@ -1060,12 +1060,12 @@ If powered by a 3000 mAh battery (for estimation only):</p>
 </tr>
 <tr>
 <td style="text-align: right;">Estimated battery life (3000 mAh Li-ion)</td>
-<td>≈ 60 hours (sleep-mode avg) / ≈ 5.7 hours (continuous active draw)</td>
+<td>≈ 60 hours (sleep-mode avg) / ≈ 5.5 hours (continuous active draw)</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Conclusion:</strong><br>
-After including the MCP6004 (23 mA max), the subsystem’s estimated current draw is 528 mA. With a 25% safety margin the design calls for 660 mA on the 5V rail. The chosen LM7805 regulator will need a small heat sink to safely dissipate about 2.64 W when powered from the 9V adapter. The 9V, 3A wall adapter provides ample headroom (≈ 2.34 A spare capacity).</p>
+After correcting the soil moisture sensor draw to 20 mA and including the MCP6004 (23 mA max), the subsystem’s estimated current draw is 543 mA. With a 25% safety margin, the design calls for ~680 mA on the 5V rail. The LM7805 regulator remains suitable but will dissipate about 2.72 W and requires a small heat sink for safe continuous operation. The 9V, 3A wall adapter provides ample spare capacity (≈ 2.32 A).</p>
 
 
 
