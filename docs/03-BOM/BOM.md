@@ -19,7 +19,7 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 | LM7805 Linear Regulator (5V, TO-220) | 1 | $1.80 | $1.80 | Texas Instruments | [Datasheet](https://www.ti.com/lit/ds/symlink/lm7800.pdf) |
 | MCP6004 Quad Op-Amp (Through-Hole) | 1 | $0.59 | $0.59 | Microchip Technology | [Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf) |
 | ST0160 Capacitive Soil Moisture Sensor V2.0 | 1 | $8.60 | $8.60 | SunFounder | [Datasheet](https://protosupplies.com/product/capacitive-soil-moisture-sensor-module/) |
-| 2x4 CONN Connector Header | 1 | $0.27 | $0.27 | Adam Tech | [Datasheet](https://app.adam-tech.com/products/download/data_sheet/203218/bhr-xx-vua-data-sheet.pdf) |
+| 2x4 CONN Connector Header | 1 | $1.51 | $1.51 | Adam Tech | [Datasheet](https://app.adam-tech.com/products/download/data_sheet/203218/bhr-xx-vua-data-sheet.pdf) |
 | 0.33 µF Ceramic Capacitor | 1 | $0.44 | $0.44 | KEMET | [Datasheet](https://www.yageogroup.com/content/datasheet/asset/file/KEM_C1051_GOLDMAX_Z5U) |
 | 0.1 µF Ceramic Capacitor | 5 | $0.47 | $2.35 | KEMET | [Datasheet](https://content.kemet.com/datasheets/KEM_C1050_GOLDMAX_X7R.pdf) |
 | 1 µF Ceramic Capacitor | 1 | $0.28 | $0.28 | KEMET | [Datasheet](https://www.yageogroup.com/content/datasheet/asset/file/KEM_C1051_GOLDMAX_Z5U) |
@@ -27,7 +27,7 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 | Red LED (Indicator) | 1 | $0.47 | $0.47 | SunLED | [Datasheet](https://www.sunledusa.com/products/spec/XLM2CRK11W.pdf) |
 | Blue LED (Debug) | 1 | $0.59 | $0.59 | QT Brightek | [Datasheet](https://www.qt-brightek.com/datasheet/QBL8XX60D.pdf) |
 | Fuse 1000 mA | 1 | $0.98 | $0.98 | Bourns Inc | [Datasheet](https://www.bourns.com/pdfs/SF-0603SP.pdf) |
-| Fuse 20 mA | 1 | $0.72 | $0.72 | Schurter | [Datasheet](https://www.mouser.com/datasheet/3/386/1/typ_SPT_3.6x10.pdf) |
+| Fuse 20 mA | 1 | $0.21 | $0.21 | Schurter | [Datasheet](https://www.mouser.com/datasheet/3/386/1/typ_SPT_3.6x10.pdf) |
 | Barrel Jack (9V Power) | 1 | $0.76 | $0.76 | Same Sky | [Datasheet](https://www.sameskydevices.com/product/resource/pj-102ah.pdf) |
 | 1x4 Debug Header | 1 | $0.10 | $0.10 | Adam Tech | [Datasheet](https://app.adam-tech.com/products/download/data_sheet/201605/ph1-xx-ua-data-sheet.pdf) |
 | 2-Pin Jumper | 4 | $0.28 | $1.12 | Würth Elektronik | [Datasheet](https://www.we-online.com/components/products/datasheet/60900213421.pdf) |
@@ -38,7 +38,7 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 | 1/2 Watt 10 kΩ Resistor | 1 | $0.11 | $0.11 | Yageo | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
 | Test Points | 9 | $0.39 | $3.51 | Keystone | [Datasheet](https://www.keyelco.com/userAssets/file/M65p56.pdf) |
 
-**Total Estimated Cost:** ≈ **$33.55**
+**Total Estimated Cost:** ≈ **$33.03**
 
 A complete Excel version of this Bill of Materials, including Manufacturer Part #, Vendor Links, Supplier Part #, and Schematic Reference Designators can be accessed here:  
 📂 [Smart Irrigation Sensor Subsystem BOM.XLSX](https://arizonastateu-my.sharepoint.com/:x:/g/personal/ilacombe_sundevils_asu_edu/EYToEqM0qnFFsyiPlOJMnzIBPYc3zt9iHRCOJaCWnhvnrA?e=ITvCyg)
