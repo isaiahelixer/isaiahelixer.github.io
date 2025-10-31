@@ -17,5 +17,4 @@ This schematic is designed to support the Smart Irrigation Subsystem Board. It r
 ## Resources
 
 The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/23277565/Subsystem.Schematic.Design.pdf)
-), and the Zip folder of the project [*here*](https://github.com/user-attachments/files/23277570/Sensors.Subsystem.zip)
-)
+, and the Zip folder of the project [*here*](https://github.com/user-attachments/files/23277570/Sensors.Subsystem.zip)
