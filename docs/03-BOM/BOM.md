@@ -43,7 +43,10 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 
 **Total Estimated Cost:** ≈ **$35.03**
 
-A complete Excel version of this Bill of Materials, including Manufacturer Part #, Vendor Links, Supplier Part #, and Schematic Reference Designators can be accessed here:  
+![Smart Irrigation Sensor Subsystem BOM](https://github.com/user-attachments/assets/9e35d3af-50c4-413a-9f36-4311afb4d8a4)
+
+
+A downloadable Excel version of this Bill of Materials, including Manufacturer Part #, Vendor Links, Supplier Part #, and Schematic Reference Designators can be accessed here:  
 📂 [Smart Irrigation Sensor Subsystem BOM.xlsx](https://arizonastateu-my.sharepoint.com/:x:/g/personal/ilacombe_sundevils_asu_edu/EYToEqM0qnFFsyiPlOJMnzIBPYc3zt9iHRCOJaCWnhvnrA?e=ITvCyg)
 
 
