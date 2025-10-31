@@ -18,7 +18,7 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 | PIC18F57Q43 Curiosity Nano Microcontroller Board | 1 | $10.19 | $10.19 | Microchip Technology | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/UserGuides/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf) |
 | LM7805 Linear Regulator (5V, TO-220) | 1 | $1.80 | $1.80 | Texas Instruments | [Datasheet](https://www.ti.com/lit/ds/symlink/lm7800.pdf) |
 | MCP6004 Quad Op-Amp (Through-Hole) | 1 | $0.59 | $0.59 | Microchip Technology | [Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf) |
-| ST0160 Capacitive Soil Moisture Sensor V2.0 | 1 | $8.60 | $8.60 | SunFounder | [Datasheet](https://rajguruelectronics.com/Product/5538/Capacitive%20Soil%20Moisture%20Sensor%20V2(1).0.pdf) |
+| ST0160 Capacitive Soil Moisture Sensor V2.0 | 1 | $8.60 | $8.60 | SunFounder | [Datasheet](https://protosupplies.com/product/capacitive-soil-moisture-sensor-module/) |
 | 2x4 CONN Connector Header | 1 | $0.27 | $0.27 | Adam Tech | [Datasheet](https://app.adam-tech.com/products/download/data_sheet/203218/bhr-xx-vua-data-sheet.pdf) |
 | 0.33 µF Ceramic Capacitor | 1 | $0.44 | $0.44 | KEMET | [Datasheet](https://www.yageogroup.com/content/datasheet/asset/file/KEM_C1051_GOLDMAX_Z5U) |
 | 0.1 µF Ceramic Capacitor | 5 | $0.47 | $2.35 | KEMET | [Datasheet](https://content.kemet.com/datasheets/KEM_C1050_GOLDMAX_X7R.pdf) |
