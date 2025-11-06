@@ -18,7 +18,8 @@ System Interface:
 Communicates soil data to other subsystems (e.g., motor control or irrigation logic) through an 8-pin connector, enabling coordinated system responses based on soil conditions.
 
 ## Block Diagram
-<img width="1412" height="1045" alt="Screenshot 2025-11-05 194016" src="https://github.com/user-attachments/assets/2f8a7824-56fa-4be8-a8c2-3d1356ac6cd5" />
+<img width="1410" height="1046" alt="Screenshot 2025-11-05 194226" src="https://github.com/user-attachments/assets/f5345d66-85e3-458a-adfb-bcb5333af939" />
+
 
 
 
