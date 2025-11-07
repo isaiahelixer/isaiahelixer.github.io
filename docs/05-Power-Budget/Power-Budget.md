@@ -21,7 +21,7 @@ title: Power Budget
 | **Subtotal** | | | | | **523.1 mA** |
 
 **Arithmetic (component sum):**  
-500 + 0.1 + 23 = **523.1 mA total subsystem current**
+500 + 0.1 + 23 = 523.1 mA total subsystem current
 
 ## Section B – Power Rails
 
@@ -32,7 +32,7 @@ title: Power Budget
 **Arithmetic (with margin):**  
 523.1 × 1.25 = (523.1 × 5) / 4 = 2615.5 / 4 = 653.875 mA  
 
-**Rounded total (for spec/selection):** ≈ **655 mA**
+Rounded total (for spec/selection): ≈ 655 mA
 
 ## Section C – Regulator Selection
 
@@ -41,7 +41,7 @@ title: Power Budget
 | LM7805 (linear) | 7 – 25 V | 1500 | Simple, low noise, reliable | Inefficient (9V→5V drop causes heat; needs heat sink) |
 | UA78L05ACLP (TO-92, 100 mA max) | 7 – 35 V | 100 | Compact, low quiescent current | Not enough output current for system needs |
 
-**Choice:** LM7805 Linear Regulator  
+Choice: LM7805 Linear Regulator  
 
 **Rationale:**  
 With a total estimated current requirement of ~655 mA (including margin), the LM7805 (1.5 A rated) provides ample output capacity and thermal headroom.  
@@ -50,9 +50,9 @@ The UA78L05ACLP (100 mA) is insufficient.
 **Regulator heat / dissipation check:**  
 - Voltage drop = 9 V − 5 V = 4 V  
 - Load current (with margin) = 655 mA = 0.655 A  
-- Power dissipated = 4 V × 0.655 A = **2.62 W**
+- Power dissipated = 4 V × 0.655 A = 2.62 W
 
-**Result:** LM7805 will require a small heat sink for continuous operation.
+Result: LM7805 will require a small heat sink for continuous operation.
 
 ## Section D – External Power Source
 
@@ -61,7 +61,7 @@ The UA78L05ACLP (100 mA) is insufficient.
 | Wall Adapter | Generic 9V DC Adapter | 9 | 3000 |
 
 - Required on +5 V rail (with 25% margin): 655 mA  
-- Remaining capacity on 9V, 3A adapter: 3000 − 655 = **2345 mA**
+- Remaining capacity on 9V, 3A adapter: 3000 − 655 = 2345 mA
 
 **Arithmetic:**  
 3000 − 655 = 2345 mA remaining
@@ -84,5 +84,4 @@ If powered by a 3000 mAh battery (for estimation only):
 | Estimated battery life (3000 mAh Li-ion) | ≈ 60 h (sleep-mode avg) / ≈ 5.7 h (continuous active draw) |
 
 **Conclusion:**  
-After updating the soil moisture sensor draw to 0.1 mA (based on measured DIY capacitive sensor current ≈ 80–100 µA), the subsystem’s total draw is ≈ 523 mA.  
-With a 25% margin, the 5 V rail requires ~655 mA. The LM7805 regulator remains a suitable choice, dissipating about 2.6 W at 9 V input, so a small heat sink is recommended. The 9 V, 3 A wall adapter provides ample headroom (~2.3 A spare capacity).
+The subsystem’s total draw is ≈ 523 mA, With a 25% margin, the 5 V rail requires ~655 mA. The LM7805 regulator remains a suitable choice, dissipating about 2.6 W at 9 V input, so a small heat sink is recommended. The 9 V, 3 A wall adapter provides ample headroom (~2.3 A spare capacity).
