@@ -904,7 +904,7 @@
 <p><strong>Team Number:</strong> 101<br>
 <strong>Project Name:</strong> Smart Irrigation Sensor Subsystem Board<br>
 <strong>Team Member Names:</strong> Liam, Isaiah, Myles, and Raj<br>
-<strong>Version:</strong> 1.4  </p>
+<strong>Version:</strong> 1.6  </p>
 <p><strong>System input:</strong> 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → Op-Amp PIC18F57Q43 Curiosity Nano</p>
 <h2 id="section-a-all-major-components">Section A – All Major Components</h2>
 <table>
@@ -929,11 +929,11 @@
 </tr>
 <tr>
 <td>Soil Moisture Sensor</td>
-<td>ST0160 Capacitive</td>
+<td>DIY Capacitive (5 V PWM, 10 kΩ–1 MΩ–0.1 µF RC)</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">20</td>
-<td style="text-align: right;">20</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0.1</td>
 </tr>
 <tr>
 <td>Operational Amplifier</td>
@@ -949,19 +949,19 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;"><strong>543 mA</strong></td>
+<td style="text-align: right;"><strong>523.1 mA</strong></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Arithmetic (component sum):</strong><br>
-500 + 20 + 23 = 543 mA total subsystem current</p>
+500 + 0.1 + 23 = <strong>523.1 mA total subsystem current</strong></p>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
-<p><strong>+5V Rail</strong>
-- Subtotal = 543 mA<br>
-- Safety margin (25%) = 543 × 1.25 = 678.75 mA</p>
+<p><strong>+5 V Rail</strong>
+- Subtotal = 523.1 mA<br>
+- Safety margin (25%) = 523.1 × 1.25 = 653.875 mA  </p>
 <p><strong>Arithmetic (with margin):</strong><br>
-543 × 1.25 = (543 × 5) / 4 = 2715 / 4 = 678.75 mA</p>
-<p><strong>Rounded total (for spec/selection):</strong> 680 mA</p>
+523.1 × 1.25 = (523.1 × 5) / 4 = 2615.5 / 4 = 653.875 mA  </p>
+<p><strong>Rounded total (for spec/selection):</strong> ≈ <strong>655 mA</strong></p>
 <h2 id="section-c-regulator-selection">Section C – Regulator Selection</h2>
 <table>
 <thead>
@@ -976,14 +976,14 @@
 <tbody>
 <tr>
 <td>LM7805 (linear)</td>
-<td style="text-align: right;">7 – 25V</td>
+<td style="text-align: right;">7 – 25 V</td>
 <td style="text-align: right;">1500</td>
 <td>Simple, low noise, reliable</td>
 <td>Inefficient (9V→5V drop causes heat; needs heat sink)</td>
 </tr>
 <tr>
 <td>UA78L05ACLP (TO-92, 100 mA max)</td>
-<td style="text-align: right;">7 – 35V</td>
+<td style="text-align: right;">7 – 35 V</td>
 <td style="text-align: right;">100</td>
 <td>Compact, low quiescent current</td>
 <td>Not enough output current for system needs</td>
@@ -992,12 +992,13 @@
 </table>
 <p><strong>Choice:</strong> LM7805 Linear Regulator  </p>
 <p><strong>Rationale:</strong><br>
-With a total estimated current requirement of ~680 mA (including margin), the LM7805 (1.5 A rated) provides ample output capacity and thermal headroom. The UA78L05ACLP (100 mA) is insufficient.</p>
+With a total estimated current requirement of ~655 mA (including margin), the LM7805 (1.5 A rated) provides ample output capacity and thermal headroom.<br>
+The UA78L05ACLP (100 mA) is insufficient.</p>
 <p><strong>Regulator heat / dissipation check:</strong><br>
 - Voltage drop = 9 V − 5 V = 4 V<br>
-- Load current (with margin) = 680 mA = 0.680 A<br>
-- Power dissipated = 4 V × 0.680 A = 2.72 W</p>
-<p><strong>Result:</strong> The LM7805 will require a small heat sink for continuous operation at this load.</p>
+- Load current (with margin) = 655 mA = 0.655 A<br>
+- Power dissipated = 4 V × 0.655 A = <strong>2.62 W</strong></p>
+<p><strong>Result:</strong> LM7805 will require a small heat sink for continuous operation.</p>
 <h2 id="section-d-external-power-source">Section D – External Power Source</h2>
 <table>
 <thead>
@@ -1018,16 +1019,16 @@ With a total estimated current requirement of ~680 mA (including margin), the LM
 </tbody>
 </table>
 <ul>
-<li>Required on +5V rail (with 25% margin): 680 mA  </li>
-<li>Remaining capacity on 9V, 3A adapter: 3000 − 680 = 2320 mA</li>
+<li>Required on +5 V rail (with 25% margin): 655 mA  </li>
+<li>Remaining capacity on 9V, 3A adapter: 3000 − 655 = <strong>2345 mA</strong></li>
 </ul>
 <p><strong>Arithmetic:</strong><br>
-3000 − 680 = 2320 mA remaining</p>
+3000 − 655 = 2345 mA remaining</p>
 <p><strong>Battery Option (not implemented):</strong><br>
 If powered by a 3000 mAh battery (for estimation only):</p>
 <ul>
-<li>Example sleep-mode average current = 50 mA → battery life = 3000 mAh / 50 mA = 60 hours (≈ 2.5 days)  </li>
-<li>With active current near the full draw (543 mA), battery life = 3000 / 543 ≈ 5.52 hours (not practical for continuous operation)</li>
+<li>Example sleep-mode average current = 50 mA → battery life = 3000 / 50 = 60 hours (≈ 2.5 days)  </li>
+<li>With active current near full draw (523 mA): 3000 / 523 ≈ 5.73 hours (not practical for continuous operation)</li>
 </ul>
 <h2 id="section-e-summary">Section E – Summary</h2>
 <table>
@@ -1040,32 +1041,33 @@ If powered by a 3000 mAh battery (for estimation only):</p>
 <tbody>
 <tr>
 <td style="text-align: right;">Subtotal (estimated)</td>
-<td>543 mA</td>
+<td>523.1 mA</td>
 </tr>
 <tr>
-<td style="text-align: right;">Total required on 5V rail (with 25% margin)</td>
-<td>680 mA</td>
+<td style="text-align: right;">Total required on 5 V rail (with 25% margin)</td>
+<td>655 mA</td>
 </tr>
 <tr>
 <td style="text-align: right;">Regulator chosen</td>
 <td>LM7805 Linear Regulator</td>
 </tr>
 <tr>
-<td style="text-align: right;">Regulator dissipation (9→5V at 680 mA)</td>
-<td>≈ 2.72 W (heat sink required)</td>
+<td style="text-align: right;">Regulator dissipation (9→5 V at 655 mA)</td>
+<td>≈ 2.62 W (heat sink required)</td>
 </tr>
 <tr>
 <td style="text-align: right;">External supply recommended</td>
-<td>9V DC adapter, ≥ 3 A</td>
+<td>9 V DC adapter, ≥ 3 A</td>
 </tr>
 <tr>
 <td style="text-align: right;">Estimated battery life (3000 mAh Li-ion)</td>
-<td>≈ 60 hours (sleep-mode avg) / ≈ 5.5 hours (continuous active draw)</td>
+<td>≈ 60 h (sleep-mode avg) / ≈ 5.7 h (continuous active draw)</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Conclusion:</strong><br>
-After correcting the soil moisture sensor draw to 20 mA and including the MCP6004 (23 mA max), the subsystem’s estimated current draw is 543 mA. With a 25% safety margin, the design calls for ~680 mA on the 5V rail. The LM7805 regulator remains suitable but will dissipate about 2.72 W and requires a small heat sink for safe continuous operation. The 9V, 3A wall adapter provides ample spare capacity (≈ 2.32 A).</p>
+After updating the soil moisture sensor draw to 0.1 mA (based on measured DIY capacitive sensor current ≈ 80–100 µA), the subsystem’s total draw is ≈ 523 mA.<br>
+With a 25% margin, the 5 V rail requires ~655 mA. The LM7805 regulator remains a suitable choice, dissipating about 2.6 W at 9 V input, so a small heat sink is recommended. The 9 V, 3 A wall adapter provides ample headroom (~2.3 A spare capacity).</p>
 
 
 
