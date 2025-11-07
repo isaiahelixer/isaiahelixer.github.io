@@ -36,7 +36,6 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 | Slide Switch | 1 | $0.83 | $0.83 | Same Sky | [Datasheet](https://www.sameskydevices.com/product/resource/slw-1276864-4a-d.pdf) |
 | Debug Button (Momentary SW) | 1 | $0.10 | $0.10 | Same Sky | [Datasheet](https://www.sameskydevices.com/product/resource/ts02.pdf) |
 | 1/2 Watt 220 Ω Resistor | 2 | $0.10 | $0.20 | YAGEO | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
-| 1/2 Watt 100 Ω Resistor | 1 | $0.10 | $0.10 | YAGEO | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
 | 1/2 Watt 10 kΩ Resistor | 2 | $0.11 | $0.22 | Stackpole Electronics Inc. | [Datasheet](https://www.seielect.com/catalog/SEI-RNF_RNMF.pdf) |
 | 1/2 Watt 1 kΩ Resistor | 1 | $0.31 | $0.31 | Stackpole Electronics Inc. | [Datasheet](https://www.seielect.com/catalog/SEI-ASR_ASRM.pdf) |
 | 1/2 Watt 1MΩ Resistor | 1 | $0.10 | $0.10 | YAGEO | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
