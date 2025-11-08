@@ -2,8 +2,7 @@
 title: Sensor Subsystem PCB Design
 ---
 
-## Subsystem Sensor PCB Design  
-  
+## Subsystem Sensor PCB Design
 <img width="1591" height="532" alt="PCB_Front" src="https://github.com/user-attachments/assets/37923798-ffdb-491c-9ae0-56f6d74902d6" />
 *Figure 1:* Showing the front of the board.  
 <img width="1591" height="532" alt="PCB_Back" src="https://github.com/user-attachments/assets/5d866e43-a590-4d8f-90c3-206a17551df9" />
