@@ -12,5 +12,5 @@ title: Sensor Subsystem PCB Design
 
 ## Resources
 
-The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/23427346/PCB_3D.pdf), and the Zip folder of the project [*here*](https://github.com/user-attachments/files/23427382/Sensor.Subsystem.zip)
+The PCB as a PDF download is available [*here*](https://github.com/user-attachments/files/23427346/PCB_3D.pdf), and the Zip folder of the project [*here*](https://github.com/user-attachments/files/23427382/Sensor.Subsystem.zip)
 
