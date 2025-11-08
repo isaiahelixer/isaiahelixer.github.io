@@ -37,5 +37,5 @@ My part in this project focuses on the Sensor Subsystem which handles data colle
 The data is then processed and converted, then sent to the Control Subsystem through an 8-pin connector to support other subsystems. My design ensures the sensor data is clean, stable, and accurate which is very important for the irrigation logic to function properly.  
 
 To review the materials and components used to build this subsystem, visit the [BOM](https://isaiahelixer.github.io/03-BOM/BOM/) section of this datasheet.  
-For information on circuit layout and wiring, see the [Schematic](https://isaiahelixer.github.io/04-Schematic/schematic/) section.  
+For information on circuit layout and wiring, see the [Schematic](https://isaiahelixer.github.io/04-Schematic/schematic/) section. For information on the PCB design, see the [PCB Design](https://isaiahelixer.github.io/06-PCB-Design/PCB-Design/) section.  
 For power usage and regulation details, check the [Power Budget](https://isaiahelixer.github.io/05-Power-Budget/Power-Budget/) section.
