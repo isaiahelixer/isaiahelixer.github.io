@@ -19,7 +19,7 @@ Communicates soil data to other subsystems (e.g., motor control or irrigation lo
 
 ## Block Diagram
 <img width="1415" height="1050" alt="Screenshot 2025-11-05 195153" src="https://github.com/user-attachments/assets/f7b0bd5e-3749-4bd6-b96f-14c364712f1a" />
-*Figure 1:* Showing the sensor subsystem block diagram.
+*Figure 1: Showing the sensor subsystem block diagram.*
 
 
 
