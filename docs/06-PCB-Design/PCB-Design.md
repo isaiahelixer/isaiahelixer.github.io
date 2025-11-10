@@ -11,4 +11,4 @@ title: Sensor Subsystem PCB Design
 
 ## Resources
 
-The PCB design as a PDF download is available [*here*](ttps://github.com/user-attachments/files/23466374/Subsystem.Schematic.Design.pdf), the Zip folder of the Gerber Files [*here*](https://github.com/user-attachments/files/23466394/IsaiahLaCombe101.zip), and the Zip folder of the Project Files [*here*]()
+The PCB design as a PDF download is available [*here*](https://github.com/user-attachments/files/23466374/Subsystem.Schematic.Design.pdf), the Zip folder of the Gerber Files [*here*](https://github.com/user-attachments/files/23466394/IsaiahLaCombe101.zip), and the Zip folder of the Project Files [*here*]()
