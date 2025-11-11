@@ -986,7 +986,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Microcontroller (Curiosity Nano)</td>
+<td>Microcontroller Curiosity Nano</td>
 <td>PIC18F57Q43 Curiosity Nano</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1</td>
@@ -1019,7 +1019,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Arithmetic (component sum):</strong><br>
+<p><strong>Arithmetic component sum:</strong><br>
 500 + 0.1 + 23 = 523.1 mA total subsystem current</p>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
 <p><strong>+5 V Rail</strong>
@@ -1027,7 +1027,7 @@
 - Safety margin (25%) = 523.1 × 1.25 = 653.875 mA  </p>
 <p><strong>Arithmetic (with margin):</strong><br>
 523.1 × 1.25 = (523.1 × 5) / 4 = 2615.5 / 4 = 653.875 mA  </p>
-<p>Rounded total (for spec/selection): ≈ 655 mA</p>
+<p>Rounded total for spec/selection: ≈ 655 mA</p>
 <h2 id="section-c-regulator-selection">Section C – Regulator Selection</h2>
 <table>
 <thead>
@@ -1041,14 +1041,14 @@
 </thead>
 <tbody>
 <tr>
-<td>LM7805 (linear)</td>
+<td>LM7805 linear</td>
 <td style="text-align: right;">7 – 25 V</td>
 <td style="text-align: right;">1500</td>
 <td>Simple, low noise, reliable</td>
 <td>Inefficient (9V→5V drop causes heat; needs heat sink)</td>
 </tr>
 <tr>
-<td>UA78L05ACLP (TO-92, 100 mA max)</td>
+<td>UA78L05ACLP TO-92, 100 mA max</td>
 <td style="text-align: right;">7 – 35 V</td>
 <td style="text-align: right;">100</td>
 <td>Compact, low quiescent current</td>
@@ -1058,11 +1058,11 @@
 </table>
 <p>Choice: LM7805 Linear Regulator  </p>
 <p><strong>Rationale:</strong><br>
-With a total estimated current requirement of ~655 mA (including margin), the LM7805 (1.5 A rated) provides ample output capacity and thermal headroom.<br>
-The UA78L05ACLP (100 mA) is insufficient.</p>
+With a total estimated current requirement of ~655 mA including margin, the LM7805 1.5 A rated provides ample output capacity and thermal headroom.<br>
+The UA78L05ACLP 100 mA is insufficient.</p>
 <p><strong>Regulator heat / dissipation check:</strong><br>
 - Voltage drop = 9 V − 5 V = 4 V<br>
-- Load current (with margin) = 655 mA = 0.655 A<br>
+- Load current with margin = 655 mA = 0.655 A<br>
 - Power dissipated = 4 V × 0.655 A = 2.62 W</p>
 <p>Result: LM7805 will require a small heat sink for continuous operation.</p>
 <h2 id="section-d-external-power-source">Section D – External Power Source</h2>
@@ -1085,16 +1085,16 @@ The UA78L05ACLP (100 mA) is insufficient.</p>
 </tbody>
 </table>
 <ul>
-<li>Required on +5 V rail (with 25% margin): 655 mA  </li>
+<li>Required on +5 V rail with 25% margin: 655 mA  </li>
 <li>Remaining capacity on 9V, 3A adapter: 3000 − 655 = 2345 mA</li>
 </ul>
 <p><strong>Arithmetic:</strong><br>
 3000 − 655 = 2345 mA remaining</p>
 <p><strong>Battery Option (not implemented):</strong><br>
-If powered by a 3000 mAh battery (for estimation only):</p>
+If powered by a 3000 mAh battery for estimation only:</p>
 <ul>
-<li>Example sleep-mode average current = 50 mA → battery life = 3000 / 50 = 60 hours (≈ 2.5 days)  </li>
-<li>With active current near full draw (523 mA): 3000 / 523 ≈ 5.73 hours (not practical for continuous operation)</li>
+<li>Example sleep-mode average current = 50 mA → battery life = 3000 / 50 = 60 hours ≈ 2.5 days  </li>
+<li>With active current near full draw 523 mA: 3000 / 523 ≈ 5.73 hours (not practical for continuous operation)</li>
 </ul>
 <h2 id="section-e-summary">Section E – Summary</h2>
 <table>
@@ -1106,7 +1106,7 @@ If powered by a 3000 mAh battery (for estimation only):</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">Subtotal (estimated)</td>
+<td style="text-align: right;">Estimated subtotal</td>
 <td>523.1 mA</td>
 </tr>
 <tr>
@@ -1118,7 +1118,7 @@ If powered by a 3000 mAh battery (for estimation only):</p>
 <td>LM7805 Linear Regulator</td>
 </tr>
 <tr>
-<td style="text-align: right;">Regulator dissipation (9→5 V at 655 mA)</td>
+<td style="text-align: right;">Regulator dissipation 9→5 V at 655 mA</td>
 <td>≈ 2.62 W (heat sink required)</td>
 </tr>
 <tr>
@@ -1127,12 +1127,12 @@ If powered by a 3000 mAh battery (for estimation only):</p>
 </tr>
 <tr>
 <td style="text-align: right;">Estimated battery life (3000 mAh Li-ion)</td>
-<td>≈ 60 h (sleep-mode avg) / ≈ 5.7 h (continuous active draw)</td>
+<td>≈ 60 h (sleep-mode avg) / ≈ 5.7 h being continuous active draw</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Conclusion:</strong><br>
-The subsystem’s total draw is ≈ 523 mA, With a 25% margin, the 5 V rail requires ~655 mA. The LM7805 regulator remains a suitable choice, dissipating about 2.6 W at 9 V input, so a small heat sink is recommended. The 9 V, 3 A wall adapter provides ample headroom (~2.3 A spare capacity).</p>
+The subsystem’s total draw is ≈ 523 mA, With a 25% margin, the 5 V rail requires ~655 mA. The LM7805 regulator remains a suitable choice, dissipating about 2.6 W at 9 V input, so a small heat sink is recommended. The 9 V, 3 A wall adapter provides ample headroom with ~2.3 A spare capacity.</p>
 
 
 
