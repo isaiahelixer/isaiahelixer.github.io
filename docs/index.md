@@ -11,20 +11,20 @@ as part of<br>
 for<br>
 <font size= "5"> Team 101 </font><br>
 
-**Submission: 11/07/2025**
+**Submission: 11/10/2025**
 </center>
 
 ## Introduction
 
 This datasheet provides a complete overview of the Sensor Subsystem Board used in the Smart Irrigation System project. The subsystem is designed to measure soil moisture levels and send that data to the main control unit in turn helping the system make decisions about when to water.  
 
-The document outlines how the subsystem works, what components were selected, and how power is managed to ensure reliable performance. It includes the block diagram, component selections, bill of materials (BOM), schematic, power budget, and appendix for full reference listed above.  
+The document outlines how the subsystem works, what components were selected, and how power is managed to ensure reliable performance. It includes the block diagram, component selections, bill of materials (BOM), schematic, power budget, PCB design and appendix for full reference listed above.  
 
 ## Project Summary
 
 The Smart Irrigation System is a water-efficient lawn watering project designed by Team 101. Its goal is to help homeowners and renters maintain healthy lawns while reducing water waste and cost. The system automatically monitors soil conditions and water usage to decide when watering is needed.  
 
-The project is built around three main subsystems — Control, Sensor, and Motor — each using a PIC18F57Q43 Curiosity Nano microcontroller. These subsystems work together to create a modular watering system that can function both online and offline.  
+The project is built around four main subsystems — Control, Sound Feedback, Sensor, and Motor — each using a PIC18F57Q43 Curiosity Nano microcontroller. These subsystems work together to create a modular watering system that can function both online and offline.  
 
 My subsystem Sensor Board plays a key role by measuring soil moisture levels and sending accurate data to the Control Board. This data allows the system to decide when to turn the pump on or off working to create efficient and automatic lawn irrigation.  
 
