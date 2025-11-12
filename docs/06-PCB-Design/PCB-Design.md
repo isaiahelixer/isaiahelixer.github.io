@@ -2,7 +2,8 @@
 title: Sensor Subsystem PCB Design
 ---
 ## Overview
-This PCB design supports the Smart Irrigation Subsystem Board by integrating power regulation, signal processing, and communication functions onto a single compact layout. The board accepts a DC 9V wall adapter input and uses an LM7805 linear regulator with diode and fuse protection to supply a stable 5V rail. This regulated voltage powers the PIC18F57Q43 Curiosity Nano microcontroller and the MCP6004 op-amp, which amplifies and filters the signal from a custom-built capacitive soil moisture sensor. The PCB layout includes organized ground and power planes for noise reduction, onboard filtering components, expansion headers for system scalability, and a ribbon connector for reliable inter-board communication.
+This PCB design supports the Smart Irrigation Subsystem Board by integrating power regulation, signal processing, and communication functions onto a single compact layout. The board accepts a DC 9V wall adapter input and uses an LM7805 linear regulator with diode and fuse protection to supply a stable 5V rail. This regulated voltage powers the PIC18F57Q43 Curiosity Nano microcontroller and the MCP6004 op-amp, which amplifies and filters the signal from a custom-built capacitive soil moisture sensor. The PCB layout includes organized ground and power planes for noise reduction, onboard filtering components, expansion headers for system scalability, and a ribbon connector for reliable inter-board communication.  
+
 ![Screenshot 2025-11-11 182913](https://github.com/user-attachments/assets/96165025-5c4f-4b40-97ed-9e608c26fea3)
 *Figure 1: Showing the front of the board.*  
 ![Screenshot 2025-11-11 182937](https://github.com/user-attachments/assets/2d8cbc56-ea50-4164-b607-a6c9fa61988b)
