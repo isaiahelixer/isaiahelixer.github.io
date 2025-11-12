@@ -72,8 +72,4 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 **Choice:** Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)  
 **Rationale:** Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.
 
-## Bill of Materials
-![Smart Irrigation Sensor Subsystem BOM (1)_page-0001](https://github.com/user-attachments/assets/7ab6b35a-bc0a-4fcb-bb2c-7fb0d62885dc)
-[**View Complete Full Bill of Materials (Excel Sheet)**](https://arizonastateu-my.sharepoint.com/:x:/g/personal/ilacombe_sundevils_asu_edu/EYToEqM0qnFFsyiPlOJMnzIBPYc3zt9iHRCOJaCWnhvnrA?e=mN6l3I)
-
 
