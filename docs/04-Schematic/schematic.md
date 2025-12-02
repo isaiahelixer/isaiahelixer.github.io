@@ -6,7 +6,7 @@ title: Sensor Subsystem Schematic
 This schematic is designed to support the Smart Irrigation Subsystem Board. It regulates a DC 9V wall adapter input down to 5V using an LM7805 linear regulator with diode and fuse protection. The 5V rail powers a PIC18F57Q43 Curiosity Nano microcontroller that monitors a hand made capacitive soil moisture sensor using an MCP6004 op-amp to amplify/filter the signal. The system provides stable sensor inputs, onboard filtering, expansion Pins, and a ribbon connector for inter-board communication.”
 
 ## Subsystem Schematic Design
-[Subsystem Schematic Design.pdf](https://github.com/user-attachments/files/23870800/Subsystem.Schematic.Design.pdf)
+[Subsystem Schematic Design.pdf](https://github.com/user-attachments/assets/5d3dec9e-b75b-40f1-80b8-188a25e007e1)
 
 
 *Figure 1:* Showing the sensors, microcontroller, signal amplifier, and power delivery schematic.
