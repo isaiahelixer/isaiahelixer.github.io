@@ -26,7 +26,7 @@
 
     
       
-        <title>Microcontroller code - EGR 304 Isaiah LaCombe Data Sheet</title>
+        <title>Microcontroller Code - EGR 304 Isaiah LaCombe Data Sheet</title>
       
     
     
@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Microcontroller code
+              Microcontroller Code
             
           </span>
         </div>
@@ -778,15 +783,52 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Microcontroller Code
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Microcontroller code
+    Microcontroller Code
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -874,6 +916,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -895,7 +954,10 @@
   
 
 
-  <h1>Microcontroller code</h1>
+  <h1>Microcontroller Code</h1>
+
+<h2 id="overview">Overview</h2>
+<p>This section covers the core firmware that runs the Smart Irrigation Subsystem. The microcontroller code handles all real-time decisions by reading sensor inputs, processing data, and controlling system outputs. The program initializes the PIC18F57Q43 Curiosity Nano, sets up ADC channels for the capacitive soil moisture sensor, and manages timing routines for stable measurements. It also communicates with the main controller through a serial interface, sending moisture readings and receiving irrigation commands. The code ensures reliable operation by using debouncing, averaging filters, and clear state-based logic for pump activation, error handling, and system updates.</p>
 
 
 
@@ -903,7 +965,8 @@
 
 
 
-
+  
+  
 
 
 
