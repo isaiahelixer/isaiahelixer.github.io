@@ -47,6 +47,6 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 
 
 A downloadable Excel version of this Bill of Materials, including Manufacturer Part #, Vendor Links, Supplier Part #, and Schematic Reference Designators can be accessed here:  
-📂 [Smart Irrigation Sensor Subsystem BOM.xlsx](https://arizonastateu-my.sharepoint.com/:x:/g/personal/ilacombe_sundevils_asu_edu/EYToEqM0qnFFsyiPlOJMnzIBPYc3zt9iHRCOJaCWnhvnrA?e=ITvCyg)
+📂 [Smart Irrigation Sensor Subsystem BOM.xlsx](https://github.com/user-attachments/files/23922563/Smart.Irrigation.Sensor.Subsystem.BOM.xlsx)
 
 
