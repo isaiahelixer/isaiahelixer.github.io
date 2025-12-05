@@ -23,9 +23,8 @@ title: Power Budget
 **Arithmetic component sum:**  
 500 + 0.1 + 23 = 523.1 mA total subsystem current
 
-## Section B – Power Rails
+## Section B – Power Rails +5V
 
-**+5 V Rail**  
 The following components are powered directly from the 5 V rail:
 
 - PIC18F57Q43 Curiosity Nano  
