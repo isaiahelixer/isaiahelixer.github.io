@@ -36,12 +36,12 @@ The design also includes decoupling capacitors, diodes for reverse protection, r
 | Slide Switch | 1 | $0.83 | $0.83 | Same Sky | [Datasheet](https://www.sameskydevices.com/product/resource/slw-1276864-4a-d.pdf) |
 | Debug Button (Momentary SW) | 1 | $0.10 | $0.10 | Same Sky | [Datasheet](https://www.sameskydevices.com/product/resource/ts02.pdf) |
 | 1/2 Watt 220 Ω Resistor | 2 | $0.10 | $0.20 | YAGEO | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
-| 1/2 Watt 10 kΩ Resistor | 2 | $0.11 | $0.22 | Stackpole Electronics Inc. | [Datasheet](https://www.seielect.com/catalog/SEI-RNF_RNMF.pdf) |
+| 1/2 Watt 10 kΩ Resistor | 3 | $0.11 | $0.33 | Stackpole Electronics Inc. | [Datasheet](https://www.seielect.com/catalog/SEI-RNF_RNMF.pdf) |
 | 1/2 Watt 1 kΩ Resistor | 1 | $0.31 | $0.31 | Stackpole Electronics Inc. | [Datasheet](https://www.seielect.com/catalog/SEI-ASR_ASRM.pdf) |
 | 1/2 Watt 1MΩ Resistor | 1 | $0.10 | $0.10 | YAGEO | [Datasheet](https://www.yageogroup.com/content/Resource%20Library/Datasheet/YAGEO-MFR_DATASHEET.pdf) |
 | Test Points | 8 | $0.39 | $3.12 | Keystone Electronics | [Datasheet](https://www.keyelco.com/userAssets/file/M65p56.pdf) |
 
-**Total Estimated Cost:** ≈ **$37.39**
+**Total Estimated Cost:** ≈ **$37.50**
 
 <img width="2462" height="662" alt="Screenshot 2025-11-06 231102" src="https://github.com/user-attachments/assets/89fa4673-2e89-4dc2-b768-98a9ebf4d20f" />
 
