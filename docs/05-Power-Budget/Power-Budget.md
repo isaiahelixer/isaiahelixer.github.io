@@ -7,7 +7,7 @@ title: Power Budget
 **Team Number:** 101  
 **Project Name:** Smart Irrigation Sensor Subsystem Board  
 **Team Member Names:** Liam, Isaiah, Myles, and Raj  
-**Version:** 1.6  
+**Version:** 1.8  
 
 **System input:** 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → Op-Amp PIC18F57Q43 Curiosity Nano
 
@@ -16,7 +16,7 @@ title: Power Budget
 | **Component Name** | **Part / Example** | **Supply Voltage (V)** | **Qty.** | **Abs. Max Current (mA)** | **Total Current (mA)** |
 |--------------------|--------------------|------------------------:|--------:|--------------------------:|-----------------------:|
 | Microcontroller Curiosity Nano | PIC18F57Q43 Curiosity Nano | 5 | 1 | 500 | 500 |
-| Soil Moisture Sensor | DIY Capacitive (5 V PWM, 10 kΩ–1 MΩ–0.1 µF RC) | 5 | 1 | 0.1 | 0.1 |
+| Soil Moisture Sensor | DIY Capacitive | 5 | 1 | 0.1 | 0.1 |
 | Operational Amplifier | MCP6004 (Quad Op-Amp, TH) | 5 | 1 | 23 | 23 |
 | **Subtotal** | | | | | **523.1 mA** |
 
@@ -86,6 +86,6 @@ If powered by a 3000 mAh battery for estimation only:
 **Power budget Conclusion:**  
 I used the power budget to estimate the max current each major part of the subsystem would draw and then added those numbers to find the total system load. Once I had the subtotal, I applied a 25% safety margin to make sure the design would handle higher-than-expected current spikes or future additions. This final value told me what the 5 V rail needed to supply and helped determine which voltage regulator was appropriate.
 
-From the budget our system needs about 655 mA so the LM7805 was the only regulator with enough headroom. The power budget also showed that the regulator would dissipate around 2.6 W meaning a heat sink may be required. Comparing this to our 9 V, 3 A adapter confirmed the external supply can easily support the load with plenty of current to spare. The budget also made it clear that battery power is not practical for continuous operation due to the high draw.
+From the budget our system needs about 655 mA so the LM7805 was the only regulator with enough headroom. The power budget also showed that the regulator would dissipate around 2.6 W meaning a heat sink may be required. Comparing this to our 9 V, 3 A adapter confirmed the external supply can easily support the load with plenty of current to spare.
 
 
