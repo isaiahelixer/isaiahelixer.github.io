@@ -1088,19 +1088,19 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/66eeb141-3a8a-4a65-ba30-f9e865b20f8b" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/66eeb141-3a8a-4a65-ba30-f9e865b20f8b"></a><br><strong>Option 1:</strong> SEN0114 Soil Moisture Sensor Module<br>$2.70 — each<br><a href="https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525">Product Link</a></td>
-<td><em>Simple analog output</em><br><em>Low cost</em><br><em>Compact design</em></td>
-<td><em>Corrodes over time if left in soil</em><br><em>Requires calibration for accuracy</em></td>
+<td><strong>Option 1:</strong> DIY Resistive Copper/Steel Probe<br>$0.50 — each<br><em>DIY-built from wires/nails</em></td>
+<td><em>Very low cost</em><br><em>Simple voltage-divider interface</em><br><em>Easy to fabricate</em></td>
+<td><em>Corrodes quickly in soil</em><br><em>Poor long-term stability</em><br><em>Requires recalibration</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/d213c9d3-1647-4f78-83f7-da6f1a7d93ea" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/d213c9d3-1647-4f78-83f7-da6f1a7d93ea"></a><br><strong>Option 2:</strong> ST0160 Capacitive Soil Moisture Sensor V2.0<br>$8.60 — each<br><a href="https://www.amazon.com/dp/B0F6N259HM">Product Link</a></td>
-<td><em>No corrosion (capacitive)</em><br><em>Stable analog readings</em><br><em>Low power consumption</em></td>
-<td><em>More expensive than SEN0114</em><br><em>Slightly larger PCB footprint</em></td>
+<td><strong>Option 2:</strong> DIY Stainless-Steel Resistive Probe<br>$1.50 — each<br><em>DIY using stainless rods/bolts</em></td>
+<td><em>More corrosion-resistant than copper</em><br><em>Durable mechanical design</em><br><em>Still simple analog interface</em></td>
+<td><em>Still corrodes slowly</em><br><em>Soil chemistry affects readings</em></td>
 </tr>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg" data-desc-position="bottom"><img alt="" src="https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg"></a><br><strong>Option 3:</strong> Industrial Soil Moisture &amp; Temperature Sensor<br>$79 — each<br><a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/314990620/16570933">Product Link</a></td>
-<td><em>Industrial-grade durability</em><br><em>Includes temperature output</em><br><em>Long-term outdoor reliability</em></td>
-<td><em>High cost</em><br><em>Requires analog-to-current interface circuitry</em></td>
+<td><strong>Option 3:</strong> DIY PCB Capacitive Soil Sensor<br>$2–4 — each<br><em>Fabricated or ordered PCB</em></td>
+<td><em>No corrosion (non-contact sensing)</em><br><em>Stable long-term readings</em><br><em>Low power consumption</em></td>
+<td><em>Requires PCB fabrication or ordering</em><br><em>Sensitivity depends on layout</em></td>
 </tr>
 </tbody>
 </table>
@@ -1148,9 +1148,19 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e"></a><br><strong>Option 1:</strong> MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">Product Link</a></td>
-<td><em>Rail-to-rail I/O</em><br><em>Low quiescent current (23 mA max)</em><br><em>Operates from single 5 V supply</em><br><em>Four amplifiers per package</em></td>
-<td><em>Through-hole package larger than SMD</em><br><em>Limited bandwidth for high-speed signals</em></td>
+<td><strong>Option 1:</strong> MCP6004 Quad Op-Amp<br>$1.25 — each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">Product Link</a></td>
+<td><em>Rail-to-rail I/O</em><br><em>Low quiescent current</em><br><em>Operates from 5 V single supply</em><br><em>Four amps per package</em></td>
+<td><em>Through-hole package takes more space</em><br><em>Limited bandwidth for fast signals</em></td>
+</tr>
+<tr>
+<td><strong>Option 2:</strong> MCP6024 Quad Op-Amp<br>$2.10 — each<br><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6024-I-P/3167858">Product Link</a></td>
+<td><em>Higher bandwidth than MCP6004</em><br><em>Rail-to-rail I/O</em><br><em>Good for faster signal conditioning</em></td>
+<td><em>Slightly higher cost</em><br><em>More power consumption than MCP6004</em></td>
+</tr>
+<tr>
+<td><strong>Option 3:</strong> TLV2374 Quad Op-Amp<br>$2.60 — each<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/TLV2374IP/381441">Product Link</a></td>
+<td><em>Low noise performance</em><br><em>Rail-to-rail I/O</em><br><em>Great for precision sensing</em></td>
+<td><em>Availability varies by distributor</em><br><em>Footprint changes based on package</em></td>
 </tr>
 </tbody>
 </table>
@@ -1167,11 +1177,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </thead>
 <tbody>
 <tr>
-<td><strong>Microcontroller</strong></td>
-<td>PIC18F16Q41 Curiosity Nano</td>
-<td>Provided to us, includes onboard debugger, and reliable ADC for moisture sensing.</td>
-</tr>
-<tr>
 <td><strong>Soil Moisture Sensor</strong></td>
 <td>DIY Capacitive Soil Moisture Sensor</td>
 <td>Easy RC circuit, low-power, and provides a stable analog signal for PIC ADC processing.</td>
@@ -1185,16 +1190,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 <td><strong>Voltage Regulator</strong></td>
 <td>LM7805 Linear Regulator (TO-220)</td>
 <td>Supplied to us, simple, and stable 5 V regulation for the subsystem.</td>
-</tr>
-<tr>
-<td><strong>External Power Source</strong></td>
-<td>9 V DC Wall Adapter (≥3 A)</td>
-<td>Provides more than enough current to power the 5 V subsystem load.</td>
-</tr>
-<tr>
-<td><strong>Subsystem Connectivity</strong></td>
-<td>8-Pin Board-to-Board Connector</td>
-<td>Provides communication and signal routing to teammate subsystem boards.</td>
 </tr>
 </tbody>
 </table>
