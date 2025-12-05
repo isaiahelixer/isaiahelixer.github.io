@@ -765,31 +765,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Section B – Power Rails">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#5-v-rail" class="md-nav__link">
-    <span class="md-ellipsis">
-      +5 V Rail
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-c-regulator-selection-final-choice-only" class="md-nav__link">
+  <a href="#section-c-regulator-selection-final-choice" class="md-nav__link">
     <span class="md-ellipsis">
-      Section C – Regulator Selection (Final Choice Only)
+      Section C – Regulator Selection (Final Choice)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Section C – Regulator Selection (Final Choice Only)">
+    <nav class="md-nav" aria-label="Section C – Regulator Selection (Final Choice)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1084,31 +1069,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Section B – Power Rails">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#5-v-rail" class="md-nav__link">
-    <span class="md-ellipsis">
-      +5 V Rail
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-c-regulator-selection-final-choice-only" class="md-nav__link">
+  <a href="#section-c-regulator-selection-final-choice" class="md-nav__link">
     <span class="md-ellipsis">
-      Section C – Regulator Selection (Final Choice Only)
+      Section C – Regulator Selection (Final Choice)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Section C – Regulator Selection (Final Choice Only)">
+    <nav class="md-nav" aria-label="Section C – Regulator Selection (Final Choice)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1186,7 +1156,7 @@
 
 <h1 id="power-budget">Power Budget</h1>
 <p><strong>Team Number:</strong> 101<br>
-<strong>Project Name:</strong> Smart Irrigation Sensor Subsystem Board<br>
+<strong>Project Name:</strong> Smart Irrigation Capacitve Soil Sensor Subsystem Board<br>
 <strong>Team Member Names:</strong> Liam, Isaiah, Myles, and Raj<br>
 <strong>Version:</strong> 1.9  </p>
 <p><strong>System input:</strong> 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → PIC18F57Q43 Curiosity Nano</p>
@@ -1240,18 +1210,18 @@
 <p><strong>Arithmetic component sum:</strong><br>
 500 + 0.1 + 23 = <strong>523.1 mA total subsystem current</strong></p>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
-<h3 id="5-v-rail"><strong>+5 V Rail</strong></h3>
-<p>The following components are powered directly from the <strong>5 V rail</strong>:</p>
+<p><strong>+5 V Rail</strong>
+The following components are powered directly from the 5 V rail:</p>
 <ul>
 <li>PIC18F57Q43 Curiosity Nano  </li>
 <li>MCP6004 Quad Op-Amp  </li>
 <li>DIY Capacitive Soil Moisture Sensor  </li>
 </ul>
-<p><strong>Rail subtotal:</strong> 523.1 mA<br>
-<strong>25% safety margin:</strong> 523.1 × 1.25 = <strong>653.875 mA</strong></p>
-<p>Rounded for specification: <strong>≈ 655 mA required from the 5 V rail</strong></p>
-<h2 id="section-c-regulator-selection-final-choice-only">Section C – Regulator Selection (Final Choice Only)</h2>
-<h3 id="selected-regulator-lm7805-linear-regulator"><strong>Selected Regulator: LM7805 Linear Regulator</strong></h3>
+<p>Rail subtotal: 523.1 mA<br>
+25% safety margin: 523.1 × 1.25 = 653.875 mA</p>
+<p>Rounded for specification: ≈ 655 mA required from the 5 V rail</p>
+<h2 id="section-c-regulator-selection-final-choice">Section C – Regulator Selection (Final Choice)</h2>
+<h3 id="selected-regulator-lm7805-linear-regulator">Selected Regulator: LM7805 Linear Regulator</h3>
 <table>
 <thead>
 <tr>
@@ -1278,7 +1248,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">Meets Requirement?</td>
-<td><strong>Yes</strong></td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
@@ -1286,12 +1256,12 @@
 The LM7805 provides more than enough headroom for the estimated 655 mA system demand. It is simple, reliable, and already available for use. Lower-current regulators (e.g., 100 mA TO-92 types) cannot support the system load.</p>
 <h3 id="regulator-power-dissipation-check"><strong>Regulator Power Dissipation Check</strong></h3>
 <ul>
-<li>Voltage drop: 9 V − 5 V = <strong>4 V</strong>  </li>
-<li>Load current (with margin): <strong>0.655 A</strong>  </li>
+<li>Voltage drop: 9 V − 5 V = 4 V </li>
+<li>Load current (with margin): 0.655 A </li>
 <li>Power dissipated:<br>
-<strong>4 V × 0.655 A = 2.62 W</strong></li>
+  4 V × 0.655 A = 2.62 W</li>
 </ul>
-<p><strong>Conclusion:</strong> A small heat sink is required for continuous operation.</p>
+<p><strong>Conclusion:</strong> A small heat sink may be required for large continuous current draw.</p>
 <h2 id="section-d-external-power-source">Section D – External Power Source</h2>
 <table>
 <thead>
@@ -1316,7 +1286,7 @@ The LM7805 provides more than enough headroom for the estimated 655 mA system de
 <li>Remaining adapter capacity:<br>
   3000 − 655 = <strong>2345 mA</strong></li>
 </ul>
-<p><strong>Battery Option (not implemented):</strong><br>
+<p>Battery Option (not implemented): 
 - If powered by a 3000 mAh Li-ion:<br>
   - Sleep-mode (50 mA avg): 60 hours<br>
   - Full draw (523 mA): ≈ 5.7 hours</p>
@@ -1338,8 +1308,8 @@ The LM7805 provides more than enough headroom for the estimated 655 mA system de
 <td>655 mA</td>
 </tr>
 <tr>
-<td style="text-align: right;"><strong>Regulator chosen</strong></td>
-<td><strong>LM7805 Linear Regulator</strong></td>
+<td style="text-align: right;">Regulator chosen</td>
+<td>LM7805 Linear Regulator</td>
 </tr>
 <tr>
 <td style="text-align: right;">Regulator dissipation</td>
