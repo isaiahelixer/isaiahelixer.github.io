@@ -1329,8 +1329,9 @@ If powered by a 3000 mAh battery for estimation only:</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Conclusion:</strong><br>
-The subsystem’s total draw is ≈ 523 mA, With a 25% margin, the 5 V rail requires ~655 mA. The LM7805 regulator remains a suitable choice, dissipating about 2.6 W at 9 V input, so a small heat sink is recommended. The 9 V, 3 A wall adapter provides ample headroom with ~2.3 A spare capacity.</p>
+<p><strong>Power budget Conclusion:</strong><br>
+I used the power budget to estimate the max current each major part of the subsystem would draw and then added those numbers to find the total system load. Once I had the subtotal, I applied a 25% safety margin to make sure the design would handle higher-than-expected current spikes or future additions. This final value told me what the 5 V rail needed to supply and helped determine which voltage regulator was appropriate.</p>
+<p>From the budget our system needs about 655 mA so the LM7805 was the only regulator with enough headroom. The power budget also showed that the regulator would dissipate around 2.6 W meaning a heat sink may be required. Comparing this to our 9 V, 3 A adapter confirmed the external supply can easily support the load with plenty of current to spare. The budget also made it clear that battery power is not practical for continuous operation due to the high draw.</p>
 
 
 
