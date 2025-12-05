@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#improvements-in-hardware-design" class="md-skip">
+        <a href="#hardware-improvements-for-version-20" class="md-skip">
           Skip to content
         </a>
       
@@ -868,17 +868,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Hardware V2.0
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -889,32 +880,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#improvements-in-hardware-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      improvement's in hardware design
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1047,23 +1012,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#improvements-in-hardware-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      improvement's in hardware design
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1086,9 +1036,10 @@
   
 
 
-  <h1>Hardware V2.0</h1>
-
-<h2 id="improvements-in-hardware-design">improvement's in hardware design</h2>
+<h1 id="hardware-improvements-for-version-20">Hardware Improvements for Version 2.0</h1>
+<p>The Version 2.0 redesign focuses on improving signal integrity, power efficiency, and debugging capability by addressing several limitations found in the current subsystem. The first major improvement involves optimizing the analog signal conditioning stage. In the original design, the MCP6004 Op-Amp, combined with capacitors C4 and C6, unintentionally created an active low-pass filter that suppressed the high-frequency square wave needed for accurate soil moisture readings. To correct this, the new design removes both capacitors to increase bandwidth and reconfigures the Op-Amp as a Schmitt Trigger, adding hysteresis and producing a clean digital square wave for the microcontroller. Additionally, unused channels of the MCP6004 will now be used to drive an active shield trace, which helps reduce parasitic capacitance from the soil.</p>
+<p>The second improvement focuses on power efficiency and operational feedback. The linear LM7805 regulator is being replaced with a pin-compatible switching regulator to eliminate unnecessary heat dissipation and extend battery life. Instead of using the fixed red power LED, the system will now rely on the blue debug LED connected to RB6 as a software-controlled heartbeat indicator. Blinking at 1 Hz, this LED provides immediate confirmation that the PIC18F57Q43 is powered and successfully executing code.</p>
+<p>The final set of improvements enhances testability and safety. Dedicated through-hole ground loops will be added near the Op-Amp and GPIO headers to make oscilloscope probing easier and less noisy. Existing flat test pads such as TP_5V and TP_AOUT0 will be upgraded to standard 0.1-inch headers for more reliable jumper connections. Finally, a series resistor or PTC fuse will be added to the Ribbon Cable Connector’s power line to protect the main board from accidental short circuits. These changes together make the subsystem more robust, efficient, and easier to troubleshoot.</p>
 
 
 
