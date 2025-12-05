@@ -19,9 +19,9 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |---------------|-----------|-----------|
-| ![](https://github.com/user-attachments/assets/66eeb141-3a8a-4a65-ba30-f9e865b20f8b)<br>**Option 1:** SEN0114 Soil Moisture Sensor Module<br>$2.70 — each<br>[Product Link](https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525) | *Simple analog output*<br>*Low cost*<br>*Compact design* | *Corrodes over time if left in soil*<br>*Requires calibration for accuracy* |
-| ![](https://github.com/user-attachments/assets/d213c9d3-1647-4f78-83f7-da6f1a7d93ea)<br>**Option 2:** ST0160 Capacitive Soil Moisture Sensor V2.0<br>$8.60 — each<br>[Product Link](https://www.amazon.com/dp/B0F6N259HM) | *No corrosion (capacitive)*<br>*Stable analog readings*<br>*Low power consumption* | *More expensive than SEN0114*<br>*Slightly larger PCB footprint* |
-| ![](https://mm.digikey.com/Volume0/opasdata/d220001/derivates/1/100/930/342/MFG_314990620_sml.jpg)<br>**Option 3:** Industrial Soil Moisture & Temperature Sensor<br>$79 — each<br>[Product Link](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/314990620/16570933) | *Industrial-grade durability*<br>*Includes temperature output*<br>*Long-term outdoor reliability* | *High cost*<br>*Requires analog-to-current interface circuitry* |
+| **Option 1:** DIY Resistive Copper/Steel Probe<br>$0.50 — each<br>*DIY-built from wires/nails* | *Very low cost*<br>*Simple voltage-divider interface*<br>*Easy to fabricate* | *Corrodes quickly in soil*<br>*Poor long-term stability*<br>*Requires recalibration* |
+| **Option 2:** DIY Stainless-Steel Resistive Probe<br>$1.50 — each<br>*DIY using stainless rods/bolts* | *More corrosion-resistant than copper*<br>*Durable mechanical design*<br>*Still simple analog interface* | *Still corrodes slowly*<br>*Soil chemistry affects readings* |
+| **Option 3:** DIY PCB Capacitive Soil Sensor<br>$2–4 — each<br>*Fabricated or ordered PCB* | *No corrosion (non-contact sensing)*<br>*Stable long-term readings*<br>*Low power consumption* | *Requires PCB fabrication or ordering*<br>*Sensitivity depends on layout* |
 
 **Choice:** Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  
 **Rationale:** Provides corrosion-free sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and easy integration with the PIC ADC.
@@ -45,7 +45,9 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |---------------|-----------|-----------|
-| ![](https://github.com/user-attachments/assets/31820770-4b2e-4d94-a2e6-3f3f1526158e)<br>**Option 1:** MCP6004 Quad Op-Amp (Through-Hole)<br>$1.25 — each<br>[Product Link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060) | *Rail-to-rail I/O*<br>*Low quiescent current (23 mA max)*<br>*Operates from single 5 V supply*<br>*Four amplifiers per package* | *Through-hole package larger than SMD*<br>*Limited bandwidth for high-speed signals* |
+| **Option 1:** MCP6004 Quad Op-Amp<br>$1.25 — each<br>[Product Link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060) | *Rail-to-rail I/O*<br>*Low quiescent current*<br>*Operates from 5 V single supply*<br>*Four amps per package* | *Through-hole package takes more space*<br>*Limited bandwidth for fast signals* |
+| **Option 2:** MCP6024 Quad Op-Amp<br>$2.10 — each<br>[Product Link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6024-I-P/3167858) | *Higher bandwidth than MCP6004*<br>*Rail-to-rail I/O*<br>*Good for faster signal conditioning* | *Slightly higher cost*<br>*More power consumption than MCP6004* |
+| **Option 3:** TLV2374 Quad Op-Amp<br>$2.60 — each<br>[Product Link](https://www.digikey.com/en/products/detail/texas-instruments/TLV2374IP/381441) | *Low noise performance*<br>*Rail-to-rail I/O*<br>*Great for precision sensing* | *Availability varies by distributor*<br>*Footprint changes based on package* |
 
 **Choice:** Option 1 — MCP6004 Op-Amp  
 **Rationale:** Already supplied; provides four precision amplifiers suitable for low-power sensor signal conditioning and stable analog performance.
@@ -54,11 +56,8 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Component Category** | **Final Component Selected** | **Reason for Selection** |
 |------------------------|------------------------------|---------------------------|
-| **Microcontroller** | PIC18F16Q41 Curiosity Nano | Provided to us, includes onboard debugger, and reliable ADC for moisture sensing. |
 | **Soil Moisture Sensor** | DIY Capacitive Soil Moisture Sensor | Easy RC circuit, low-power, and provides a stable analog signal for PIC ADC processing. |
 | **Operational Amplifier** | MCP6004 Quad Op-Amp | Rail-to-rail operation and low power, suitable for filtering and amplifying the sensor output. |
 | **Voltage Regulator** | LM7805 Linear Regulator (TO-220) | Supplied to us, simple, and stable 5 V regulation for the subsystem. |
-| **External Power Source** | 9 V DC Wall Adapter (≥3 A) | Provides more than enough current to power the 5 V subsystem load. |
-| **Subsystem Connectivity** | 8-Pin Board-to-Board Connector | Provides communication and signal routing to teammate subsystem boards. |
 
 
