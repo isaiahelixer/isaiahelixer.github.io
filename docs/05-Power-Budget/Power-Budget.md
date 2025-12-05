@@ -7,9 +7,9 @@ title: Power Budget
 **Team Number:** 101  
 **Project Name:** Smart Irrigation Sensor Subsystem Board  
 **Team Member Names:** Liam, Isaiah, Myles, and Raj  
-**Version:** 1.8  
+**Version:** 1.9  
 
-**System input:** 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → Op-Amp PIC18F57Q43 Curiosity Nano
+**System input:** 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → PIC18F57Q43 Curiosity Nano
 
 ## Section A – All Major Components 
 
@@ -21,38 +21,45 @@ title: Power Budget
 | **Subtotal** | | | | | **523.1 mA** |
 
 **Arithmetic component sum:**  
-500 + 0.1 + 23 = 523.1 mA total subsystem current
+500 + 0.1 + 23 = **523.1 mA total subsystem current**
 
 ## Section B – Power Rails
 
-**+5 V Rail**
-- Subtotal = 523.1 mA  
-- Safety margin (25%) = 523.1 × 1.25 = 653.875 mA  
+### **+5 V Rail**
+The following components are powered directly from the **5 V rail**:
 
-**Arithmetic (with margin):**  
-523.1 × 1.25 = (523.1 × 5) / 4 = 2615.5 / 4 = 653.875 mA  
+- PIC18F57Q43 Curiosity Nano  
+- MCP6004 Quad Op-Amp  
+- DIY Capacitive Soil Moisture Sensor  
 
-Rounded total for spec/selection: ≈ 655 mA
+**Rail subtotal:** 523.1 mA  
+**25% safety margin:** 523.1 × 1.25 = **653.875 mA**
 
-## Section C – Regulator Selection
+Rounded for specification: **≈ 655 mA required from the 5 V rail**
 
-| **Regulator Option** | **Input Range (V)** | **Max Output (mA)** | **Pros** | **Cons** |
-|----------------------|---------------------:|--------------------:|----------|---------|
-| LM7805 linear | 7 – 25 V | 1500 | Simple, low noise, reliable | Inefficient (9V→5V drop causes heat; needs heat sink) |
-| UA78L05ACLP TO-92, 100 mA max | 7 – 35 V | 100 | Compact, low quiescent current | Not enough output current for system needs |
+## Section C – Regulator Selection (Final Choice Only)
 
-Choice: LM7805 Linear Regulator  
+### **Selected Regulator: LM7805 Linear Regulator**
+
+| **Parameter** | **Value** |
+|--------------:|-----------|
+| Input Voltage | 9 V from wall adapter |
+| Output Voltage | 5 V |
+| Max Output Current | 1.5 A |
+| Required Current (with margin) | 655 mA |
+| Meets Requirement? | **Yes** |
 
 **Rationale:**  
-With a total estimated current requirement of ~655 mA including margin, the LM7805 1.5 A rated provides ample output capacity and thermal headroom.  
-The UA78L05ACLP 100 mA is insufficient.
+The LM7805 provides more than enough headroom for the estimated 655 mA system demand. It is simple, reliable, and already available for use. Lower-current regulators (e.g., 100 mA TO-92 types) cannot support the system load.
 
-**Regulator heat / dissipation check:**  
-- Voltage drop = 9 V − 5 V = 4 V  
-- Load current with margin = 655 mA = 0.655 A  
-- Power dissipated = 4 V × 0.655 A = 2.62 W
+### **Regulator Power Dissipation Check**
 
-Result: LM7805 will require a small heat sink for continuous operation.
+- Voltage drop: 9 V − 5 V = **4 V**  
+- Load current (with margin): **0.655 A**  
+- Power dissipated:  
+  **4 V × 0.655 A = 2.62 W**
+
+**Conclusion:** A small heat sink is required for continuous operation.
 
 ## Section D – External Power Source
 
@@ -60,32 +67,29 @@ Result: LM7805 will require a small heat sink for continuous operation.
 |------------------|-------------:|------------------------:|---------------------:|
 | Wall Adapter | Generic 9V DC Adapter | 9 | 3000 |
 
-- Required on +5 V rail with 25% margin: 655 mA  
-- Remaining capacity on 9V, 3A adapter: 3000 − 655 = 2345 mA
-
-**Arithmetic:**  
-3000 − 655 = 2345 mA remaining
+- Required on 5 V rail (with margin): **655 mA**  
+- Remaining adapter capacity:  
+  3000 − 655 = **2345 mA**
 
 **Battery Option (not implemented):**  
-If powered by a 3000 mAh battery for estimation only:
-
-- Example sleep-mode average current = 50 mA → battery life = 3000 / 50 = 60 hours ≈ 2.5 days  
-- With active current near full draw 523 mA: 3000 / 523 ≈ 5.73 hours (not practical for continuous operation)
+- If powered by a 3000 mAh Li-ion:  
+  - Sleep-mode (50 mA avg): 60 hours  
+  - Full draw (523 mA): ≈ 5.7 hours
 
 ## Section E – Summary
 
 | **Item** | **Value / Action** |
 |---------:|--------------------|
 | Estimated subtotal | 523.1 mA |
-| Total required on 5 V rail (with 25% margin) | 655 mA |
-| Regulator chosen | LM7805 Linear Regulator |
-| Regulator dissipation 9→5 V at 655 mA | ≈ 2.62 W (heat sink required) |
+| Required 5 V rail with 25% margin | 655 mA |
+| **Regulator chosen** | **LM7805 Linear Regulator** |
+| Regulator dissipation | ≈ 2.62 W (heat sink needed) |
 | External supply recommended | 9 V DC adapter, ≥ 3 A |
-| Estimated battery life (3000 mAh Li-ion) | ≈ 60 h (sleep-mode avg) / ≈ 5.7 h being continuous active draw |
+| Estimated battery life (3000 mAh) | 60 h (sleep) / 5.7 h (active) |
 
-**Power budget Conclusion:**  
-I used the power budget to estimate the max current each major part of the subsystem would draw and then added those numbers to find the total system load. Once I had the subtotal, I applied a 25% safety margin to make sure the design would handle higher-than-expected current spikes or future additions. This final value told me what the 5 V rail needed to supply and helped determine which voltage regulator was appropriate.
+## Power Budget Conclusion
 
-From the budget our system needs about 655 mA so the LM7805 was the only regulator with enough headroom. The power budget also showed that the regulator would dissipate around 2.6 W meaning a heat sink may be required. Comparing this to our 9 V, 3 A adapter confirmed the external supply can easily support the load with plenty of current to spare.
+I used the power budget to estimate the maximum current each major part draws and summed them to find the total system load. After applying a 25% safety margin, this established the requirement for the 5 V rail. Since the rail needs around 655 mA, the LM7805 was the only regulator with enough output capacity. The calculations also showed the regulator would dissipate about 2.6 W, meaning a heat sink is required. A 9 V, 3 A wall adapter easily supports this load with plenty of current to spare.
+
 
 
