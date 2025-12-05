@@ -25,7 +25,7 @@ title: Power Budget
 
 ## Section B – Power Rails
 
-**+5 V Rail**  
+###**+5 V Rail**  
 The following components are powered directly from the 5 V rail:
 
 - PIC18F57Q43 Curiosity Nano  
