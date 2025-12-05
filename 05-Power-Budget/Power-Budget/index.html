@@ -1168,7 +1168,7 @@
 <p><strong>Team Number:</strong> 101<br>
 <strong>Project Name:</strong> Smart Irrigation Sensor Subsystem Board<br>
 <strong>Team Member Names:</strong> Liam, Isaiah, Myles, and Raj<br>
-<strong>Version:</strong> 1.6  </p>
+<strong>Version:</strong> 1.8  </p>
 <p><strong>System input:</strong> 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → Op-Amp PIC18F57Q43 Curiosity Nano</p>
 <h2 id="section-a-all-major-components">Section A – All Major Components</h2>
 <table>
@@ -1193,7 +1193,7 @@
 </tr>
 <tr>
 <td>Soil Moisture Sensor</td>
-<td>DIY Capacitive (5 V PWM, 10 kΩ–1 MΩ–0.1 µF RC)</td>
+<td>DIY Capacitive</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0.1</td>
@@ -1331,7 +1331,7 @@ If powered by a 3000 mAh battery for estimation only:</p>
 </table>
 <p><strong>Power budget Conclusion:</strong><br>
 I used the power budget to estimate the max current each major part of the subsystem would draw and then added those numbers to find the total system load. Once I had the subtotal, I applied a 25% safety margin to make sure the design would handle higher-than-expected current spikes or future additions. This final value told me what the 5 V rail needed to supply and helped determine which voltage regulator was appropriate.</p>
-<p>From the budget our system needs about 655 mA so the LM7805 was the only regulator with enough headroom. The power budget also showed that the regulator would dissipate around 2.6 W meaning a heat sink may be required. Comparing this to our 9 V, 3 A adapter confirmed the external supply can easily support the load with plenty of current to spare. The budget also made it clear that battery power is not practical for continuous operation due to the high draw.</p>
+<p>From the budget our system needs about 655 mA so the LM7805 was the only regulator with enough headroom. The power budget also showed that the regulator would dissipate around 2.6 W meaning a heat sink may be required. Comparing this to our 9 V, 3 A adapter confirmed the external supply can easily support the load with plenty of current to spare.</p>
 
 
 
