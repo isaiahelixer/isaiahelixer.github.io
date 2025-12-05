@@ -39,17 +39,6 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 **Choice:** Option 1 — LM7805 Linear Regulator  
 **Rationale:** Already supplied and sufficient for the system’s moderate current demand. The N7805-1CW offers higher efficiency but is unnecessary for this subsystem.
 
-## Microcontroller
-
-**Table 3: Microcontroller Comparison**
-
-| **Solution** | **Pros** | **Cons** |
-|---------------|-----------|-----------|
-| ![](https://github.com/user-attachments/assets/74bf714e-3918-4d43-b116-b8da425d14f9)<br>**Option 1:** PIC18F16Q41 Curiosity Nano<br>$15 — each<br>[Product Link](https://www.microchip.com/en-us/development-tool/dm164150) | *Low-power operation*<br>*Integrated ADC channels*<br>*I²C, SPI, and UART communication*<br>*Onboard debugger via USB* | *Limited I/O for expansion*<br>*Requires MPLAB X IDE setup* |
-
-**Choice:** Option 1 — PIC18F16Q41 Curiosity Nano  
-**Rationale:** Readily available and already supplied to the team, simplifying integration with sensors and op-amp circuitry.
-
 ## Operational Amplifier
 
 **Table 4: Operational Amplifier Comparison**
