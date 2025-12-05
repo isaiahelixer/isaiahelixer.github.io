@@ -668,9 +668,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-adapter" class="md-nav__link">
+  <a href="#summary-table-of-final-major-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Power Adapter
+      Summary Table of Final Major Components
     </span>
   </a>
   
@@ -1133,9 +1133,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-adapter" class="md-nav__link">
+  <a href="#summary-table-of-final-major-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Power Adapter
+      Summary Table of Final Major Components
     </span>
   </a>
   
@@ -1270,26 +1270,48 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:<br>
 </table>
 <p><strong>Choice:</strong> Option 1 — MCP6004 Op-Amp<br>
 <strong>Rationale:</strong> Already supplied; provides four precision amplifiers suitable for low-power sensor signal conditioning and stable analog performance.</p>
-<h2 id="power-adapter">Power Adapter</h2>
-<p><strong>Table 5: Power Adapter Comparison</strong></p>
+<h2 id="summary-table-of-final-major-components">Summary Table of Final Major Components</h2>
 <table>
 <thead>
 <tr>
-<th><strong>Solution</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
+<th><strong>Component Category</strong></th>
+<th><strong>Final Component Selected</strong></th>
+<th><strong>Reason for Selection</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/04c6a715-77bc-453e-a9f3-900abc7a1e74" data-desc-position="bottom"><img alt="" src="https://github.com/user-attachments/assets/04c6a715-77bc-453e-a9f3-900abc7a1e74"></a><br><strong>Option 1:</strong> 9 V 3 A AC to DC Adapter — Model 0930<br>Supplied Item<br><a href="https://circuit.rocks/products/ac-dc-9v-3a-wall-power-adapter-5-5x2-1mm-barrel-jack-center-positive">Product Link</a></td>
-<td><em>High current capacity (3 A)</em><br><em>Stable DC output</em><br><em>Compatible with LM7805 input requirements</em></td>
-<td><em>Linear regulator heat generation at high loads</em><br><em>Requires correct barrel polarity and connector matching</em></td>
+<td><strong>Microcontroller</strong></td>
+<td>PIC18F16Q41 Curiosity Nano</td>
+<td>Provided by course; includes onboard debugger and reliable ADC for moisture sensing.</td>
+</tr>
+<tr>
+<td><strong>Soil Moisture Sensor</strong></td>
+<td>DIY Capacitive Soil Moisture Sensor</td>
+<td>Corrosion-free, low-power, and provides a stable analog signal for PIC ADC processing.</td>
+</tr>
+<tr>
+<td><strong>Operational Amplifier</strong></td>
+<td>MCP6004 Quad Op-Amp</td>
+<td>Rail-to-rail operation and low power, suitable for filtering and amplifying the sensor output.</td>
+</tr>
+<tr>
+<td><strong>Voltage Regulator</strong></td>
+<td>LM7805 Linear Regulator (TO-220)</td>
+<td>Supplied to the team; simple and stable 5 V regulation for the subsystem.</td>
+</tr>
+<tr>
+<td><strong>External Power Source</strong></td>
+<td>9 V DC Wall Adapter (≥3 A)</td>
+<td>Provides more than enough current to power the 5 V subsystem load.</td>
+</tr>
+<tr>
+<td><strong>Subsystem Connectivity</strong></td>
+<td>8-Pin Board-to-Board Connector</td>
+<td>Provides communication and signal routing to teammate subsystem boards.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> Option 1 — 9 V 3 A AC to DC Adapter (Model 0930)<br>
-<strong>Rationale:</strong> Already supplied and provides sufficient power for the full subsystem board, ensuring reliable operation of all components through the 5 V regulated supply.</p>
 
 
 
