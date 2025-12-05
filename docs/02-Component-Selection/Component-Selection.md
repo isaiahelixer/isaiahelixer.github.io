@@ -45,7 +45,7 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |---------------|-----------|-----------|
-| **Option 1:** MCP6004 Quad Op-Amp<br>$1.25 — each<br>[Product Link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060) | *Rail-to-rail I/O*<br>*Low quiescent current*<br>*Operates from 5 V single supply*<br>*Four amps per package* | *Through-hole package takes more space*<br>*Limited bandwidth for fast signals* |
+| <img width="250" height="250" alt="Screenshot 2025-12-05 142417" src="https://github.com/user-attachments/assets/b1063e43-914e-45c0-835f-a7ebdf88fbd2" /><br>**Option 1:** MCP6004 Quad Op-Amp<br>$1.25 — each<br>[Product Link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060) | *Rail-to-rail I/O*<br>*Low quiescent current*<br>*Operates from 5 V single supply*<br>*Four amps per package* | *Through-hole package takes more space*<br>*Limited bandwidth for fast signals* |
 | **Option 2:** MCP6024 Quad Op-Amp<br>$2.10 — each<br>[Product Link](https://www.digikey.com/en/products/detail/microchip-technology/MCP6024-I-P/3167858) | *Higher bandwidth than MCP6004*<br>*Rail-to-rail I/O*<br>*Good for faster signal conditioning* | *Slightly higher cost*<br>*More power consumption than MCP6004* |
 | **Option 3:** TLV2374 Quad Op-Amp<br>$2.60 — each<br>[Product Link](https://www.digikey.com/en/products/detail/texas-instruments/TLV2374IP/381441) | *Low noise performance*<br>*Rail-to-rail I/O*<br>*Great for precision sensing* | *Availability varies by distributor*<br>*Footprint changes based on package* |
 
