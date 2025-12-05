@@ -5,13 +5,10 @@ tags:
 - Power and Sensor Board
 ---
 
-# Component Selection
-
-Subsystem board powered from a 9 V wall adapter input through a 5 V regulator.  
-Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:  
+# Component Selection Needs
 - Analog capacitive soil moisture sensor  
-- MCP6004 op-amp  
-- 8-pin connector for communication with other subsystem boards  
+- Operational Amplifier 
+- Linear Voltage Regulator at 5V
 
 ## Soil Moisture Sensor
 
@@ -19,9 +16,9 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Solution** | **Pros** | **Cons** |
 |---------------|-----------|-----------|
-|<img width="250" height="250" alt="Screenshot 2025-12-05 142235" src="https://github.com/user-attachments/assets/067f53bb-84fc-4f64-8438-9873440237e3" /><br>**Option 1:** DIY Resistive Copper/Steel Probe<br>$0.50 — each<br>*DIY-built from wires/nails* | *Very low cost*<br>*Simple voltage-divider interface*<br>*Easy to fabricate* | *Corrodes quickly in soil*<br>*Poor long-term stability*<br>*Requires recalibration* |
-| <img width="250" height="250" alt="Screenshot 2025-12-05 141049" src="https://github.com/user-attachments/assets/b332ac6c-e4ca-45b7-8e63-54a251928135" /><br>**Option 2:** DIY Stainless-Steel Resistive Probe<br>$1.50 — each<br>*DIY using stainless rods/bolts* | *More corrosion-resistant than copper*<br>*Durable mechanical design*<br>*Still simple analog interface* | *Still corrodes slowly*<br>*Soil chemistry affects readings* |
-| <img width="250" height="250" alt="Screenshot 2025-12-05 141651" src="https://github.com/user-attachments/assets/b51ff5d4-60ad-4ae1-a897-63575225aae5" /><br>**Option 3:** DIY PCB Capacitive Soil Sensor<br>$2–4 — each<br>*Fabricated or ordered PCB* | *No corrosion (non-contact sensing)*<br>*Stable long-term readings*<br>*Low power consumption* | *Requires PCB fabrication or ordering*<br>*Sensitivity depends on layout* |
+|<img width="250" height="250" alt="Screenshot 2025-12-05 142235" src="https://github.com/user-attachments/assets/067f53bb-84fc-4f64-8438-9873440237e3" /><br>**Option 1:** DIY Resistive Copper Probe<br>$0.50 — each<br>*DIY-built from copper rods* | *Very low cost*<br>*Simple voltage-divider interface*<br>*Easy to fabricate* | *Corrodes quickly in soil*<br>*Poor long-term stability*<br>*Requires constant recalibration* |
+| <img width="250" height="250" alt="Screenshot 2025-12-05 141049" src="https://github.com/user-attachments/assets/b332ac6c-e4ca-45b7-8e63-54a251928135" /><br>**Option 2:** DIY Stainless-Steel Resistive Probe<br>$1.50 — each<br>*DIY using stainless rods* | *More corrosion-resistant than copper*<br>*Durable mechanical design*<br>*Still simple analog interface* | *Still corrodes slowly*<br>*Soil compositions affects readings* |
+| <img width="250" height="250" alt="Screenshot 2025-12-05 141651" src="https://github.com/user-attachments/assets/b51ff5d4-60ad-4ae1-a897-63575225aae5" /><br>**Option 3:** DIY PCB Capacitive Soil Sensor<br>$2–4 — each<br>*DIY using copper or titanium rods* | *Very little corrosion (Oxidation)*<br>*Stable long-term readings*<br>*Low power consumption* | *Requires more intricate circuit tuning*<br>*Sensitivity depends on layout* |
 
 **Choice:** Option 3 — Capacitive Soil Moisture Sensor  
 **Rationale:** Provides low corrosion sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and easy integration with the PIC ADC.
