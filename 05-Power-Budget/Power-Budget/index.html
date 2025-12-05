@@ -765,14 +765,53 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Section B – Power Rails">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-v-rail" class="md-nav__link">
+    <span class="md-ellipsis">
+      +5 V Rail
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-c-regulator-selection" class="md-nav__link">
+  <a href="#section-c-regulator-selection-final-choice-only" class="md-nav__link">
     <span class="md-ellipsis">
-      Section C – Regulator Selection
+      Section C – Regulator Selection (Final Choice Only)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Section C – Regulator Selection (Final Choice Only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selected-regulator-lm7805-linear-regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected Regulator: LM7805 Linear Regulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regulator-power-dissipation-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulator Power Dissipation Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -789,6 +828,15 @@
   <a href="#section-e-summary" class="md-nav__link">
     <span class="md-ellipsis">
       Section E – Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget Conclusion
     </span>
   </a>
   
@@ -1036,14 +1084,53 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Section B – Power Rails">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5-v-rail" class="md-nav__link">
+    <span class="md-ellipsis">
+      +5 V Rail
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-c-regulator-selection" class="md-nav__link">
+  <a href="#section-c-regulator-selection-final-choice-only" class="md-nav__link">
     <span class="md-ellipsis">
-      Section C – Regulator Selection
+      Section C – Regulator Selection (Final Choice Only)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Section C – Regulator Selection (Final Choice Only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selected-regulator-lm7805-linear-regulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected Regulator: LM7805 Linear Regulator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regulator-power-dissipation-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulator Power Dissipation Check
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1060,6 +1147,15 @@
   <a href="#section-e-summary" class="md-nav__link">
     <span class="md-ellipsis">
       Section E – Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Budget Conclusion
     </span>
   </a>
   
@@ -1092,8 +1188,8 @@
 <p><strong>Team Number:</strong> 101<br>
 <strong>Project Name:</strong> Smart Irrigation Sensor Subsystem Board<br>
 <strong>Team Member Names:</strong> Liam, Isaiah, Myles, and Raj<br>
-<strong>Version:</strong> 1.8  </p>
-<p><strong>System input:</strong> 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → Op-Amp PIC18F57Q43 Curiosity Nano</p>
+<strong>Version:</strong> 1.9  </p>
+<p><strong>System input:</strong> 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → PIC18F57Q43 Curiosity Nano</p>
 <h2 id="section-a-all-major-components">Section A – All Major Components</h2>
 <table>
 <thead>
@@ -1142,51 +1238,60 @@
 </tbody>
 </table>
 <p><strong>Arithmetic component sum:</strong><br>
-500 + 0.1 + 23 = 523.1 mA total subsystem current</p>
+500 + 0.1 + 23 = <strong>523.1 mA total subsystem current</strong></p>
 <h2 id="section-b-power-rails">Section B – Power Rails</h2>
-<p><strong>+5 V Rail</strong>
-- Subtotal = 523.1 mA<br>
-- Safety margin (25%) = 523.1 × 1.25 = 653.875 mA  </p>
-<p><strong>Arithmetic (with margin):</strong><br>
-523.1 × 1.25 = (523.1 × 5) / 4 = 2615.5 / 4 = 653.875 mA  </p>
-<p>Rounded total for spec/selection: ≈ 655 mA</p>
-<h2 id="section-c-regulator-selection">Section C – Regulator Selection</h2>
+<h3 id="5-v-rail"><strong>+5 V Rail</strong></h3>
+<p>The following components are powered directly from the <strong>5 V rail</strong>:</p>
+<ul>
+<li>PIC18F57Q43 Curiosity Nano  </li>
+<li>MCP6004 Quad Op-Amp  </li>
+<li>DIY Capacitive Soil Moisture Sensor  </li>
+</ul>
+<p><strong>Rail subtotal:</strong> 523.1 mA<br>
+<strong>25% safety margin:</strong> 523.1 × 1.25 = <strong>653.875 mA</strong></p>
+<p>Rounded for specification: <strong>≈ 655 mA required from the 5 V rail</strong></p>
+<h2 id="section-c-regulator-selection-final-choice-only">Section C – Regulator Selection (Final Choice Only)</h2>
+<h3 id="selected-regulator-lm7805-linear-regulator"><strong>Selected Regulator: LM7805 Linear Regulator</strong></h3>
 <table>
 <thead>
 <tr>
-<th><strong>Regulator Option</strong></th>
-<th style="text-align: right;"><strong>Input Range (V)</strong></th>
-<th style="text-align: right;"><strong>Max Output (mA)</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
+<th style="text-align: right;"><strong>Parameter</strong></th>
+<th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>LM7805 linear</td>
-<td style="text-align: right;">7 – 25 V</td>
-<td style="text-align: right;">1500</td>
-<td>Simple, low noise, reliable</td>
-<td>Inefficient (9V→5V drop causes heat; needs heat sink)</td>
+<td style="text-align: right;">Input Voltage</td>
+<td>9 V from wall adapter</td>
 </tr>
 <tr>
-<td>UA78L05ACLP TO-92, 100 mA max</td>
-<td style="text-align: right;">7 – 35 V</td>
-<td style="text-align: right;">100</td>
-<td>Compact, low quiescent current</td>
-<td>Not enough output current for system needs</td>
+<td style="text-align: right;">Output Voltage</td>
+<td>5 V</td>
+</tr>
+<tr>
+<td style="text-align: right;">Max Output Current</td>
+<td>1.5 A</td>
+</tr>
+<tr>
+<td style="text-align: right;">Required Current (with margin)</td>
+<td>655 mA</td>
+</tr>
+<tr>
+<td style="text-align: right;">Meets Requirement?</td>
+<td><strong>Yes</strong></td>
 </tr>
 </tbody>
 </table>
-<p>Choice: LM7805 Linear Regulator  </p>
 <p><strong>Rationale:</strong><br>
-With a total estimated current requirement of ~655 mA including margin, the LM7805 1.5 A rated provides ample output capacity and thermal headroom.<br>
-The UA78L05ACLP 100 mA is insufficient.</p>
-<p><strong>Regulator heat / dissipation check:</strong><br>
-- Voltage drop = 9 V − 5 V = 4 V<br>
-- Load current with margin = 655 mA = 0.655 A<br>
-- Power dissipated = 4 V × 0.655 A = 2.62 W</p>
-<p>Result: LM7805 will require a small heat sink for continuous operation.</p>
+The LM7805 provides more than enough headroom for the estimated 655 mA system demand. It is simple, reliable, and already available for use. Lower-current regulators (e.g., 100 mA TO-92 types) cannot support the system load.</p>
+<h3 id="regulator-power-dissipation-check"><strong>Regulator Power Dissipation Check</strong></h3>
+<ul>
+<li>Voltage drop: 9 V − 5 V = <strong>4 V</strong>  </li>
+<li>Load current (with margin): <strong>0.655 A</strong>  </li>
+<li>Power dissipated:<br>
+<strong>4 V × 0.655 A = 2.62 W</strong></li>
+</ul>
+<p><strong>Conclusion:</strong> A small heat sink is required for continuous operation.</p>
 <h2 id="section-d-external-power-source">Section D – External Power Source</h2>
 <table>
 <thead>
@@ -1207,17 +1312,14 @@ The UA78L05ACLP 100 mA is insufficient.</p>
 </tbody>
 </table>
 <ul>
-<li>Required on +5 V rail with 25% margin: 655 mA  </li>
-<li>Remaining capacity on 9V, 3A adapter: 3000 − 655 = 2345 mA</li>
+<li>Required on 5 V rail (with margin): <strong>655 mA</strong>  </li>
+<li>Remaining adapter capacity:<br>
+  3000 − 655 = <strong>2345 mA</strong></li>
 </ul>
-<p><strong>Arithmetic:</strong><br>
-3000 − 655 = 2345 mA remaining</p>
 <p><strong>Battery Option (not implemented):</strong><br>
-If powered by a 3000 mAh battery for estimation only:</p>
-<ul>
-<li>Example sleep-mode average current = 50 mA → battery life = 3000 / 50 = 60 hours ≈ 2.5 days  </li>
-<li>With active current near full draw 523 mA: 3000 / 523 ≈ 5.73 hours (not practical for continuous operation)</li>
-</ul>
+- If powered by a 3000 mAh Li-ion:<br>
+  - Sleep-mode (50 mA avg): 60 hours<br>
+  - Full draw (523 mA): ≈ 5.7 hours</p>
 <h2 id="section-e-summary">Section E – Summary</h2>
 <table>
 <thead>
@@ -1232,30 +1334,29 @@ If powered by a 3000 mAh battery for estimation only:</p>
 <td>523.1 mA</td>
 </tr>
 <tr>
-<td style="text-align: right;">Total required on 5 V rail (with 25% margin)</td>
+<td style="text-align: right;">Required 5 V rail with 25% margin</td>
 <td>655 mA</td>
 </tr>
 <tr>
-<td style="text-align: right;">Regulator chosen</td>
-<td>LM7805 Linear Regulator</td>
+<td style="text-align: right;"><strong>Regulator chosen</strong></td>
+<td><strong>LM7805 Linear Regulator</strong></td>
 </tr>
 <tr>
-<td style="text-align: right;">Regulator dissipation 9→5 V at 655 mA</td>
-<td>≈ 2.62 W (heat sink required)</td>
+<td style="text-align: right;">Regulator dissipation</td>
+<td>≈ 2.62 W (heat sink needed)</td>
 </tr>
 <tr>
 <td style="text-align: right;">External supply recommended</td>
 <td>9 V DC adapter, ≥ 3 A</td>
 </tr>
 <tr>
-<td style="text-align: right;">Estimated battery life (3000 mAh Li-ion)</td>
-<td>≈ 60 h (sleep-mode avg) / ≈ 5.7 h being continuous active draw</td>
+<td style="text-align: right;">Estimated battery life (3000 mAh)</td>
+<td>60 h (sleep) / 5.7 h (active)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Power budget Conclusion:</strong><br>
-I used the power budget to estimate the max current each major part of the subsystem would draw and then added those numbers to find the total system load. Once I had the subtotal, I applied a 25% safety margin to make sure the design would handle higher-than-expected current spikes or future additions. This final value told me what the 5 V rail needed to supply and helped determine which voltage regulator was appropriate.</p>
-<p>From the budget our system needs about 655 mA so the LM7805 was the only regulator with enough headroom. The power budget also showed that the regulator would dissipate around 2.6 W meaning a heat sink may be required. Comparing this to our 9 V, 3 A adapter confirmed the external supply can easily support the load with plenty of current to spare.</p>
+<h2 id="power-budget-conclusion">Power Budget Conclusion</h2>
+<p>I used the power budget to estimate the maximum current each major part draws and summed them to find the total system load. After applying a 25% safety margin, this established the requirement for the 5 V rail. Since the rail needs around 655 mA, the LM7805 was the only regulator with enough output capacity. The calculations also showed the regulator would dissipate about 2.6 W, meaning a heat sink is required. A 9 V, 3 A wall adapter easily supports this load with plenty of current to spare.</p>
 
 
 
