@@ -10,6 +10,8 @@ This PCB design supports the Smart Irrigation Subsystem Board by integrating pow
 *Figure 2: Showing the back of the board.*
 <img width="2232" height="755" alt="PCB 3D" src="https://github.com/user-attachments/assets/9463a6e6-2fb1-4aad-8a91-b56dc51c0dbe" />
 *Figure 3: Showing the 3D veiw of the board.*  
+<img width="2200" height="750" alt="Screenshot 2025-12-05 153412" src="https://github.com/user-attachments/assets/63c7c2a9-10ba-40e5-8bee-60f4179855ef" />
+*Figure 4: Showing a component populated view of the board.*  
 
 ## Resources
 The PCB design as a PDF download is available [*here*](https://github.com/user-attachments/files/23871097/PCB.pdf), the Zip folder of the Gerber Files [*here*](https://github.com/user-attachments/files/23871074/IsaiahLaCombe101.zip), and the Zip folder of the Project Files [*here*](https://github.com/user-attachments/files/23870865/Subsystem.Schematic.Design.zip)
