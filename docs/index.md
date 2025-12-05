@@ -24,7 +24,7 @@ The document outlines how the subsystem works, what components were selected, an
 The Smart Irrigation System is a water-efficient lawn watering project designed by Team 101. Its goal is to help homeowners and renters maintain healthy lawns while reducing water waste and cost. The system automatically monitors soil conditions and water usage to decide when watering is needed.  
 The project is built around four main subsystems: Control, Sound Feedback, Sensor, and Motor with each using a PIC18F57Q43 Curiosity Nano microcontroller. These subsystems work together to create a modular watering system that can function both online and offline.  
 My subsystem Sensor Board plays a key role by measuring soil moisture levels and sending accurate data to the Control Board. This data allows the system to decide when to turn the pump on or off working to create efficient and automatic lawn irrigation.  
-For a full overview of the team project, including our mission statement, user needs, and system design, you can visit the [Team Report Appendix](https://egr304-2025-f-101.github.io/team101.github.io/Appendix/).
+For a full overview of the team project, including our mission statement, user needs, and system design, you can visit the [Team Home Page](https://egr304-2025-f-101.github.io/team101.github.io/).
 
 ## My Contribution
 
