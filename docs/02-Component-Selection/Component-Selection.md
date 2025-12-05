@@ -23,8 +23,8 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 | <img width="250" height="250" alt="Screenshot 2025-12-05 141049" src="https://github.com/user-attachments/assets/b332ac6c-e4ca-45b7-8e63-54a251928135" /><br>**Option 2:** DIY Stainless-Steel Resistive Probe<br>$1.50 — each<br>*DIY using stainless rods/bolts* | *More corrosion-resistant than copper*<br>*Durable mechanical design*<br>*Still simple analog interface* | *Still corrodes slowly*<br>*Soil chemistry affects readings* |
 | <img width="250" height="250" alt="Screenshot 2025-12-05 141651" src="https://github.com/user-attachments/assets/b51ff5d4-60ad-4ae1-a897-63575225aae5" /><br>**Option 3:** DIY PCB Capacitive Soil Sensor<br>$2–4 — each<br>*Fabricated or ordered PCB* | *No corrosion (non-contact sensing)*<br>*Stable long-term readings*<br>*Low power consumption* | *Requires PCB fabrication or ordering*<br>*Sensitivity depends on layout* |
 
-**Choice:** Option 2 — ST0160 Capacitive Soil Moisture Sensor V2.0  
-**Rationale:** Provides corrosion-free sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and easy integration with the PIC ADC.
+**Choice:** Option 3 — Capacitive Soil Moisture Sensor  
+**Rationale:** Provides low corrosion sensing with stable analog output for long-term outdoor monitoring while maintaining low cost and easy integration with the PIC ADC.
 
 ## Voltage Regulator
 
