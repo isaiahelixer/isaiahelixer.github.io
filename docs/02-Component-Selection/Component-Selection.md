@@ -65,10 +65,10 @@ Includes a PIC18F16Q41 Curiosity Nano microcontroller connected to:
 
 | **Component Category** | **Final Component Selected** | **Reason for Selection** |
 |------------------------|------------------------------|---------------------------|
-| **Microcontroller** | PIC18F16Q41 Curiosity Nano | Provided by course; includes onboard debugger and reliable ADC for moisture sensing. |
-| **Soil Moisture Sensor** | DIY Capacitive Soil Moisture Sensor | Corrosion-free, low-power, and provides a stable analog signal for PIC ADC processing. |
+| **Microcontroller** | PIC18F16Q41 Curiosity Nano | Provided to us, includes onboard debugger, and reliable ADC for moisture sensing. |
+| **Soil Moisture Sensor** | DIY Capacitive Soil Moisture Sensor | Easy RC circuit, low-power, and provides a stable analog signal for PIC ADC processing. |
 | **Operational Amplifier** | MCP6004 Quad Op-Amp | Rail-to-rail operation and low power, suitable for filtering and amplifying the sensor output. |
-| **Voltage Regulator** | LM7805 Linear Regulator (TO-220) | Supplied to the team; simple and stable 5 V regulation for the subsystem. |
+| **Voltage Regulator** | LM7805 Linear Regulator (TO-220) | Supplied to us, simple, and stable 5 V regulation for the subsystem. |
 | **External Power Source** | 9 V DC Wall Adapter (≥3 A) | Provides more than enough current to power the 5 V subsystem load. |
 | **Subsystem Connectivity** | 8-Pin Board-to-Board Connector | Provides communication and signal routing to teammate subsystem boards. |
 
