@@ -1,5 +1,5 @@
 ---
-title: Welcome Here
+title: Home
 tags:
 - tag1
 - tag2
