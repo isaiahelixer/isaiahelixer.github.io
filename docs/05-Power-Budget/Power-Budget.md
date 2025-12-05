@@ -9,7 +9,7 @@ title: Power Budget
 **Team Member Names:** Liam, Isaiah, Myles, and Raj  
 **Version:** 1.9  
 
-**System input:** 9V external → 5V regulator (LM7805) → Soil Moisture Sensor + MCP6004 → PIC18F57Q43 Curiosity Nano
+**System input:** 9V external → 5V regulator → Soil Moisture Sensor + MCP6004 → PIC18F57Q43 Curiosity Nano
 
 ## Section A – All Major Components 
 
