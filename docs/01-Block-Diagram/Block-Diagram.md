@@ -22,7 +22,7 @@ PIC Microcontroller – Generates the 100 kHz drive signal, performs ADC process
 
 ## Block Diagram
 <img width="1558" height="1159" alt="Block Diagram - Isaiah" src="https://github.com/user-attachments/assets/a040560a-7d5a-4997-b7ab-ab9e056c5ab4" />
-*Figure 1: Showing the capacitive soil sensor subsystem block diagram.*
+*Figure 1: Showing the capacitive soil sensor subsystem block diagram.*  
 
 
 
