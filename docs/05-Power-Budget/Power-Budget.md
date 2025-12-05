@@ -21,7 +21,7 @@ title: Power Budget
 | **Subtotal** | | | | | **523.1 mA** |
 
 **Arithmetic component sum:**  
-500 + 0.1 + 23 = **523.1 mA total subsystem current**
+500 + 0.1 + 23 = 523.1 mA total subsystem current
 
 ## Section B – Power Rails
 
@@ -50,7 +50,7 @@ Rounded for specification: ≈ 655 mA required from the 5 V rail
 | Meets Requirement? | Yes |
 
 **Rationale:**  
-The LM7805 provides more than enough headroom for the estimated 655 mA system demand. It is simple, reliable, and already available for use. Lower-current regulators (e.g., 100 mA TO-92 types) cannot support the system load.
+The LM7805 provides more than enough headroom for the estimated 655 mA system demand. It is simple, reliable, and already available for use. Lower-current regulators cannot support the system load.
 
 ### **Regulator Power Dissipation Check**
 
@@ -67,9 +67,9 @@ The LM7805 provides more than enough headroom for the estimated 655 mA system de
 |------------------|-------------:|------------------------:|---------------------:|
 | Wall Adapter | Generic 9V DC Adapter | 9 | 3000 |
 
-- Required on 5 V rail (with margin): **655 mA**  
+- Required on 5 V rail (with margin): 655 mA  
 - Remaining adapter capacity:  
-  3000 − 655 = **2345 mA**
+  3000 − 655 = 2345 mA
 
 Battery Option (not implemented): 
 - If powered by a 3000 mAh Li-ion:  
