@@ -5,7 +5,7 @@ title: Power Budget
 # Power Budget
 
 **Team Number:** 101  
-**Project Name:** Smart Irrigation Sensor Subsystem Board  
+**Project Name:** Smart Irrigation Capacitve Soil Sensor Subsystem Board  
 **Team Member Names:** Liam, Isaiah, Myles, and Raj  
 **Version:** 1.9  
 
@@ -25,21 +25,21 @@ title: Power Budget
 
 ## Section B – Power Rails
 
-### **+5 V Rail**
-The following components are powered directly from the **5 V rail**:
+**+5 V Rail**
+The following components are powered directly from the 5 V rail:
 
 - PIC18F57Q43 Curiosity Nano  
 - MCP6004 Quad Op-Amp  
 - DIY Capacitive Soil Moisture Sensor  
 
-**Rail subtotal:** 523.1 mA  
-**25% safety margin:** 523.1 × 1.25 = **653.875 mA**
+Rail subtotal: 523.1 mA  
+25% safety margin: 523.1 × 1.25 = 653.875 mA
 
-Rounded for specification: **≈ 655 mA required from the 5 V rail**
+Rounded for specification: ≈ 655 mA required from the 5 V rail
 
-## Section C – Regulator Selection (Final Choice Only)
+## Section C – Regulator Selection (Final Choice)
 
-### **Selected Regulator: LM7805 Linear Regulator**
+### Selected Regulator: LM7805 Linear Regulator
 
 | **Parameter** | **Value** |
 |--------------:|-----------|
@@ -47,19 +47,19 @@ Rounded for specification: **≈ 655 mA required from the 5 V rail**
 | Output Voltage | 5 V |
 | Max Output Current | 1.5 A |
 | Required Current (with margin) | 655 mA |
-| Meets Requirement? | **Yes** |
+| Meets Requirement? | Yes |
 
 **Rationale:**  
 The LM7805 provides more than enough headroom for the estimated 655 mA system demand. It is simple, reliable, and already available for use. Lower-current regulators (e.g., 100 mA TO-92 types) cannot support the system load.
 
 ### **Regulator Power Dissipation Check**
 
-- Voltage drop: 9 V − 5 V = **4 V**  
-- Load current (with margin): **0.655 A**  
+- Voltage drop: 9 V − 5 V = 4 V 
+- Load current (with margin): 0.655 A 
 - Power dissipated:  
-  **4 V × 0.655 A = 2.62 W**
+  4 V × 0.655 A = 2.62 W
 
-**Conclusion:** A small heat sink is required for continuous operation.
+**Conclusion:** A small heat sink may be required for large continuous current draw.
 
 ## Section D – External Power Source
 
@@ -71,7 +71,7 @@ The LM7805 provides more than enough headroom for the estimated 655 mA system de
 - Remaining adapter capacity:  
   3000 − 655 = **2345 mA**
 
-**Battery Option (not implemented):**  
+Battery Option (not implemented): 
 - If powered by a 3000 mAh Li-ion:  
   - Sleep-mode (50 mA avg): 60 hours  
   - Full draw (523 mA): ≈ 5.7 hours
@@ -82,7 +82,7 @@ The LM7805 provides more than enough headroom for the estimated 655 mA system de
 |---------:|--------------------|
 | Estimated subtotal | 523.1 mA |
 | Required 5 V rail with 25% margin | 655 mA |
-| **Regulator chosen** | **LM7805 Linear Regulator** |
+| Regulator chosen | LM7805 Linear Regulator |
 | Regulator dissipation | ≈ 2.62 W (heat sink needed) |
 | External supply recommended | 9 V DC adapter, ≥ 3 A |
 | Estimated battery life (3000 mAh) | 60 h (sleep) / 5.7 h (active) |
