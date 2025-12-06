@@ -82,7 +82,7 @@ Battery Option (not implemented):
 | Estimated subtotal | 523.1 mA |
 | Required 5 V rail with 25% margin | 655 mA |
 | Regulator chosen | LM7805 Linear Regulator |
-| Regulator dissipation | ≈ 2.62 W (heat sink needed) |
+| Regulator dissipation | ≈ 2.62 W |
 | External supply recommended | 9 V DC adapter, ≥ 3 A |
 | Estimated battery life (3000 mAh) | 60 h (sleep) / 5.7 h (active) |
 
